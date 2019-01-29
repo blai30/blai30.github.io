@@ -230,7 +230,7 @@
                             <h1 class="title display-1 text-primary">About</h2>
                             <h3 class="description">
                                 <strong>A2</strong>Vellum is a fictional company brand that specializes in designing and manufacturing the world's greatest electronic styli.
-                                We value the satisfaction of our customers as our number one priority and will continue to create and improve our products so that our customers can enjoy the best quality.
+                                We value the satisfaction of our customers as our number one priority and will continue to create and improve our products so that our customers can enjoy the best quality. This website is powered by BLK• Design System from CreativeTim.
                             </h3>
                         </div>
                         <!-- Sign up button -->
