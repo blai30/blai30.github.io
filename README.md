@@ -3,7 +3,7 @@
 * [LinkedIn](https://www.linkedin.com/in/blai/)
 
 # Resources
-* [Resume](http://www.bhlai.com/documents/myResume.pdf)
+* [Resume](http://www.bhlai.com/documents/resume.pdf)
 
 # My Webpages
 * [A2Vellum](http://www.bhlai.com/A2Vellum)
