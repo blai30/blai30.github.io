@@ -55,6 +55,8 @@ jQuery(document).ready(function($) {
 
   // Github Activity Feed - https://github.com/caseyscarborough/github-activity
   GitHubActivity.feed({
-    username: "blai30", selector: "#ghfeed"
+    username: "blai30",
+    selector: "#ghfeed",
+    responsive: true
   });
 });
