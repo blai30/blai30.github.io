@@ -15,111 +15,96 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <title>Brian Lai</title>
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-  <link rel="stylesheet" href="assets/css/darkly.min.css">
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Assistant&display=swap" rel="stylesheet">
 
-  <!-- Theme CSS -->
-  <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body>
 <!-- Top header -->
-<header class="header">
-  <div class="container clearfix">
-    <!-- Profile -->
-    <img class="profile-image img-fluid float-left rounded-circle" src="favicon.png" alt="profile image" width="180"
-         height="180"/>
-    <div class="profile-content float-left">
-      <h1 class="name">Brian Lai</h1>
-      <h2 class="desc">Software Developer</h2>
-      <ul class="social list-inline">
-        <li class="list-inline-item"><a href="https://www.linkedin.com/in/blai/" target="_blank"><i
-                class="fab fa-linkedin-in"></i></a></li>
-        <li class="list-inline-item"><a href="https://github.com/blai30" target="_blank"><i
-                class="fab fa-github-alt"></i></a></li>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <img class="d-inline-block img-fluid align-top rounded-lg" src="assets/images/logo_dark@512.png" alt="logo" width="48" height="48"/>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto float-md-right">
+        <li class="nav-item active">
+          <a href="/" class="nav-link">WORKS</a>
+        </li>
+        <li class="nav-item">
+          <a href="about.html" class="nav-link">ABOUT</a>
+        </li>
       </ul>
     </div>
-    <div class="btn-group-vertical float-md-right">
-      <a class="btn btn-cta-primary mb-3" href="documents/resume.pdf" target="_blank"><i
-              class="fas fa-paper-plane"></i> View Resume</a>
-      <a class="btn btn-cta-primary mb-3" href="#" target="_blank"><i
-              class="fas fa-paper-plane"></i> Contact Me</a>
-    </div>
   </div>
-</header>
+</nav>
 
-<div class="container sections-wrapper">
-  <div class="row">
-    <div class="primary col-lg-8 col-12">
-      <section class="about section">
-        <div class="section-inner shadow-sm rounded">
-          <h2 class="heading">About Me</h2>
-          <div class="content">
-            <p>
-              I have a strong passion for game development and interest in web app development. My hobbies include, playing video games, watching shows and movies, reading light novels, developing games in Unity, and drawing digital art.
-            </p>
+<div class="root">
+  <main class="container sections-wrapper" role="main">
+    <section class="section">
+      <div class="section-inner">
+        <h2 class="heading">WORKS</h2>
+        <div class="content">
 
-          </div><!--//content-->
-        </div><!--//section-inner-->
-      </section><!--//section-->
-
-      <section class="latest section">
-        <div class="section-inner shadow-sm rounded">
-          <h2 class="heading">Selected Projects</h2>
-          <div class="content">
-
-            <div class="item row">
-              <a class="col-md-4 col-12"
-                 href="#"
-                 target="_blank">
-                <img class="img-fluid project-image rounded shadow-sm" src="assets/images/projects/Downtown.jpg"
-                     alt="project name" width="600" height="450"/>
-              </a>
-              <div class="desc col-md-8 col-12">
-                <h3 class="title">
-                  <a href="#"
-                     target="_blank">
-                    Infection FPS
-                  </a>
-                </h3>
-                <p class="mb-2">
-                  A multiplayer first-person shooter game created in Unity using the Mirror
-                  Networking API. Weapon system includes firing, reloading, switching, and aiming.
-                  New weapons can be picked up from the ground. Infected players are equipped with
-                  a melee weapon. The game was developed in a team of six programmers and two audio leads.
-                </p>
-                <p>
-                  <a class="more-link"
-                     href="https://github.com/blai30/infection"
-                     target="_blank"><i class="fas fa-external-link-alt"></i>View Source
-                  </a>
-                </p>
-              </div><!--//desc-->
-            </div><!--//item-->
-
-            <a class="btn btn-cta-secondary" href="https://www.github.com/blai30">
-              More on GitHub <i class="fas fa-chevron-right pt-1"></i>
+          <div class="item row">
+            <div class="desc col-md-8 col-12">
+              <h3 class="title">
+                <a href="#" target="_blank">
+                  Infection FPS
+                </a>
+              </h3>
+              <p class="mb-2">
+                A multiplayer first-person shooter game created in Unity using the Mirror
+                Networking API. Weapon system includes firing, reloading, switching, and aiming.
+                New weapons can be picked up from the ground. Infected players are equipped with
+                a melee weapon. The game was developed in a team of six programmers and two audio leads.
+              </p>
+              <p>
+                <a class="more-link"
+                   href="https://github.com/blai30/infection"
+                   target="_blank"><i class="fas fa-external-link-alt"></i>View Source
+                </a>
+              </p>
+            </div><!--//desc-->
+            <a class="col-md-4 col-12"
+               href="#"
+               target="_blank">
+              <img class="img-fluid project-image rounded shadow-sm" src="assets/images/projects/Downtown.jpg"
+                   alt="project name" width="600" height="450"/>
             </a>
+          </div><!--//item-->
 
-          </div><!--//content-->
-        </div><!--//section-inner-->
-      </section><!--//section-->
+        </div><!--//content-->
+      </div><!--//section-inner-->
+    </section><!--//section-->
 
-    </div><!--//secondary-->
-  </div><!--//row-->
-</div><!--//masonry-->
+    <!--//secondary-->
+    <!--//row-->
+  </main><!--//masonry-->
+</div>
 
 <!-- ******FOOTER****** -->
 <footer class="footer">
   <div class="container">
+    <span class="text-muted">Sticky Footer</span>
   </div><!--//container-->
 </footer><!--//footer-->
 
 <!-- Javascript -->
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script type="text/javascript" src="https://unpkg.com/@popperjs/core@2"></script>
-<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<!-- JavaScript and dependencies -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
 <!-- custom js -->
 <script type="text/javascript" src="assets/js/main.js"></script>
 </body>

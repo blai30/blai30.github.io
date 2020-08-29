@@ -1,0 +1,17 @@
+body {
+  background-color: #171941;
+  color: #eeeeee;
+  font-family: 'Assistant', sans-serif;
+}
+
+.container {
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: gray;
+  color: white;
+}
