@@ -1,10 +1,22 @@
 body {
-  background-color: #171941;
+  background-color: #121212;
   color: #eeeeee;
-  font-family: 'Assistant', sans-serif;
+  font-family: ministry, Helvetica, Arial, sans-serif;
 }
 
 .container {
+}
+
+.navbar {
+  padding: 64px 0px;
+}
+
+.nav-link {
+  margin-left: 16px;
+}
+
+.nav-item.active {
+  color: #eeeeee;
 }
 
 .footer {
