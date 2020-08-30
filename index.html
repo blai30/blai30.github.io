@@ -8,693 +8,311 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="description" content="Personal portfolio website">
   <meta name="author" content="Brian Lai">
-  <link rel="shortcut icon" href="favicon.png">
+  <link rel="shortcut icon" href="/favicon.png">
   <!-- Apple devices -->
-  <link rel="apple-touch-icon" href="favicon.png">
+  <link rel="apple-touch-icon" href="/favicon.png">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <title>Brian Lai</title>
-
-  <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;1,300;1,400&family=Overpass:wght@400;700&display=swap"
-        rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap" rel="stylesheet"
-        type="text/css">
-
-  <!-- FontAwesome JS -->
-  <script defer src="assets/fontawesome/js/all.js"></script>
+  <title>Brian Lai - Works</title>
 
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/darkly.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
 
-  <!-- github calendar css -->
-  <link rel="stylesheet" href="assets/plugins/github-calendar/dist/github-calendar.css">
-  <!-- github activity css -->
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css">
-  <link rel="stylesheet" href="assets/plugins/github-activity/github-activity-0.1.5.min.css">
+  <!-- HTML5 Boilerplate -->
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/normalize.css">
 
-  <!-- Theme CSS -->
-  <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+  <!-- Font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Assistant&display=swap">
+  <link rel="stylesheet" href="https://use.typekit.net/fwc4mwz.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="stylesheet" href="/assets/css/fonts.css">
+  <link rel="stylesheet" href="/assets/css/background.css">
 </head>
 
-<body>
+<body data-aos-easing="ease" data-aos-duration="400 data-aos-delay=0">
 <!-- Top header -->
-<header class="header">
-  <div class="container clearfix">
-    <!-- Profile -->
-    <img class="profile-image img-fluid float-left rounded-circle" src="favicon.png" alt="profile image" width="180"
-         height="180"/>
-    <div class="profile-content float-left">
-      <h1 class="name">Brian Lai</h1>
-      <h2 class="desc">Software Developer</h2>
-      <ul class="social list-inline">
-        <li class="list-inline-item"><a href="https://www.linkedin.com/in/blai/" target="_blank"><i
-                class="fab fa-linkedin-in"></i></a></li>
-        <li class="list-inline-item"><a href="https://github.com/blai30" target="_blank"><i
-                class="fab fa-github-alt"></i></a></li>
+<nav class="navbar navbar-expand-lg navbar-dark">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <!--      <img class="d-inline-block img-fluid align-top rounded-lg" src="assets/images/logo_dark@512.png" alt="logo" width="64" height="64"/>-->
+      BRIAN LAI
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto float-right">
+        <li class="nav-item active">
+          <a href="/" class="nav-link">WORKS</a>
+        </li>
+        <li class="nav-item">
+          <a href="/about.html" class="nav-link">ABOUT</a>
+        </li>
       </ul>
     </div>
-    <div class="btn-group-vertical float-md-right">
-      <a class="btn btn-cta-primary mb-3" href="documents/resume.pdf" target="_blank"><i
-              class="fas fa-paper-plane"></i> View Resume</a>
-      <a class="btn btn-cta-primary mb-3" href="#" target="_blank"><i
-              class="fas fa-paper-plane"></i> Contact Me</a>
-    </div>
   </div>
-</header>
+</nav>
 
-<div class="container sections-wrapper">
-  <div class="row">
-    <div class="primary col-lg-8 col-12">
-      <section class="about section">
-        <div class="section-inner shadow-sm rounded">
-          <h2 class="heading">About Me</h2>
-          <div class="content">
-            <p>
-              I have a strong passion for game development and interest in web app development. My hobbies include, playing video games, watching shows and movies, reading light novels, developing games in Unity, and drawing digital art.
-            </p>
+<div class="root">
+  <main class="container" role="main">
 
-          </div><!--//content-->
-        </div><!--//section-inner-->
-      </section><!--//section-->
+    <a target="_blank">
+      <section class="row wrapper">
+        <div class="desc col-lg-6 col-12">
+          <h2 class="title">Turn-based JRPG</h2>
+          <hr>
+          <p class="mb-2">
+            A single-player Japanese-style role-playing game created in Unity with
+            cross-platform input support and data serialization for saving and loading. This
+            project uses the Zenject framework for dependency injection to maintain
+            cleaner code. Features RPG systems like inventory, crafting, quests, 4-character
+            party, world map, saving and loading, etc. Graphics are powered by Unity’s new
+            Universal Render Pipeline with custom shaders such as toon-style. The source code
+            is unavailable to the public as it is currently in development and contains
+            commercially licensed material.
+          </p>
+          <br>
+          <h5 class="text-muted">GAME</h5>
+          <h4 class="text-muted">IN DEVELOPMENT</h4>
+        </div><!--//desc-->
+        <div class="col-lg-6 col-12">
+          <img class="img-fluid project-image" src="/assets/images/projects/jrpg-turnbased.jpg"
+               alt="project" width="600" height="400"/>
+        </div><!--//image-->
+      </section><!--//item-->
+    </a>
 
-      <section class="latest section">
-        <div class="section-inner shadow-sm rounded">
-          <h2 class="heading">Selected Projects</h2>
-          <div class="content">
+    <a href="https://github.com/blai30/infection" target="_blank">
+      <section class="row wrapper">
+        <div class="desc col-lg-6 col-12">
+          <h2 class="title">Infection FPS</h2>
+          <hr>
+          <p class="mb-2">
+            A multiplayer first-person shooter game created in Unity using the Mirror
+            Networking API. Weapon system includes firing, reloading, switching, and aiming.
+            New weapons can be picked up from the ground. Infected players are equipped with
+            a melee weapon. The game was developed in a team of six programmers and two audio leads.
+          </p>
+          <br>
+          <h5 class="text-muted">MULTIPLAYER GAME</h5>
+          <h4 class="text-muted">2020</h4>
+        </div><!--//desc-->
+        <div class="col-lg-6 col-12">
+          <img class="img-fluid project-image" src="/assets/images/projects/infection.png"
+               alt="project" width="600" height="400"/>
+        </div><!--//image-->
+      </section><!--//item-->
+    </a>
 
-            <div class="item row">
-              <a class="col-md-4 col-12"
-                 href="#"
-                 target="_blank">
-                <img class="img-fluid project-image rounded shadow-sm" src="assets/images/projects/jrpg-turnbased.jpg"
-                     alt="project name" width="600" height="450"/>
-              </a>
-              <div class="desc col-md-8 col-12">
-                <h3 class="title">
-                  <a href="#"
-                     target="_blank">
-                    Turn-based JRPG
-                  </a>
-                </h3>
-                <p class="mb-2">
-                  A single-player Japanese-style role-playing game created in Unity with
-                  cross-platform input support and data serialization for saving and loading. This
-                  project uses the Zenject framework for dependency injection to maintain
-                  cleaner code. Features RPG systems like inventory, crafting, quests, 4-character
-                  party, world map, saving and loading, etc. Graphics are powered by Unity’s new
-                  Universal Render Pipeline with custom shaders such as toon-style. The source code
-                  is unavailable to the public as it is currently in development and contains
-                  licensed material.
-                </p>
-                <!--                <p>-->
-                <!--                  <a class="more-link"-->
-                <!--                     href="#"-->
-                <!--                     target="_blank"><i class="fas fa-external-link-alt"></i>Find out more-->
-                <!--                  </a>-->
-                <!--                </p>-->
-              </div><!--//desc-->
-            </div><!--//item-->
+    <a href="https://github.com/blai30/CSC615AutonomousCar" target="_blank">
+      <section class="row wrapper">
+        <div class="desc col-lg-6 col-12">
+          <h2 class="title">Raspberry Pi Self-driving Car</h2>
+          <hr>
+          <p class="mb-2">
+            An autonomous self-driving robot car powered by a Raspberry Pi using various motors
+            and sensors to navigate an obstacle course. The sensors help the robot follow a
+            black line and avoid obstacles within a certain distance. The project was developed
+            in a group of four individuals.
+          </p>
+          <br>
+          <h5 class="text-muted">EMBEDDED SYSTEMS</h5>
+          <h4 class="text-muted">2020</h4>
+        </div><!--//desc-->
+        <div class="col-lg-6 col-12">
+          <img class="img-fluid project-image" src="/assets/images/projects/picar.png"
+               alt="project" width="600" height="400"/>
+        </div><!--//image-->
+      </section><!--//item-->
+    </a>
 
-            <div class="item row">
-              <a class="col-md-4 col-12"
-                 href="#"
-                 target="_blank">
-                <img class="img-fluid project-image rounded shadow-sm" src="assets/images/projects/Downtown.jpg"
-                     alt="project name" width="600" height="450"/>
-              </a>
-              <div class="desc col-md-8 col-12">
-                <h3 class="title">
-                  <a href="#"
-                     target="_blank">
-                    Infection FPS
-                  </a>
-                </h3>
-                <p class="mb-2">
-                  A multiplayer first-person shooter game created in Unity using the Mirror
-                  Networking API. Weapon system includes firing, reloading, switching, and aiming.
-                  New weapons can be picked up from the ground. Infected players are equipped with
-                  a melee weapon. The game was developed in a team of six programmers and two audio leads.
-                </p>
-                <p>
-                  <a class="more-link"
-                     href="https://github.com/blai30/infection"
-                     target="_blank"><i class="fas fa-external-link-alt"></i>View Source
-                  </a>
-                </p>
-              </div><!--//desc-->
-            </div><!--//item-->
+    <a href="https://github.com/blai30/Mecha-Fighter-VR" target="_blank">
+      <section class="row wrapper">
+        <div class="desc col-lg-6 col-12">
+          <h2 class="title">Mecha Fighter VR</h2>
+          <hr>
+          <p class="mb-2">
+            A multiplayer VR fighting game in Unity using SteamVR SDK. Combat system features
+            gesture-based ability system and velocity-based hit detection. Networking is
+            implemented using a custom server written in Java. The game was developed in a team
+            of five individuals.
+          </p>
+          <br>
+          <h5 class="text-muted">VIRTUAL REALITY</h5>
+          <h4 class="text-muted">2019</h4>
+        </div><!--//desc-->
+        <div class="col-lg-6 col-12">
+          <img class="img-fluid project-image" src="/assets/images/projects/mecha.png"
+               alt="project" width="600" height="400"/>
+        </div><!--//image-->
+      </section><!--//item-->
+    </a>
 
-            <div class="item row">
-              <a class="col-md-4 col-12"
-                 href="#"
-                 target="_blank">
-                <img class="img-fluid project-image rounded shadow-sm" src="assets/images/projects/picar.png"
-                     alt="project name" width="600" height="450"/>
-              </a>
-              <div class="desc col-md-8 col-12">
-                <h3 class="title">
-                  <a href="#"
-                     target="_blank">
-                    Raspberry Pi Self-driving Car
-                  </a>
-                </h3>
-                <p class="mb-2">
-                  An autonomous self-driving robot car powered by a Raspberry Pi using various motors
-                  and sensors to navigate an obstacle course. The sensors help the robot follow a
-                  black line and avoid obstacles within a certain distance. The project was developed
-                  in a group of four individuals.
-                </p>
-                <p>
-                  <a class="more-link"
-                     href="https://github.com/blai30/CSC615AutonomousCar"
-                     target="_blank"><i class="fas fa-external-link-alt"></i>View Source
-                  </a>
-                </p>
-              </div><!--//desc-->
-            </div><!--//item-->
+    <a href="https://github.com/blai30/RPG-Core-Combat" target="_blank">
+      <section class="row wrapper">
+        <div class="desc col-lg-6 col-12">
+          <h2 class="title">RPG Core Combat Sandbox</h2>
+          <hr>
+          <p class="mb-2">
+            A top-down click to move and attack core combat system for an RPG
+            game created in Unity using the NavMesh pathfinding system. Features core RPG
+            elements like equipment, character stats, enemy AI, map navigation with
+            portals, and more. Created high-fidelity shaders using Unity Shader Graph and
+            Universal Render Pipeline.
+          </p>
+          <br>
+          <h5 class="text-muted">GAME</h5>
+          <h4 class="text-muted">2019</h4>
+        </div><!--//desc-->
+        <div class="col-lg-6 col-12">
+          <img class="img-fluid project-image" src="/assets/images/projects/rpg.png"
+               alt="project" width="600" height="400"/>
+        </div><!--//image-->
+      </section><!--//item-->
+    </a>
 
-            <div class="item row">
-              <a class="col-md-4 col-12"
-                 href="#"
-                 target="_blank">
-                <img class="img-fluid project-image rounded shadow-sm" src="assets/images/projects/mecha.png"
-                     alt="project name" width="600" height="450"/>
-              </a>
-              <div class="desc col-md-8 col-12">
-                <h3 class="title">
-                  <a href="#"
-                     target="_blank">
-                    Mecha Fighter VR
-                  </a>
-                </h3>
-                <p class="mb-2">
-                  A multiplayer VR fighting game in Unity using SteamVR SDK. Combat system features
-                  gesture-based ability system and velocity-based hit detection. Networking is
-                  implemented using a custom server written in Java. The game was developed in a team
-                  of five individuals.
-                </p>
-                <p>
-                  <a class="more-link"
-                     href="https://github.com/blai30/Mecha-Fighter-VR"
-                     target="_blank"><i class="fas fa-external-link-alt"></i>View Source
-                  </a>
-                </p>
-              </div><!--//desc-->
-            </div><!--//item-->
+    <a href="https://github.com/blai30/csc648-su19-Team05" target="_blank">
+      <section class="row wrapper">
+        <div class="desc col-lg-6 col-12">
+          <h2 class="title">BaySpace - Online Image Post Platform</h2>
+          <hr>
+          <p class="mb-2">
+            Worked on front-end, back-end, and Git management for a team of 8 as the
+            GitHub admin. Our team exercised the software development process which
+            includes iterative deployment, scrum meetings, and test-driven development.
+            The web app is written in NodeJS and Bootstrap, uses MySQL database, and
+            deployed on AWS using the Express framework. Users can submit posts, upload
+            images, search posts, view map of locations, and register and sign-in.
+          </p>
+          <br>
+          <h5 class="text-muted">WEB APPLICATION</h5>
+          <h4 class="text-muted">2019</h4>
+        </div><!--//desc-->
+        <div class="col-lg-6 col-12">
+          <img class="img-fluid project-image" src="/assets/images/projects/bayspace.png"
+               alt="project" width="600" height="400"/>
+        </div><!--//image-->
+      </section><!--//item-->
+    </a>
 
-            <div class="item row">
-              <a class="col-md-4 col-12"
-                 href="#"
-                 target="_blank">
-                <img class="img-fluid project-image rounded shadow-sm" src="assets/images/projects/rpg.png"
-                     alt="project name" width="600" height="450"/>
-              </a>
-              <div class="desc col-md-8 col-12">
-                <h3 class="title">
-                  <a href="#"
-                     target="_blank">
-                    RPG Core Combat Sandbox
-                  </a>
-                </h3>
-                <p class="mb-2">
-                  A top-down click to move and attack core combat system for an RPG
-                  game created in Unity using the NavMesh pathfinding system. Features core RPG
-                  elements like equipment, character stats, enemy AI, map navigation with
-                  portals, and more. Created high-fidelity shaders using Unity Shader Graph and
-                  Universal Render Pipeline.
-                </p>
-                <p>
-                  <a class="more-link"
-                     href="https://github.com/blai30/RPG-Core-Combat"
-                     target="_blank"><i class="fas fa-external-link-alt"></i>View Source
-                  </a>
-                </p>
-              </div><!--//desc-->
-            </div><!--//item-->
+    <a href="https://github.com/blai30/bomberman-java" target="_blank">
+      <section class="row wrapper">
+        <div class="desc col-lg-6 col-12">
+          <h2 class="title">Bomberman Java</h2>
+          <hr>
+          <p class="mb-2">
+            A 4-player bomberman game written in Java using Swing. Bombs use a simple algorithm
+            to calculate explosion distances in 4 directions. The map is a tile-based grid is
+            randomly generated. Custom maps can be created then loaded from file.
+            Collisions are used for kicking bombs and solid interactions.
+          </p>
+          <br>
+          <h5 class="text-muted">GAME</h5>
+          <h4 class="text-muted">2019</h4>
+        </div><!--//desc-->
+        <div class="col-lg-6 col-12">
+          <img class="img-fluid project-image" src="/assets/images/projects/bomberman.png"
+               alt="project" width="600" height="400"/>
+        </div><!--//image-->
+      </section><!--//item-->
+    </a>
 
-            <div class="item row">
-              <a class="col-md-4 col-12"
-                 href="#"
-                 target="_blank">
-                <img class="img-fluid project-image rounded shadow-sm" src="assets/images/projects/bayspace.png"
-                     alt="project name" width="600" height="450"/>
-              </a>
-              <div class="desc col-md-8 col-12">
-                <h3 class="title">
-                  <a href="#"
-                     target="_blank">
-                    BaySpace - Online Image Post Platform
-                  </a>
-                </h3>
-                <p class="mb-2">
-                  Worked on front-end, back-end, and Git management for a team of 8 as the
-                  GitHub admin. Our team exercised the software development process which
-                  includes iterative deployment, scrum meetings, and test-driven development.
-                  The web app is written in NodeJS and Bootstrap, uses MySQL database, and
-                  deployed on AWS using the Express framework. Users can submit posts, upload
-                  images, search posts, view map of locations, and register and sign-in.
-                </p>
-                <p>
-                  <a class="more-link"
-                     href="https://github.com/blai30/csc648-su19-Team05"
-                     target="_blank"><i class="fas fa-external-link-alt"></i>View Source
-                  </a>
-                </p>
-              </div><!--//desc-->
-            </div><!--//item-->
+    <a href="https://github.com/blai30/tankgame-java" target="_blank">
+      <section class="row wrapper">
+        <div class="desc col-lg-6 col-12">
+          <h2 class="title">Tank Game Java</h2>
+          <hr>
+          <p class="mb-2">
+            A 2-player top-down shooter tank game written in Java using Swing. Includes a
+            collision detection system using the Visitor Design Pattern. Features include health UI,
+            powerups, destructible walls, custom maps, and more.
+          </p>
+          <br>
+          <h5 class="text-muted">GAME</h5>
+          <h4 class="text-muted">2019</h4>
+        </div><!--//desc-->
+        <div class="col-lg-6 col-12">
+          <img class="img-fluid project-image" src="/assets/images/projects/tankgame.png"
+               alt="project" width="600" height="400"/>
+        </div><!--//image-->
+      </section><!--//item-->
+    </a>
 
-            <div class="item row">
-              <a class="col-md-4 col-12"
-                 href="#"
-                 target="_blank">
-                <img class="img-fluid project-image rounded shadow-sm" src="assets/images/projects/bomberman.png"
-                     alt="project name" width="600" height="450"/>
-              </a>
-              <div class="desc col-md-8 col-12">
-                <h3 class="title">
-                  <a href="#"
-                     target="_blank">
-                    Bomberman Java
-                  </a>
-                </h3>
-                <p class="mb-2">
-                  A 4-player bomberman game written in Java using Swing. Bombs use a simple algorithm
-                  to calculate explosion distances in 4 directions. The map is a tile-based grid is
-                  randomly generated. Custom maps can be created then loaded from file.
-                  Collisions are used for kicking bombs and solid interactions.
-                </p>
-                <p>
-                  <a class="more-link"
-                     href="https://github.com/blai30/bomberman-java"
-                     target="_blank"><i class="fas fa-external-link-alt"></i>View Source
-                  </a>
-                </p>
-              </div><!--//desc-->
-            </div><!--//item-->
+  </main><!--//masonry-->
+</div>
 
-            <div class="item row">
-              <a class="col-md-4 col-12"
-                 href="#"
-                 target="_blank">
-                <img class="img-fluid project-image rounded shadow-sm" src="assets/images/projects/tankgame.png"
-                     alt="project name" width="600" height="450"/>
-              </a>
-              <div class="desc col-md-8 col-12">
-                <h3 class="title">
-                  <a href="#"
-                     target="_blank">
-                    Tank Game Java
-                  </a>
-                </h3>
-                <p class="mb-2">
-                  A 2-player top-down shooter tank game written in Java using Swing. Includes a
-                  collision detection system using the Visitor Design Pattern. Features include health UI,
-                  powerups, destructible walls, custom maps, and more.
-                </p>
-                <p>
-                  <a class="more-link"
-                     href="https://github.com/blai30/tankgame-java"
-                     target="_blank"><i class="fas fa-external-link-alt"></i>View Source
-                  </a>
-                </p>
-              </div><!--//desc-->
-            </div><!--//item-->
-
-            <a class="btn btn-cta-secondary" href="https://www.github.com/blai30">
-              More on GitHub <i class="fas fa-chevron-right pt-1"></i>
-            </a>
-
-          </div><!--//content-->
-        </div><!--//section-inner-->
-      </section><!--//section-->
-
-      <!--      <section class="experience section">-->
-      <!--        <div class="section-inner shadow-sm rounded">-->
-      <!--          <h2 class="heading">Work Experience</h2>-->
-      <!--          <div class="content">-->
-      <!--            <div class="item">-->
-      <!--              <h3 class="title">Co-Founder & Lead Developer - <span class="place"><a href="#">Startup Hub</a></span>-->
-      <!--                <span class="year">(2014 - Present)</span></h3>-->
-      <!--              <p>Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in,-->
-      <!--                viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Donec vitae sapien ut-->
-      <!--                libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt.</p>-->
-      <!--            </div>&lt;!&ndash;//item&ndash;&gt;-->
-      <!--            <div class="item">-->
-      <!--              <h3 class="title">Software Engineer - <span class="place"><a href="#">Google</a></span> <span-->
-      <!--                      class="year">(2013 - 2014)</span></h3>-->
-      <!--              <p>Vivamus a tortor eu turpis pharetra consequat quis non metus. Aliquam aliquam, orci eu suscipit-->
-      <!--                pellentesque, mauris dui tincidunt enim. Sed fringilla mauris sit amet nibh. Donec sodales sagittis-->
-      <!--                magna.</p>-->
-      <!--            </div>&lt;!&ndash;//item&ndash;&gt;-->
-
-      <!--            <div class="item">-->
-      <!--              <h3 class="title">Software Engineer - <span class="place"><a href="#">eBay</a></span> <span class="year">(2012 - 2013)</span>-->
-      <!--              </h3>-->
-      <!--              <p>Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque-->
-      <!--                sed ipsum.</p>-->
-      <!--            </div>&lt;!&ndash;//item&ndash;&gt;-->
-
-      <!--          </div>&lt;!&ndash;//content&ndash;&gt;-->
-      <!--        </div>&lt;!&ndash;//section-inner&ndash;&gt;-->
-      <!--      </section>&lt;!&ndash;//section&ndash;&gt;-->
-
-      <section class="github section">
-        <div class="section-inner shadow-sm rounded">
-          <h2 class="heading">GitHub Activity</h2>
-
-          <!-- Usage: https://github.com/IonicaBizau/github-calendar -->
-          <div id="github-graph" class="github-graph">
-          </div><!--//github-graph-->
-
-          <!-- Usage: https://github.com/caseyscarborough/github-activity -->
-          <div id="ghfeed" class="ghfeed">
-          </div><!--//ghfeed-->
-
-        </div><!--//secton-inner-->
-      </section><!--//section-->
-    </div><!--//primary-->
-    <div class="secondary col-lg-4 col-12">
-      <aside class="info aside section">
-        <div class="section-inner shadow-sm rounded">
-          <h2 class="heading sr-only">Basic Information</h2>
-          <div class="content">
-            <ul class="list-unstyled">
-              <li><i class="fas fa-map-marker-alt"></i><span class="sr-only">Location:</span>San Francisco, US</li>
-              <li><i class="fas fa-envelope"></i><span class="sr-only">Email:</span><a
-                      href="#">brianlai30@outlook.com</a>
-              </li>
-              <li><i class="fas fa-link"></i><span class="sr-only">Website:</span><a
-                      href="#">http://www.bhlai.com/</a></li>
-            </ul>
-          </div><!--//content-->
-        </div><!--//section-inner-->
-      </aside><!--//aside-->
-
-      <aside class="skills aside section">
-        <div class="section-inner shadow-sm rounded">
-          <h2 class="heading">Skills</h2>
-          <div class="content">
-            <p class="intro">
-              I mainly focus on game development and web app development. I love working on projects where the results
-              are tangible and visual. I spend my free time working on personal projects in Unity game engine.
-            </p>
-
-            <div class="skillset">
-
-              <div class="item">
-                <h3 class="level-title">
-                  Unity & C#
-                  <span class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true"
-                        title="Worked in 2D, 3D, shaders, multiplayer, UI, and more. Experienced with game systems such as saving and loading, inventory items, camera control, player movement, raycasts, visual effects, level design, cross-platform input, and more.">
-                    <i class="fas fa-info-circle"></i>
-                    Advanced
-                  </span>
-                </h3>
-                <div class="level-bar">
-                  <div class="level-bar-inner" data-level="96%">
-                  </div>
-                </div><!--//level-bar-->
-              </div><!--//item-->
-
-              <div class="item">
-                <h3 class="level-title">
-                  Java
-                  <span class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true"
-                        title="You can use the tooltip to explain more about your skill level...">
-                    <i class="fas fa-info-circle"></i>
-                    Advanced
-                  </span>
-                </h3>
-                <div class="level-bar">
-                  <div class="level-bar-inner" data-level="90%">
-                  </div>
-                </div><!--//level-bar-->
-              </div><!--//item-->
-
-              <div class="item">
-                <h3 class="level-title">
-                  HTML, CSS, JavaScript
-                  <span class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true"
-                        title="You can use the tooltip to explain more about your skill level...">
-                    <i class="fas fa-info-circle"></i>
-                    Intermediate
-                  </span>
-                </h3>
-                <div class="level-bar">
-                  <div class="level-bar-inner" data-level="80%">
-                  </div>
-                </div><!--//level-bar-->
-              </div><!--//item-->
-
-              <div class="item">
-                <h3 class="level-title">
-                  C/C++
-                  <span class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true"
-                        title="You can use the tooltip to explain more about your skill level...">
-                    <i class="fas fa-info-circle"></i>
-                    Intermediate
-                  </span>
-                </h3>
-                <div class="level-bar">
-                  <div class="level-bar-inner" data-level="80%">
-                  </div>
-                </div><!--//level-bar-->
-              </div><!--//item-->
-
-              <div class="item">
-                <h3 class="level-title">
-                  Angular
-                  <span class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true"
-                        title="You can use the tooltip to explain more about your skill level...">
-                    <i class="fas fa-info-circle"></i>
-                    Intermediate
-                  </span>
-                </h3>
-                <div class="level-bar">
-                  <div class="level-bar-inner" data-level="70%">
-                  </div>
-                </div><!--//level-bar-->
-              </div><!--//item-->
-
-              <div class="item">
-                <h3 class="level-title">
-                  Unreal Engine
-                  <span class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true"
-                        title="You can use the tooltip to explain more about your skill level...">
-                    <i class="fas fa-info-circle"></i>
-                    Beginner
-                  </span>
-                </h3>
-                <div class="level-bar">
-                  <div class="level-bar-inner" data-level="65%">
-                  </div>
-                </div><!--//level-bar-->
-              </div><!--//item-->
-
-              <div class="item">
-                <h3 class="level-title">
-                  Godot Engine
-                  <span class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true"
-                        title="You can use the tooltip to explain more about your skill level...">
-                    <i class="fas fa-info-circle"></i>
-                    Beginner
-                  </span>
-                </h3>
-                <div class="level-bar">
-                  <div class="level-bar-inner" data-level="60%">
-                  </div>
-                </div><!--//level-bar-->
-              </div><!--//item-->
-
-              <div class="item">
-                <h3 class="level-title">
-                  Python
-                  <span class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true"
-                        title="You can use the tooltip to explain more about your skill level...">
-                    <i class="fas fa-info-circle"></i>
-                    Beginner
-                  </span>
-                </h3>
-                <div class="level-bar">
-                  <div class="level-bar-inner" data-level="55%">
-                  </div>
-                </div><!--//level-bar-->
-              </div><!--//item-->
-
-              <p><a class="more-link" href="https://www.github.com/blai30"><i class="fas fa-external-link-alt"></i>More
-                on GitHub</a></p>
-            </div>
-          </div><!--//content-->
-        </div><!--//section-inner-->
-      </aside><!--//section-->
-
-      <!--      <aside class="testimonials aside section">-->
-      <!--        <div class="section-inner shadow-sm rounded">-->
-      <!--          <h2 class="heading">Testimonials</h2>-->
-      <!--          <div class="content">-->
-      <!--            <div class="item">-->
-      <!--              <blockquote class="quote">-->
-      <!--                <p><i class="fas fa-quote-left"></i>James is an excellent software engineer and he is passionate about-->
-      <!--                  what he does. You can totally count on him to deliver your projects!</p>-->
-      <!--              </blockquote>-->
-      <!--              <p class="source"><span class="name">Tim Adams</span><br/><span class="title">Curabitur commodo</span></p>-->
-      <!--            </div>&lt;!&ndash;//item&ndash;&gt;-->
-
-      <!--            <p><a class="more-link" href="#"><i class="fas fa-external-link-alt"></i>More on Linkedin</a></p>-->
-
-      <!--          </div>&lt;!&ndash;//content&ndash;&gt;-->
-      <!--        </div>&lt;!&ndash;//section-inner&ndash;&gt;-->
-      <!--      </aside>&lt;!&ndash;//section&ndash;&gt;-->
-
-      <aside class="education aside section">
-        <div class="section-inner shadow-sm rounded">
-          <h2 class="heading">Education</h2>
-          <div class="content">
-            <div class="item">
-              <h3 class="title"><i class="fas fa-graduation-cap"></i> Computer Science - BS</h3>
-              <h4 class="university">San Francisco State University</h4>
-              <h4 class="university">August 2016 - May 2020</h4>
-            </div><!--//item-->
-          </div><!--//content-->
-        </div><!--//section-inner-->
-      </aside><!--//section-->
-
-      <aside class="languages aside section">
-        <div class="section-inner shadow-sm rounded">
-          <h2 class="heading">Languages</h2>
-          <div class="content">
-            <ul class="list-unstyled">
-              <li class="item">
-                <span class="title"><strong>English:</strong></span>
-                <span class="level">Native Speaker</span>
-              </li><!--//item-->
-              <li class="item">
-                <span class="title"><strong>Vietnamese:</strong></span>
-                <span class="level">Good</span>
-              </li><!--//item-->
-              <li class="item">
-                <span class="title"><strong>Japanese:</strong></span>
-                <span class="level">Good</span>
-              </li><!--//item-->
-            </ul>
-          </div><!--//content-->
-        </div><!--//section-inner-->
-      </aside><!--//section-->
-
-      <!--      <aside class="blog aside section">-->
-      <!--        <div class="section-inner shadow-sm rounded">-->
-      <!--          <h2 class="heading">Latest Blog Posts</h2>-->
-      <!--          <p>You can use Sascha Depold's <a href="https://github.com/sdepold/jquery-rss" target="_blank">jQuery RSS-->
-      <!--            plugin</a> to pull in your blog post feeds.</p>-->
-      <!--          <div id="rss-feeds" class="content">-->
-
-      <!--          </div>&lt;!&ndash;//content&ndash;&gt;-->
-      <!--        </div>&lt;!&ndash;//section-inner&ndash;&gt;-->
-      <!--      </aside>&lt;!&ndash;//section&ndash;&gt;-->
-
-      <!--      <aside class="list music aside section">-->
-      <!--        <div class="section-inner shadow-sm rounded">-->
-      <!--          <h2 class="heading">Favourite coding music</h2>-->
-      <!--          <div class="content">-->
-      <!--            <ul class="list-unstyled">-->
-      <!--              <li><i class="fas fa-headphones"></i> <a href="#">Etiam hendrerit urna nunc</a></li>-->
-      <!--              <li><i class="fas fa-headphones"></i> <a href="#">Ut sollicitudin in mauris non auctor</a></li>-->
-      <!--              <li><i class="fas fa-headphones"></i> <a href="#">Etiam hendrerit urna nunc</a></li>-->
-      <!--              <li><i class="fas fa-headphones"></i> <a href="#">Duis et felis bibendum</a></li>-->
-      <!--            </ul>-->
-      <!--          </div>&lt;!&ndash;//content&ndash;&gt;-->
-      <!--        </div>&lt;!&ndash;//section-inner&ndash;&gt;-->
-      <!--      </aside>&lt;!&ndash;//section&ndash;&gt;-->
-
-      <!--      <aside class="list conferences aside section">-->
-      <!--        <div class="section-inner shadow-sm rounded">-->
-      <!--          <h2 class="heading">Conferences</h2>-->
-      <!--          <div class="content">-->
-      <!--            <ul class="list-unstyled">-->
-      <!--              <li><i class="far fa-calendar-alt"></i> <a href="#" target="_blank">WWDC 2020</a> (San Francisco)</li>-->
-      <!--              <li><i class="far fa-calendar-alt"></i> <a href="#">Hive</a> (Seattle)</li>-->
-      <!--            </ul>-->
-      <!--          </div>&lt;!&ndash;//content&ndash;&gt;-->
-      <!--        </div>&lt;!&ndash;//section-inner&ndash;&gt;-->
-      <!--      </aside>&lt;!&ndash;//section&ndash;&gt;-->
-
-      <!--      <aside class="credits aside section">-->
-      <!--        <div class="section-inner shadow-sm rounded">-->
-      <!--          <h2 class="heading">Credits</h2>-->
-      <!--          <div class="content">-->
-      <!--            <ul class="list-unstyled pb-2">-->
-      <!--              <li><a href="https://getbootstrap.com/" target="_blank"><i class="fas fa-external-link-alt"></i>Bootstrap</a>-->
-      <!--              </li>-->
-      <!--              <li><a href="https://fortawesome.github.io/Font-Awesome/" target="_blank"><i-->
-      <!--                      class="fas fa-external-link-alt"></i>FontAwesome</a></li>-->
-      <!--              <li><a href="https://jquery.com/" target="_blank"><i class="fas fa-external-link-alt"></i>jQuery</a></li>-->
-      <!--              <li><a href="https://github.com/IonicaBizau/github-calendar" target="_blank"><i-->
-      <!--                      class="fas fa-external-link-alt"></i>GitHub Calendar Plugin</a></li>-->
-
-      <!--              <li><a href="https://caseyscarborough.com/projects/github-activity/" target="_blank"><i-->
-      <!--                      class="fas fa-external-link-alt"></i>GitHub Activity Stream</a></li>-->
-
-      <!--              <li><a href="https://github.com/sdepold/jquery-rss" target="_blank"><i-->
-      <!--                      class="fas fa-external-link-alt"></i>jQuery RSS</a></li>-->
-
-      <!--              <li>Profile image: <a href="https://www.flickr.com/photos/dotbenjamin/2577394151" target="_blank">Ben-->
-      <!--                Smith</a></li>-->
-      <!--            </ul>-->
-
-      <!--            <hr/>-->
-
-      <!--            <p class="pt-2">This Bootstrap 4 portfolio template is handcrafted by UX designer <a-->
-      <!--                    href="https://twitter.com/3rdwave_themes" target="_blank">Xiaoying Riley</a> at <a-->
-      <!--                    href="https://themes.3rdwavemedia.com/" target="_blank">3rd Wave Media</a> for developers and is-->
-      <!--              <strong>FREE</strong> as long as you keep the footer attribution link.</p>-->
-      <!--            <p>If you’d like to <strong>use this template without the attribution link</strong>, you can <a-->
-      <!--                    href="https://themes.3rdwavemedia.com/bootstrap-templates/resume/free-bootstrap-portfolio-theme-for-web-developers/"-->
-      <!--                    target="_blank">buy the commercial license</a>.</p>-->
-
-      <!--            <a class="btn btn-cta-primary btn-download"-->
-      <!--               href="https://themes.3rdwavemedia.com/bootstrap-templates/resume/free-bootstrap-portfolio-theme-for-web-developers/"-->
-      <!--               target="_blank"><i class="fas fa-download"></i> I want to download</a>-->
-      <!--            <hr/>-->
-      <!--            <h5 class="subheading pt-3">Want more free Bootstrap themes and templates?</h5>-->
-      <!--            <p>Check out our <a href="https://themes.3rdwavemedia.com/bootstrap-templates/free/">collection of free-->
-      <!--              themes and templates.</a></p>-->
-      <!--            <p>Follow <a href="https://twitter.com/3rdwave_themes" target="_blank">Xiaoying</a> on twitter so you don't-->
-      <!--              miss any future freebies!</p>-->
-
-      <!--            <a class="btn btn-cta-secondary btn-follow" href="https://twitter.com/3rdwave_themes" target="_blank"><i-->
-      <!--                    class="fab fa-twitter"></i> Follow on twitter</a>-->
-
-      <!--          </div>&lt;!&ndash;//content&ndash;&gt;-->
-      <!--        </div>&lt;!&ndash;//section-inner&ndash;&gt;-->
-      <!--      </aside>&lt;!&ndash;//section&ndash;&gt;-->
-
-    </div><!--//secondary-->
-  </div><!--//row-->
-</div><!--//masonry-->
+<div id="vanta-net" class="vantajs"></div>
+<!--<div id="vanta-waves" class="vantajs"></div>-->
+<!--<div id="vanta-globe" class="vantajs"></div>-->
 
 <!-- ******FOOTER****** -->
 <footer class="footer">
-  <div class="container text-center">
-    <!--/* This template is free as long as you keep the attribution link below. Thank you for your support. :) If you'd like to use the template without the attribution, you can buy the commercial license via our website: themes.3rdwavemedia.com */-->
-    <small class="copyright">Designed with <i class="fas fa-heart"></i> by <a href="https://themes.3rdwavemedia.com"
-                                                                              target="_blank">Xiaoying Riley</a> for
-      developers</small>
+  <div class="container">
   </div><!--//container-->
 </footer><!--//footer-->
 
 <!-- Javascript -->
-<script type="text/javascript" src="assets/plugins/jquery-3.4.1.min.js"></script>
-<script type="text/javascript" src="assets/plugins/popper.min.js"></script>
-<script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="assets/plugins/jquery-rss/dist/jquery.rss.min.js"></script>
-<!-- github calendar plugin -->
-<script type="text/javascript" src="assets/plugins/github-calendar/dist/github-calendar.min.js"></script>
-<!-- github activity plugin -->
-<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
-<script type="text/javascript" src="assets/plugins/github-activity/github-activity-0.1.5.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<!-- JavaScript and dependencies -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+<!-- AOS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<!-- Vanta.js -->
+<script src="/assets/js/vendor/three.r119.min.js"></script>
+<script src="/assets/js/vendor/vanta.net.min.js"></script>
+<script src="/assets/js/vendor/vanta.waves.min.js"></script>
+<script src="/assets/js/vendor/vanta.globe.min.js"></script>
+<script>
+  VANTA.NET({
+    el: "#vanta-net",
+    mouseControls: true,
+    touchControls: true,
+    gyroControls: true,
+    minHeight: 200.00,
+    minWidth: 200.00,
+    scale: 1.00,
+    scaleMobile: 1.00,
+    color: 0x484848,
+    backgroundColor: 0x121212
+  })
+</script>
+<script>
+  VANTA.WAVES({
+    el: "#vanta-waves",
+    mouseControls: true,
+    touchControls: true,
+    gyroControls: true,
+    minHeight: 200.00,
+    minWidth: 200.00,
+    scale: 1.00,
+    scaleMobile: 1.00,
+    color: 0x121212,
+    shininess: 9.00,
+    waveHeight: 18.00,
+    waveSpeed: 0.35,
+    zoom: 0.85
+  })
+</script>
+<script>
+  VANTA.GLOBE({
+    el: "#vanta-globe",
+    mouseControls: true,
+    touchControls: true,
+    gyroControls: false,
+    minHeight: 200.00,
+    minWidth: 200.00,
+    scale: 1.00,
+    scaleMobile: 1.00,
+    color: 0x595959,
+    color2: 0xc0c0c0,
+    backgroundColor: 0x161616
+  })
+</script>
 <!-- custom js -->
-<script type="text/javascript" src="assets/js/main.js"></script>
+<script type="text/javascript" src="/assets/js/main.js"></script>
 </body>
 </html>
-
