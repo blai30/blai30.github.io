@@ -8,28 +8,28 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="description" content="Personal portfolio website">
   <meta name="author" content="Brian Lai">
-  <link rel="shortcut icon" href="favicon.png">
+  <link rel="shortcut icon" href="/favicon.png">
   <!-- Apple devices -->
-  <link rel="apple-touch-icon" href="favicon.png">
+  <link rel="apple-touch-icon" href="/favicon.png">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <title>Brian Lai</title>
+  <title>Brian Lai - Works</title>
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
 
   <!-- HTML5 Boilerplate -->
-  <link rel="stylesheet" href="assets/css/main.css">
-  <link rel="stylesheet" href="assets/css/normalize.css">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/normalize.css">
 
   <!-- Font -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Assistant&display=swap">
   <link rel="stylesheet" href="https://use.typekit.net/fwc4mwz.css">
 
   <!-- Custom CSS -->
-  <link rel="stylesheet" href="assets/css/styles.css">
-  <link rel="stylesheet" href="assets/css/fonts.css">
-  <link rel="stylesheet" href="assets/css/background.css">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="stylesheet" href="/assets/css/fonts.css">
+  <link rel="stylesheet" href="/assets/css/background.css">
 </head>
 
 <body data-aos-easing="ease" data-aos-duration="400 data-aos-delay=0">
@@ -37,19 +37,19 @@
 <nav class="navbar navbar-expand-lg navbar-dark">
   <div class="container">
     <a class="navbar-brand" href="/">
-      <img class="d-inline-block img-fluid align-top rounded-lg" src="assets/images/logo_dark@512.png" alt="logo" width="64" height="64"/>
+      <!--      <img class="d-inline-block img-fluid align-top rounded-lg" src="assets/images/logo_dark@512.png" alt="logo" width="64" height="64"/>-->
+      BRIAN LAI
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ml-auto float-md-right">
         <li class="nav-item active">
           <a href="/" class="nav-link">WORKS</a>
         </li>
         <li class="nav-item">
-          <a href="about.html" class="nav-link">ABOUT</a>
+          <a href="/about.html" class="nav-link">ABOUT</a>
         </li>
       </ul>
     </div>
@@ -59,40 +59,188 @@
 <div class="root">
   <main class="container" role="main">
 
-    <div class="row">
-      <div class="desc col-md-6 col-12">
-        <h3 class="title">
-          <a href="#" target="_blank">
-            Infection FPS
-          </a>
-        </h3>
-        <p class="mb-2">
-          A multiplayer first-person shooter game created in Unity using the Mirror
-          Networking API. Weapon system includes firing, reloading, switching, and aiming.
-          New weapons can be picked up from the ground. Infected players are equipped with
-          a melee weapon. The game was developed in a team of six programmers and two audio leads.
-        </p>
-        <p>
-          <a class="more-link"
-             href="https://github.com/blai30/infection"
-             target="_blank"><i class="fas fa-external-link-alt"></i>View Source
-          </a>
-        </p>
-      </div><!--//desc-->
-      <a class="col-md-6 col-12"
-         href="#"
-         target="_blank">
-        <img class="img-fluid project-image" src="assets/images/projects/Downtown.jpg"
-             alt="project" width="720" height="405"/>
-      </a>
-    </div><!--//item-->
+    <a target="_blank">
+      <section class="row wrapper">
+        <div class="desc col-md-6 col-12">
+          <h2 class="title">Turn-based JRPG</h2>
+          <hr>
+          <p class="mb-2">
+            A single-player Japanese-style role-playing game created in Unity with
+            cross-platform input support and data serialization for saving and loading. This
+            project uses the Zenject framework for dependency injection to maintain
+            cleaner code. Features RPG systems like inventory, crafting, quests, 4-character
+            party, world map, saving and loading, etc. Graphics are powered by Unity’s new
+            Universal Render Pipeline with custom shaders such as toon-style. The source code
+            is unavailable to the public as it is currently in development and contains
+            commercially licensed material.
+          </p>
+          <br>
+          <h5 class="text-muted">GAME</h5>
+          <h4 class="text-muted">IN DEVELOPMENT</h4>
+        </div><!--//desc-->
+        <div class="col-md-6 col-12">
+          <img class="img-fluid project-image" src="/assets/images/projects/jrpg-turnbased.jpg"
+               alt="project" width="600" height="400"/>
+        </div><!--//image-->
+      </section><!--//item-->
+    </a>
 
-    <!--//content-->
-    <!--//section-inner-->
-    <!--//section-->
+    <a href="https://github.com/blai30/infection" target="_blank">
+      <section class="row wrapper">
+        <div class="desc col-md-6 col-12">
+          <h2 class="title">Infection FPS</h2>
+          <hr>
+          <p class="mb-2">
+            A multiplayer first-person shooter game created in Unity using the Mirror
+            Networking API. Weapon system includes firing, reloading, switching, and aiming.
+            New weapons can be picked up from the ground. Infected players are equipped with
+            a melee weapon. The game was developed in a team of six programmers and two audio leads.
+          </p>
+          <br>
+          <h5 class="text-muted">MULTIPLAYER GAME</h5>
+          <h4 class="text-muted">2020</h4>
+        </div><!--//desc-->
+        <div class="col-md-6 col-12">
+          <img class="img-fluid project-image" src="/assets/images/projects/infection.png"
+               alt="project" width="600" height="400"/>
+        </div><!--//image-->
+      </section><!--//item-->
+    </a>
 
-    <!--//secondary-->
-    <!--//row-->
+    <a href="https://github.com/blai30/CSC615AutonomousCar" target="_blank">
+      <section class="row wrapper">
+        <div class="desc col-md-6 col-12">
+          <h2 class="title">Raspberry Pi Self-driving Car</h2>
+          <hr>
+          <p class="mb-2">
+            An autonomous self-driving robot car powered by a Raspberry Pi using various motors
+            and sensors to navigate an obstacle course. The sensors help the robot follow a
+            black line and avoid obstacles within a certain distance. The project was developed
+            in a group of four individuals.
+          </p>
+          <br>
+          <h5 class="text-muted">EMBEDDED SYSTEMS</h5>
+          <h4 class="text-muted">2020</h4>
+        </div><!--//desc-->
+        <div class="col-md-6 col-12">
+          <img class="img-fluid project-image" src="/assets/images/projects/picar.png"
+               alt="project" width="600" height="400"/>
+        </div><!--//image-->
+      </section><!--//item-->
+    </a>
+
+    <a href="https://github.com/blai30/Mecha-Fighter-VR" target="_blank">
+      <section class="row wrapper">
+        <div class="desc col-md-6 col-12">
+          <h2 class="title">Mecha Fighter VR</h2>
+          <hr>
+          <p class="mb-2">
+            A multiplayer VR fighting game in Unity using SteamVR SDK. Combat system features
+            gesture-based ability system and velocity-based hit detection. Networking is
+            implemented using a custom server written in Java. The game was developed in a team
+            of five individuals.
+          </p>
+          <br>
+          <h5 class="text-muted">VIRTUAL REALITY</h5>
+          <h4 class="text-muted">2019</h4>
+        </div><!--//desc-->
+        <div class="col-md-6 col-12">
+          <img class="img-fluid project-image" src="/assets/images/projects/mecha.png"
+               alt="project" width="600" height="400"/>
+        </div><!--//image-->
+      </section><!--//item-->
+    </a>
+
+    <a href="https://github.com/blai30/RPG-Core-Combat" target="_blank">
+      <section class="row wrapper">
+        <div class="desc col-md-6 col-12">
+          <h2 class="title">RPG Core Combat Sandbox</h2>
+          <hr>
+          <p class="mb-2">
+            A top-down click to move and attack core combat system for an RPG
+            game created in Unity using the NavMesh pathfinding system. Features core RPG
+            elements like equipment, character stats, enemy AI, map navigation with
+            portals, and more. Created high-fidelity shaders using Unity Shader Graph and
+            Universal Render Pipeline.
+          </p>
+          <br>
+          <h5 class="text-muted">GAME</h5>
+          <h4 class="text-muted">2019</h4>
+        </div><!--//desc-->
+        <div class="col-md-6 col-12">
+          <img class="img-fluid project-image" src="/assets/images/projects/rpg.png"
+               alt="project" width="600" height="400"/>
+        </div><!--//image-->
+      </section><!--//item-->
+    </a>
+
+    <a href="https://github.com/blai30/csc648-su19-Team05" target="_blank">
+      <section class="row wrapper">
+        <div class="desc col-md-6 col-12">
+          <h2 class="title">BaySpace - Online Image Post Platform</h2>
+          <hr>
+          <p class="mb-2">
+            Worked on front-end, back-end, and Git management for a team of 8 as the
+            GitHub admin. Our team exercised the software development process which
+            includes iterative deployment, scrum meetings, and test-driven development.
+            The web app is written in NodeJS and Bootstrap, uses MySQL database, and
+            deployed on AWS using the Express framework. Users can submit posts, upload
+            images, search posts, view map of locations, and register and sign-in.
+          </p>
+          <br>
+          <h5 class="text-muted">WEB APPLICATION</h5>
+          <h4 class="text-muted">2019</h4>
+        </div><!--//desc-->
+        <div class="col-md-6 col-12">
+          <img class="img-fluid project-image" src="/assets/images/projects/bayspace.png"
+               alt="project" width="600" height="400"/>
+        </div><!--//image-->
+      </section><!--//item-->
+    </a>
+
+    <a href="https://github.com/blai30/bomberman-java" target="_blank">
+      <section class="row wrapper">
+        <div class="desc col-md-6 col-12">
+          <h2 class="title">Bomberman Java</h2>
+          <hr>
+          <p class="mb-2">
+            A 4-player bomberman game written in Java using Swing. Bombs use a simple algorithm
+            to calculate explosion distances in 4 directions. The map is a tile-based grid is
+            randomly generated. Custom maps can be created then loaded from file.
+            Collisions are used for kicking bombs and solid interactions.
+          </p>
+          <br>
+          <h5 class="text-muted">GAME</h5>
+          <h4 class="text-muted">2019</h4>
+        </div><!--//desc-->
+        <div class="col-md-6 col-12">
+          <img class="img-fluid project-image" src="/assets/images/projects/bomberman.png"
+               alt="project" width="600" height="400"/>
+        </div><!--//image-->
+      </section><!--//item-->
+    </a>
+
+    <a href="https://github.com/blai30/tankgame-java" target="_blank">
+      <section class="row wrapper">
+        <div class="desc col-md-6 col-12">
+          <h2 class="title">Tank Game Java</h2>
+          <hr>
+          <p class="mb-2">
+            A 2-player top-down shooter tank game written in Java using Swing. Includes a
+            collision detection system using the Visitor Design Pattern. Features include health UI,
+            powerups, destructible walls, custom maps, and more.
+          </p>
+          <br>
+          <h5 class="text-muted">GAME</h5>
+          <h4 class="text-muted">2019</h4>
+        </div><!--//desc-->
+        <div class="col-md-6 col-12">
+          <img class="img-fluid project-image" src="/assets/images/projects/tankgame.png"
+               alt="project" width="600" height="400"/>
+        </div><!--//image-->
+      </section><!--//item-->
+    </a>
+
   </main><!--//masonry-->
 </div>
 
@@ -103,7 +251,6 @@
 <!-- ******FOOTER****** -->
 <footer class="footer">
   <div class="container">
-    <span class="text-muted">Sticky Footer</span>
   </div><!--//container-->
 </footer><!--//footer-->
 
@@ -115,10 +262,10 @@
 <!-- AOS -->
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <!-- Vanta.js -->
-<script src="assets/js/vendor/three.r119.min.js"></script>
-<script src="assets/js/vendor/vanta.net.min.js"></script>
-<script src="assets/js/vendor/vanta.waves.min.js"></script>
-<script src="assets/js/vendor/vanta.globe.min.js"></script>
+<script src="/assets/js/vendor/three.r119.min.js"></script>
+<script src="/assets/js/vendor/vanta.net.min.js"></script>
+<script src="/assets/js/vendor/vanta.waves.min.js"></script>
+<script src="/assets/js/vendor/vanta.globe.min.js"></script>
 <script>
   VANTA.NET({
     el: "#vanta-net",
@@ -166,6 +313,6 @@
   })
 </script>
 <!-- custom js -->
-<script type="text/javascript" src="assets/js/main.js"></script>
+<script type="text/javascript" src="/assets/js/main.js"></script>
 </body>
 </html>
