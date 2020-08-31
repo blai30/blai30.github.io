@@ -1,5 +1,14 @@
-body {
+* {
+  /* Firefox 64+ */
+  scrollbar-color: #5C5C5E #131315 !important;
+}
+
+html {
   background-color: #121212;
+}
+
+body {
+  background-color: rgba(12, 12, 12, 0);
   color: #eeeeee;
   font-family: ministry, Helvetica, Arial, sans-serif;
 }
