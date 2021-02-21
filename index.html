@@ -68,10 +68,16 @@
             A Discord bot created in C# using the .NET 5 framework and Discord.Net library.
             The bot includes various commands that communicate with REST APIs through HTTP requests
             and also stores persistent data in a MySQL database using Microsoft's Entity Framework Core.
-            As part of the development cycle, there are NUnit test scripts, build scripts, and deployment scripts
-            that run on Docker containers in a local or production environment.
+            Database migrations are applied using Flyway database migrations tool which executes
+            versioned SQL scripts and maintains a history table to keep track of executed migration scripts.
+            As part of the development cycle, there are SQL database migration scripts, NUnit test scripts,
+            build scripts, and deployment scripts that run on Docker containers in a local
+            or production environment.
+            Users can manage roles through message reactions and data will be saved to the database.
+            In addition, the bot can play music by querying services such as YouTube, Soundcloud, and more.
+            Tracks are added to a queue and will automatically play in order.
             Features include reaction roles, color lookup, urban dictionary lookup, calculator,
-            random number generator, database access, and more.
+            random number generator, database access, database migrations, and more.
             This project is a command-line application that runs cross-platform and includes a logger
             powered by Serilog that can log to the console, files, debugger, and Seq.
           </p>
