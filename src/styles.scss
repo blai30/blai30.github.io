@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@layer base {
+  @font-face {
+    font-family: JetBrains Mono;
+    src: url(assets/fonts/JetBrainsMono-Regular.ttf) format("ttf");
+  }
+}

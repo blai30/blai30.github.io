@@ -3,5 +3,5 @@
 * [LinkedIn](https://www.linkedin.com/in/blai/)
 
 # Resources
-* [Resume](https://blai30.github.io/resume/)
-* [Website](http://www.bhlai.com/)
+* [Resume](https://blai30.github.io/Resume-BrianLai.pdf/)
+* [Website](https://www.bhlai.com/)
