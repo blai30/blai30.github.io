@@ -1,5 +1,4 @@
 const colors = require('tailwindcss/colors');
-const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
   // mode: 'jit',
@@ -16,7 +15,7 @@ module.exports = {
       current: 'currentColor',
       black: colors.black,
       white: colors.white,
-      gray: colors.blueGray,
+      gray: colors.warmGray,
       red: colors.red,
       yellow: colors.amber,
       green: colors.emerald,
@@ -30,9 +29,8 @@ module.exports = {
         '-10': '-10',
       },
       fontFamily: {
-        sans: ['Inter', ...defaultTheme.fontFamily.sans],
-        serif: [...defaultTheme.fontFamily.serif],
-        mono: ['JetBrains Mono', ...defaultTheme.fontFamily.mono],
+        sans: ['Inter'],
+        mono: ['JetBrains Mono'],
       },
       typography: (theme) => ({
         dark: {
@@ -95,19 +93,6 @@ module.exports = {
     extend: {
       backgroundColor: [
         'dark',
-        'disabled',
-      ],
-      cursor: [
-        'dark',
-        'disabled',
-      ],
-      opacity: [
-        'dark',
-        'disabled',
-      ],
-      textOpacity: [
-        'dark',
-        'disabled',
       ],
       typography: [
         'dark',
