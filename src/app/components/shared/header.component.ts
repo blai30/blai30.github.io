@@ -6,18 +6,17 @@ import { Component, Input, OnInit } from '@angular/core';
   styles: [],
 })
 export class HeaderComponent implements OnInit {
-  @Input() brand = 'BRAND';
-  showHeader = true;
-  prevScrollpos = window.pageYOffset;
+  mounted = true;
+  previousScroll = window.pageYOffset;
 
   constructor() {
   }
 
   ngOnInit() {
     window.onscroll = () => {
-      const currentScrollPos = window.pageYOffset;
-      this.showHeader = this.prevScrollpos > currentScrollPos;
-      this.prevScrollpos = currentScrollPos;
+      const currentScroll = window.pageYOffset;
+      this.mounted = this.previousScroll > currentScroll;
+      this.previousScroll = currentScroll;
     };
   }
 }
