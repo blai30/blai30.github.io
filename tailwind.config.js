@@ -91,9 +91,6 @@ module.exports = {
   },
   variants: {
     extend: {
-      backgroundColor: [
-        'dark',
-      ],
       typography: [
         'dark',
       ],
