@@ -9,10 +9,7 @@ export class HeaderComponent implements OnInit {
   mounted = true;
   previousScroll = window.pageYOffset;
 
-  constructor() {
-  }
-
-  ngOnInit() {
+  ngOnInit(): void {
     window.onscroll = () => {
       const currentScroll = window.pageYOffset;
       this.mounted = this.previousScroll > currentScroll;
