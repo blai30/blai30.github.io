@@ -21,7 +21,6 @@ module.exports = {
         'plugin:@typescript-eslint/recommended-requiring-type-checking',
         'plugin:@angular-eslint/recommended',
         'plugin:@angular-eslint/template/process-inline-templates',
-        'plugin:prettier/recommended',
       ],
       'rules': {
         '@angular-eslint/directive-selector': [
@@ -48,7 +47,6 @@ module.exports = {
       ],
       'extends': [
         'plugin:@angular-eslint/template/recommended',
-        'plugin:prettier/recommended',
       ],
       'rules': {},
     },
