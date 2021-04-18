@@ -9,6 +9,7 @@ module.exports = {
     './src/**/*.{js,jsx,ts,tsx,vue,html}',
     './src/index.html',
   ],
+  important: true,
   darkMode: 'class', // or 'media' or 'class'
   theme: {
     colors: {

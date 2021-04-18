@@ -8,7 +8,7 @@ export class ThemeService {
 
   constructor() {
     // On page load or when changing themes, best to add inline in `head` to avoid FOUC
-    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
       document.documentElement.classList.add('dark');
       this.isDark = true;
     } else {
@@ -20,12 +20,11 @@ export class ThemeService {
   toggleTheme(enabled: boolean): void {
     if (enabled) {
       document.documentElement.classList.add('dark');
-      localStorage.theme = 'dark';
-      this.isDark = true;
+      localStorage.setItem('theme', 'dark');
     } else {
       document.documentElement.classList.remove('dark');
-      localStorage.theme = 'light';
-      this.isDark = false;
+      localStorage.setItem('theme', 'light');
     }
+    this.isDark = enabled;
   }
 }
