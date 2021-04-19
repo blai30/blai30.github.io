@@ -57,14 +57,14 @@ export class SkillsComponent {
         vendorUrl: 'https://reactjs.org/',
       },
       {
-        skillName: 'NextJS',
-        svgPath: 'assets/logos/nextjs-original-wordmark.svg',
-        vendorUrl: 'https://nextjs.org/',
-      },
-      {
         skillName: 'NodeJS',
         svgPath: 'assets/logos/nodejs-original.svg',
         vendorUrl: 'https://nodejs.org/',
+      },
+      {
+        skillName: 'Blazor',
+        svgPath: 'assets/logos/Blazor.png',
+        vendorUrl: 'https://blazor.net/',
       },
       {
         skillName: 'MySQL',
@@ -75,7 +75,8 @@ export class SkillsComponent {
     [
       {
         skillName: 'Unity',
-        svgPath: 'assets/logos/unity3d-icon.svg',
+        svgPath: 'assets/logos/unity-white.png',
+        svgPathDark: 'assets/logos/unity-black.png',
         vendorUrl: 'https://unity.com/',
       },
       {
@@ -94,6 +95,17 @@ export class SkillsComponent {
         vendorUrl: 'https://www.docker.com/',
       },
       {
+        skillName: 'Amazon Web Services',
+        svgPath: 'assets/logos/aws.svg',
+        svgPathDark: 'assets/logos/aws-dark.svg',
+        vendorUrl: 'https://www.docker.com/',
+      },
+      {
+        skillName: 'Google Cloud Platform',
+        svgPath: 'assets/logos/google-cloud.svg',
+        vendorUrl: 'https://www.docker.com/',
+      },
+      {
         skillName: 'Figma',
         svgPath: 'assets/logos/figma-original.svg',
         vendorUrl: 'https://www.figma.com/',
@@ -102,11 +114,6 @@ export class SkillsComponent {
         skillName: 'Sketch',
         svgPath: 'assets/logos/sketch-original.svg',
         vendorUrl: 'https://www.sketch.com/',
-      },
-      {
-        skillName: 'Blender',
-        svgPath: 'assets/logos/blender.png',
-        vendorUrl: 'https://www.blender.org/',
       },
     ],
   ];

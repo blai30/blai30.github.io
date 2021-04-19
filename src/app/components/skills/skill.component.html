@@ -1,8 +1,8 @@
 <a [href]="skill.vendorUrl" class="block no-underline transition-shadow ease-in-out bg-gray-200 dark:bg-gray-800 shadow-md hover:shadow-xl">
   <div class="p-2 bg-gray-200 dark:bg-gray-800">
-    <div class="flex flex-col h-24 items-center">
-      <span class="mb-2 text-center font-semibold text-sm">{{skill.skillName}}</span>
-      <img [src]="skill.svgPath" alt="logo" width="64" height="64" class="my-0">
+    <div class="flex flex-col h-28 md:h-32 items-center">
+      <span class="text-center">{{skill.skillName}}</span>
+      <img [src]="isDark() && skill.svgPathDark ? skill.svgPathDark : skill.svgPath" alt="logo" class="my-auto w-16 h-16 md:w-20 md:h-20">
     </div>
   </div>
 </a>

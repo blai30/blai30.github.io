@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   mounted = true;
-  docked = true;
+  docked = false;
   previousScroll = window.pageYOffset;
 
   ngOnInit(): void {
