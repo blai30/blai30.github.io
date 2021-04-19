@@ -1,8 +1,7 @@
 <div class="mx-auto prose prose-pink md:prose-lg dark:prose-dark">
   <h2>Featured Projects</h2>
-  <p>filters</p>
+<!--  <p>filters</p>-->
   <div class="flex flex-col space-y-12">
-    <app-project></app-project>
-    <app-project></app-project>
+    <app-project *ngFor="let project of projects" [project]="project"></app-project>
   </div>
 </div>

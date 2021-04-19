@@ -3,10 +3,12 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { DarkToggleComponent } from './dark-toggle.component';
+import { ScrollTopComponent } from './scroll-top.component';
 
 @NgModule({
   declarations: [
     DarkToggleComponent,
+    ScrollTopComponent,
   ],
   imports: [
     CommonModule,
@@ -20,6 +22,7 @@ import { DarkToggleComponent } from './dark-toggle.component';
     ReactiveFormsModule,
     RouterModule,
     DarkToggleComponent,
+    ScrollTopComponent,
   ],
 })
 export class SharedModule {

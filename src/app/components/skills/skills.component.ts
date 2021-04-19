@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { Skill } from "./skill.component";
 
 @Component({
@@ -7,7 +7,7 @@ import { Skill } from "./skill.component";
   styles: [],
 })
 export class SkillsComponent {
-  @Input() skills: Skill[][] = [
+  skills: Skill[][] = [
     [
       {
         skillName: 'C#',
