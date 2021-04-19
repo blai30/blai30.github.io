@@ -2,7 +2,7 @@ const colors = require('tailwindcss/colors');
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
-  // mode: 'jit',
+  mode: 'jit',
   // NODE_ENV set to 'production' to purge.
   // Don't purge during development for PostCSS faster reloads.
   purge: [
@@ -35,15 +35,21 @@ module.exports = {
         mono: ['JetBrains Mono', ...defaultTheme.fontFamily.mono],
       },
       typography: (theme) => ({
+        pink: {
+          css: {
+            a: {
+              '&:hover': {
+                color: theme('colors.pink.400'),
+              },
+            },
+          },
+        },
         dark: {
           css: {
             color: theme('colors.gray.300'),
             '[class~="lead"]': {
               color: theme('colors.gray.400'),
             },
-            // a: {
-            //   color: theme('colors.gray.100'),
-            // },
             strong: {
               color: theme('colors.gray.100'),
             },

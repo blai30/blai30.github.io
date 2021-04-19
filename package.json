@@ -4,6 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "dev": "cross-env NODE_ENV=development ng serve",
     "build": "ng build",
     "build:prod": "cross-env NODE_ENV=production ng build --prod --base-href /text-morph/",
     "test": "ng test",
