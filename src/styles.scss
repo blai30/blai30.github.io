@@ -5,7 +5,12 @@
 
 @layer base {
   @font-face {
+    font-family: Inter;
+    src: url(fonts/Inter.ttf) format("ttf");
+  }
+
+  @font-face {
     font-family: JetBrains Mono;
-    src: url(app/fonts/JetBrainsMono-Regular.ttf) format("ttf");
+    src: url(fonts/JetBrainsMono-Regular.ttf) format("ttf");
   }
 }
