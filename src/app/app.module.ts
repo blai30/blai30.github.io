@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { FooterComponent, HeaderComponent, SharedModule } from './components/shared';
 import { PageNotFoundModule } from './pages/page-not-found';
 import { HomeModule } from './pages/home';
+import { FadeInDirective } from './directives/fade-in.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
     HeaderComponent,
+    FadeInDirective,
   ],
   imports: [
     BrowserModule,

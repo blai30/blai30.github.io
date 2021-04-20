@@ -3,7 +3,7 @@
 >
   <button
     id="scroll-top"
-    class="p-3 flex items-center justify-center transition transform-gpu ease-in-out backdrop-filter backdrop-blur-lg rounded-full shadow-lg text-white dark:text-white bg-opacity-60 dark:bg-opacity-60 bg-pink-400 dark:bg-pink-500 hover:bg-pink-500 dark:hover:bg-pink-600 focus:outline-none"
+    class="p-3 flex items-center justify-center transition transform-gpu ease-in-out backdrop-filter backdrop-blur-lg rounded-full shadow-lg hover:shadow-xl text-white dark:text-white bg-opacity-60 dark:bg-opacity-60 bg-pink-400 dark:bg-pink-500 hover:bg-pink-500 dark:hover:bg-pink-600 focus:outline-none"
     [ngClass]="{'scale-0': !isScrolled(), 'hover:scale-110': isScrolled()}"
     (click)="onScrollTop()"
   >
