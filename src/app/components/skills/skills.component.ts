@@ -68,7 +68,8 @@ export class SkillsComponent {
       },
       {
         skillName: 'MySQL',
-        svgPath: 'assets/logos/mysql-original-wordmark.svg',
+        svgPath: 'assets/logos/mysql.png',
+        svgPathDark: 'assets/logos/mysql-dark.png',
         vendorUrl: 'https://www.mysql.com/',
       },
     ],
@@ -107,12 +108,12 @@ export class SkillsComponent {
       },
       {
         skillName: 'Figma',
-        svgPath: 'assets/logos/figma-original.svg',
+        svgPath: 'assets/logos/figma.svg',
         vendorUrl: 'https://www.figma.com/',
       },
       {
         skillName: 'Sketch',
-        svgPath: 'assets/logos/sketch-original.svg',
+        svgPath: 'assets/logos/sketch.png',
         vendorUrl: 'https://www.sketch.com/',
       },
     ],
