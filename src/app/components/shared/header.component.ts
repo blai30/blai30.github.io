@@ -13,7 +13,7 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
     window.onscroll = () => {
       const currentScroll = window.pageYOffset;
-      this.mounted = this.previousScroll > currentScroll;
+      this.mounted = this.previousScroll > currentScroll || currentScroll <= 0;
       this.docked = this.previousScroll < 50 || currentScroll <= 0;
       this.previousScroll = currentScroll;
     };
