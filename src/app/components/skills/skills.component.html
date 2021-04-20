@@ -1,0 +1,18 @@
+<div class="mx-auto prose prose-pink md:prose-lg dark:prose-dark">
+  <h2>Skills</h2>
+  <p>
+    I enjoy learning and using new tools and technologies every day. Below is a collection of what I am most familiar with when building projects.
+  </p>
+  <h3>Programming Languages</h3>
+  <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+    <app-skill *ngFor="let skill of skills[0]" [skill]="skill"></app-skill>
+  </div>
+  <h3>Technologies</h3>
+  <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+    <app-skill *ngFor="let skill of skills[1]" [skill]="skill"></app-skill>
+  </div>
+  <h3>Tooling</h3>
+  <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+    <app-skill *ngFor="let skill of skills[2]" [skill]="skill"></app-skill>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<a
+  id="skill-url"
+  [href]="skill.vendorUrl"
+  class="block no-underline transition-shadow ease-in-out shadow-md hover:shadow-xl"
+>
+  <div class="p-2 transition ease-in-out bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700">
+    <div class="flex flex-col h-28 md:h-32 items-center">
+      <span id="skill-name" class="text-center">{{skill.skillName}}</span>
+      <img
+        id="skill-image"
+        [src]="isDark() && skill.svgPathDark ? skill.svgPathDark : skill.svgPath"
+        alt="logo"
+        class="my-auto w-16 md:w-20 max-h-16 md:max-h-20"
+      >
+    </div>
+  </div>
+</a>

@@ -1,0 +1,16 @@
+<div
+  class="block fixed bottom-20 right-16 z-50"
+>
+  <button
+    id="scroll-top"
+    class="p-3 flex items-center justify-center transition transform-gpu ease-in-out backdrop-filter backdrop-blur-lg rounded-full shadow-lg hover:shadow-xl text-white dark:text-white bg-opacity-60 dark:bg-opacity-60 bg-pink-400 dark:bg-pink-500 hover:bg-pink-500 dark:hover:bg-pink-600 focus:outline-none"
+    [ngClass]="{'scale-0': !isScrolled(), 'hover:scale-110': isScrolled()}"
+    (click)="onScrollTop()"
+  >
+  <span class="flex items-center justify-between">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" width="30" height="30" class="bi bi-arrow-up" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
+    </svg>
+  </span>
+  </button>
+</div>
