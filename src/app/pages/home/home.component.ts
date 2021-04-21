@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Meta, MetaDefinition } from "@angular/platform-browser";
+import { Meta, MetaDefinition, Title } from "@angular/platform-browser";
 
 @Component({
   selector: 'app-home',
@@ -8,43 +8,37 @@ import { Meta, MetaDefinition } from "@angular/platform-browser";
   ]
 })
 export class HomeComponent implements OnInit {
+  title = 'Brian Lai';
+
   metaTags: MetaDefinition[] = [
+    {
+      name: 'title',
+      content: 'Brian Lai',
+    },
     {
       property: 'og:title',
       content: 'Brian Lai',
     },
     {
-      property: 'og:description',
+      name: 'description',
       content: 'Software Engineer, Full-stack Web Developer, and Unity hobbyist from San Francisco Bay Area, CA.',
     },
     {
-      property: 'og:type',
-      content: 'website',
-    },
-    {
-      property: 'og:url',
-      content: 'https://www.bhlai.com/',
-    },
-    {
-      property: 'og:image',
-      content: 'assets/favicon.png',
-    },
-    {
-      name: 'theme-color',
-      content: '#E11D48',
-    },
-    {
-      name: 'twitter:card',
-      content: 'summary_large_image',
+      property: 'og:description',
+      content: 'Software Engineer, Full-stack Web Developer, and Unity hobbyist from San Francisco Bay Area, CA.',
     },
   ];
 
   constructor(
+    private titleService: Title,
     private metaService: Meta,
   ) {
   }
 
   ngOnInit(): void {
-    this.metaService.addTags(this.metaTags);
+    this.titleService.setTitle(this.title);
+    for (const metaTag of this.metaTags) {
+      this.metaService.updateTag(metaTag);
+    }
   }
 }
