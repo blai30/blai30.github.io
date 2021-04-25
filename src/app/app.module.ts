@@ -7,6 +7,8 @@ import { FooterComponent, HeaderComponent, SharedModule } from './components/sha
 import { PageNotFoundModule } from './pages/page-not-found';
 import { HomeModule } from './pages/home';
 import { FadeInDirective } from './directives/fade-in.directive';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,12 @@ import { FadeInDirective } from './directives/fade-in.directive';
     SharedModule,
     PageNotFoundModule,
     HomeModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production,
+      // Register the ServiceWorker as soon as the app is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000'
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent],
