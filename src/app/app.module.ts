@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -7,8 +9,6 @@ import { FooterComponent, HeaderComponent, SharedModule } from './components/sha
 import { PageNotFoundModule } from './pages/page-not-found';
 import { HomeModule } from './pages/home';
 import { FadeInDirective } from './directives/fade-in.directive';
-import { ServiceWorkerModule } from '@angular/service-worker';
-import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [

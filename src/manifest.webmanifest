@@ -1,8 +1,8 @@
 {
-  "name": "blai30-github-io",
-  "short_name": "blai30-github-io",
-  "theme_color": "#1976d2",
-  "background_color": "#fafafa",
+  "name": "Brian Lai",
+  "short_name": "Brian Lai",
+  "theme_color": "#E11D48",
+  "background_color": "#1C1917",
   "display": "standalone",
   "scope": "./",
   "start_url": "./",
