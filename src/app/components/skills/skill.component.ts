@@ -14,6 +14,15 @@ export interface Skill {
   styles: [],
 })
 export class SkillComponent {
+  @Input() index = 0;
+
+  @Input() skill: Skill = {
+    skillName: 'Angular',
+    svgPath: 'assets/logos/angular.svg',
+    svgPathDark: 'assets/logos/unity-black.png',
+    vendorUrl: 'https://www.angular.io',
+  };
+
   constructor(
     private themeService: ThemeService,
   ) {
@@ -22,11 +31,4 @@ export class SkillComponent {
   isDark(): boolean {
     return this.themeService.isDark;
   }
-
-  @Input() skill: Skill = {
-    skillName: 'Angular',
-    svgPath: 'assets/logos/angular.svg',
-    svgPathDark: 'assets/logos/unity-black.png',
-    vendorUrl: 'https://www.angular.io',
-  };
 }

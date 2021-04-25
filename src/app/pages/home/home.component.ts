@@ -16,12 +16,12 @@ export class HomeComponent implements OnInit {
       content: 'Brian Lai',
     },
     {
-      property: 'og:title',
-      content: 'Brian Lai',
-    },
-    {
       name: 'description',
       content: 'Software Engineer, Full-stack Web Developer, and Unity hobbyist from San Francisco Bay Area, CA.',
+    },
+    {
+      property: 'og:title',
+      content: 'Brian Lai',
     },
     {
       property: 'og:description',

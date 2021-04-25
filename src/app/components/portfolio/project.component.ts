@@ -17,6 +17,8 @@ export interface Project {
   ]
 })
 export class ProjectComponent {
+  @Input() index = 0;
+
   @Input() project: Project = {
     title: 'Raspberry Pi self-driving car',
     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, eligendi, ullam! A debitis enim fugit impedit incidunt, ipsum nobis nulla numquam odit perspiciatis quam qui quo ratione reiciendis sit voluptatem!',

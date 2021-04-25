@@ -5,15 +5,27 @@
   </p>
   <h3>Programming Languages</h3>
   <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
-    <app-skill *ngFor="let skill of skills[0]" [skill]="skill"></app-skill>
+    <app-skill
+      *ngFor="let skill of skills[0]; index as i;"
+      [skill]="skill"
+      [index]="i"
+    ></app-skill>
   </div>
   <h3>Technologies</h3>
   <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
-    <app-skill *ngFor="let skill of skills[1]" [skill]="skill"></app-skill>
+    <app-skill
+      *ngFor="let skill of skills[1]; index as i;"
+      [skill]="skill"
+      [index]="i"
+    ></app-skill>
   </div>
   <h3>Tooling</h3>
   <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
-    <app-skill *ngFor="let skill of skills[2]" [skill]="skill"></app-skill>
+    <app-skill
+      *ngFor="let skill of skills[2]; index as i;"
+      [skill]="skill"
+      [index]="i"
+    ></app-skill>
   </div>
   <p class="font-light text-sm text-gray-600">
     * I am not affiliated with the logos featured, all logos are registered trademarks of their respective owners.
