@@ -17,7 +17,7 @@ export class SkillsComponent {
       {
         skillName: 'Java',
         svgPath: 'assets/logos/java-icon.svg',
-        vendorUrl: 'https://openjdk.java.net/',
+        vendorUrl: 'https://www.java.com/',
       },
       {
         skillName: 'TypeScript',
@@ -69,7 +69,6 @@ export class SkillsComponent {
       {
         skillName: 'MySQL',
         svgPath: 'assets/logos/mysql.png',
-        svgPathDark: 'assets/logos/mysql-dark.png',
         vendorUrl: 'https://www.mysql.com/',
       },
     ],
