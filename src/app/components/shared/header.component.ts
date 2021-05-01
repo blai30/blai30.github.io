@@ -1,21 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-layout-header',
   templateUrl: './header.component.html',
   styles: [],
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
   mounted = true;
   docked = true;
   previousScroll = window.pageYOffset;
 
-  ngOnInit(): void {
-    window.onscroll = () => {
-      const currentScroll = window.pageYOffset;
-      this.mounted = this.previousScroll > currentScroll || currentScroll <= 0;
-      this.docked = this.previousScroll < 50 || currentScroll <= 0;
-      this.previousScroll = currentScroll;
-    };
+  @HostListener('window:scroll', ['$event'])
+  autoHide(event: Event): void {
+    const currentScroll = window.pageYOffset;
+    this.mounted = (currentScroll < this.previousScroll && currentScroll < document.body.clientHeight) || currentScroll <= 50;
+    this.docked = currentScroll <= 50;
+    this.previousScroll = currentScroll;
   }
 }
