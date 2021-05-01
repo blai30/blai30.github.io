@@ -13,7 +13,7 @@ export class HeaderComponent {
   @HostListener('window:scroll', ['$event'])
   autoHide(event: Event): void {
     const currentScroll = window.pageYOffset;
-    this.mounted = (currentScroll < this.previousScroll && currentScroll < document.body.clientHeight) || currentScroll <= 50;
+    this.mounted = currentScroll < this.previousScroll || currentScroll <= 50;
     this.docked = currentScroll <= 50;
     this.previousScroll = currentScroll;
   }
