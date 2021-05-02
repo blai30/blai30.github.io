@@ -27,6 +27,11 @@ module.exports = {
       pink: colors.rose,
     },
     extend: {
+      screens: {
+        'hover': {
+          'raw': '(hover: hover)',
+        },
+      },
       zIndex: {
         '-10': '-10',
       },
