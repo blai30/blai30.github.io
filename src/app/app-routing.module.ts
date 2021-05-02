@@ -5,8 +5,12 @@ import { HomeComponent } from "./pages/home/home.component";
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent,
     pathMatch: 'full',
+    redirectTo: 'home',
+  },
+  {
+    path: 'home',
+    component: HomeComponent,
   },
 ];
 
