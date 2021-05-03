@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes, UrlTree } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from "./pages/home/home.component";
 import { PageNotFoundComponent } from "./pages/page-not-found";
 
@@ -16,11 +16,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {
-    malformedUriErrorHandler: (error, urlSerializer, url) => {
-      return new UrlTree();
-    },
-  })],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
 export class AppRoutingModule {
