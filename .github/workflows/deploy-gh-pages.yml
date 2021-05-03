@@ -22,6 +22,14 @@ jobs:
           npm install
           npm run build:prod
 
+      # Copy index.html to 404.html to serve the same file when a file is not found.
+      - name: Copy index.html to 404.html
+        run: cp dist/bhlai-com/index.html dist/bhlai-com/404.html
+
+      # Add .nojekyll file so GitHub pages doesn't treat this project as a Jekyll project. (Allow files and folders starting with an underscore)
+      - name: Add .nojekyll file
+        run: touch dist/bhlai-com/.nojekyll
+
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.1
         with:
