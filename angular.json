@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "blai30-github-io": {
+    "bhlai-com": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/blai30-github-io",
+            "outputPath": "dist/bhlai-com",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -71,18 +71,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "blai30-github-io:build"
+            "browserTarget": "bhlai-com:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "blai30-github-io:build:production"
+              "browserTarget": "bhlai-com:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "blai30-github-io:build"
+            "browserTarget": "bhlai-com:build"
           }
         },
         "test": {
@@ -116,18 +116,18 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "blai30-github-io:serve"
+            "devServerTarget": "bhlai-com:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "blai30-github-io:serve:production"
+              "devServerTarget": "bhlai-com:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "blai30-github-io",
+  "defaultProject": "bhlai-com",
   "cli": {
     "defaultCollection": "@angular-eslint/schematics"
   }

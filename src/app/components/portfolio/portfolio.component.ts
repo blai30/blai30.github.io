@@ -20,7 +20,7 @@ export class PortfolioComponent {
     {
       title: 'Text Morph',
       description: 'Web app allowing users to transform text, built with Angular and styled with Tailwind CSS. Ability to manipulate letter casing, trim whitespace, insert clap emojis between words, convert numbers to spelled-out words, and more.',
-      externalUrl: 'https://www.bhlai.com/text-morph/',
+      externalUrl: 'https://blai30.github.io/text-morph/',
       githubUrl: 'https://github.com/blai30/text-morph/',
       thumbnailPath: 'assets/images/projects/textmorph.png',
       tags: ['Angular', 'TypeScript', 'Tailwind CSS'],

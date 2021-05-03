@@ -27,4 +27,4 @@ jobs:
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           branch: gh-pages
-          folder: dist/blai30-github-io
+          folder: dist/bhlai-com
