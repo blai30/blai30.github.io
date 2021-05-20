@@ -40,8 +40,9 @@ module.exports = {
         pink: {
           css: {
             a: {
+              color: theme('colors.pink.700'),
               '&:hover': {
-                color: theme('colors.pink.400'),
+                color: theme('colors.pink.500'),
               },
             },
           },
