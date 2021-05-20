@@ -28,5 +28,18 @@
         ]
       }
     }
+  ],
+  "dataGroups": [
+    {
+      "name": "static",
+      "urls": [
+        "/"
+      ],
+      "cacheConfig": {
+        "strategy": "performance",
+        "maxSize": 100,
+        "maxAge": "3d"
+      }
+    }
   ]
 }

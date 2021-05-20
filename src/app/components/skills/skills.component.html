@@ -16,7 +16,7 @@
     <app-skill
       *ngFor="let skill of skills[1]; index as i;"
       [skill]="skill"
-      [index]="i"
+      [index]="i + 100"
     ></app-skill>
   </div>
   <h3>Tooling</h3>
@@ -24,10 +24,10 @@
     <app-skill
       *ngFor="let skill of skills[2]; index as i;"
       [skill]="skill"
-      [index]="i"
+      [index]="i + 200"
     ></app-skill>
   </div>
-  <p class="font-light text-sm text-gray-600">
+  <p class="font-light text-sm text-gray-600 dark:text-gray-400">
     * I am not affiliated with the logos featured, all logos are registered trademarks of their respective owners.
   </p>
 </div>
