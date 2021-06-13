@@ -12,7 +12,7 @@ export class PortfolioComponent {
       title: 'Asuka.Net Discord bot',
       description: 'Discord bot written in C# using the Discord.Net library and dependency injection with .NET 5, Entity Framework Core with MySQL database, and Docker for build and deployment. Various utility and fun commands are available for users to manage reaction roles, fetch Urban Dictionary definitions, play music, and more.',
       externalUrl: 'https://discord.com/api/oauth2/authorize?client_id=547507928287019009&permissions=1580330096&scope=bot',
-      githubUrl: 'https://github.com/blai30/AsukaNet/',
+      githubUrl: 'https://github.com/blai30/Asuka.Net/',
       thumbnailPath: 'assets/images/projects/asuka.png',
       tags: ['C#', '.NET', 'MySQL', 'Docker'],
       // readMoreRoute: 'projects/AsukaNet',

@@ -1,5 +1,4 @@
 const colors = require('tailwindcss/colors');
-const defaultTheme = require('tailwindcss/defaultTheme');
 
 const mode = process.env.TAILWIND_MODE ? 'jit' : 'aot';
 
@@ -33,8 +32,8 @@ module.exports = {
         '-10': '-10',
       },
       fontFamily: {
-        sans: ['Inter', ...defaultTheme.fontFamily.sans],
-        mono: ['JetBrains Mono', ...defaultTheme.fontFamily.mono],
+        sans: ['Inter', ...fontFamily.sans],
+        mono: ['JetBrains Mono', ...fontFamily.mono],
       },
       typography: (theme) => ({
         pink: {
