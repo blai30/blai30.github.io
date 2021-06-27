@@ -5,8 +5,6 @@ const mode = process.env.TAILWIND_MODE ? 'jit' : 'aot';
 
 module.exports = {
   mode: mode,
-  // NODE_ENV set to 'production' to purge.
-  // Don't purge during development for PostCSS faster reloads.
   purge: [
     './src/**/*.{js,jsx,ts,tsx,vue,html}',
     './src/index.html',
@@ -33,8 +31,7 @@ module.exports = {
         '-10': '-10',
       },
       fontFamily: {
-        sans: ['Inter', ...defaultTheme.fontFamily.sans],
-        mono: ['JetBrains Mono', ...defaultTheme.fontFamily.mono],
+        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
       },
       typography: (theme) => ({
         pink: {

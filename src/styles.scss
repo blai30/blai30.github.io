@@ -3,14 +3,4 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-@layer base {
-  @font-face {
-    font-family: Inter;
-    src: url(fonts/Inter.ttf) format("ttf");
-  }
-
-  @font-face {
-    font-family: JetBrains Mono;
-    src: url(fonts/JetBrainsMono-Regular.ttf) format("ttf");
-  }
-}
+@import url('https://rsms.me/inter/inter.css');
