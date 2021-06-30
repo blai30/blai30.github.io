@@ -1,10 +1,7 @@
 const colors = require('tailwindcss/colors');
 const defaultTheme = require('tailwindcss/defaultTheme');
 
-const mode = process.env.TAILWIND_MODE ? 'jit' : 'aot';
-
 module.exports = {
-  mode: mode,
   purge: [
     './src/**/*.{js,jsx,ts,tsx,vue,html}',
     './src/index.html',
@@ -27,9 +24,6 @@ module.exports = {
       pink: colors.rose,
     },
     extend: {
-      zIndex: {
-        '-10': '-10',
-      },
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
       },
