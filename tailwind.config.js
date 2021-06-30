@@ -2,6 +2,7 @@ const colors = require('tailwindcss/colors');
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
+  mode: 'jit',
   purge: [
     './src/**/*.{js,jsx,ts,tsx,vue,html}',
     './src/index.html',
@@ -18,7 +19,7 @@ module.exports = {
       red: colors.red,
       yellow: colors.amber,
       green: colors.emerald,
-      blue: colors.lightBlue,
+      blue: colors.sky,
       indigo: colors.indigo,
       purple: colors.violet,
       pink: colors.rose,
