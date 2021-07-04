@@ -1,7 +1,12 @@
+@import url('https://rsms.me/inter/inter.css');
+
 @tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 @layer base {
-  @import url('https://rsms.me/inter/inter.css');
+  html, body, h1, h2, h3, h4, h5, h6, a, p, span, img, .prose {
+    @apply transition-colors ease-in-out;
+  }
 }
+
+@tailwind components;
+@tailwind utilities;

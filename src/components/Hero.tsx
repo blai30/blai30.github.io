@@ -1,9 +1,7 @@
-import Image from 'next/image'
-
 const Hero = () => {
   return (
     <div className="mx-auto prose prose-pink md:prose-lg dark:prose-dark">
-      <Image
+      <img
         id="hero-avatar"
         src="/hero.png"
         alt="avatar"

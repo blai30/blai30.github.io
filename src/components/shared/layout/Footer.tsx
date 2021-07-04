@@ -8,7 +8,7 @@ const Footer = () => {
           <a
             id="footer-credits"
             href="https://github.com/blai30/www.bhlai.com/"
-            className="transition-colors ease-in-out hover:text-pink-400"
+            className="hover:text-pink-400"
           >
             <span>Made by Brian with Next.js & Tailwind &copy; {today}</span>
           </a>

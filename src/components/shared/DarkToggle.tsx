@@ -1,23 +1,35 @@
-import { useState } from 'react'
 import { Switch } from '@headlessui/react'
+import { useEffect, useState } from 'react'
+import { useTheme } from 'next-themes'
 
 const DarkToggle = () => {
-  const [enabled, setEnabled] = useState(false)
+  const { theme, setTheme } = useTheme()
+  const [mounted, setMounted] = useState(false)
+
+  // Delay display until mounted to client, this will ensure initial state.
+  useEffect(() => setMounted(true), [])
+
+  if (!mounted) {
+    return null
+  }
 
   return (
     <Switch
-      checked={enabled}
-      onChange={setEnabled}
-      className={`
-        ${enabled ? 'bg-purple-700' : 'bg-yellow-400'} relative inline-flex items-center h-6 transition-colors ease-in-out duration-200 rounded-full w-11 focus:outline-none
-      `}
+      id="dark-toggle"
+      checked={theme === 'light'}
+      onChange={() => setTheme(theme === 'light' ? 'dark' : 'light')}
+      className={`${
+        theme === 'dark' ? 'bg-gray-200' : 'bg-gray-700'
+      } relative inline-flex items-center h-6 transition ease-in-out duration-200 rounded-full w-11 focus:outline-none`}
     >
       <span className="sr-only">Enable dark mode</span>
       <span
         aria-hidden="true"
-        className={`
-          ${enabled ? 'translate-x-6' : 'translate-x-1'} pointer-events-none inline-block w-4 h-4 transform ring-0 transition-transform ease-in-out duration-200 bg-white rounded-full
-        `}
+        className={`${
+          theme === 'dark'
+            ? 'translate-x-6 bg-gray-700'
+            : 'translate-x-1 bg-gray-200'
+        } pointer-events-none inline-block w-4 h-4 transform ring-0 transition ease-in-out duration-200 bg-white rounded-full`}
       />
     </Switch>
   )

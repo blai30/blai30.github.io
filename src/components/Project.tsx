@@ -1,5 +1,3 @@
-import Image from 'next/image'
-
 export interface ProjectData {
   title: string
   description: string
@@ -42,13 +40,13 @@ const Project = (props: ProjectData & { id: number }) => {
               <div className="mt-3 flex items-end justify-between">
                 <div className="flex flex-wrap space-x-2">
                   {props.tags?.map((tag, index) => (
-                    <div
+                    <span
                       key={index}
                       id={`project-${props.id}-tag-${index}`}
                       className="rounded-full py-1 px-2 font-light text-sm bg-gray-300 dark:bg-gray-700"
                     >
                       {tag}
-                    </div>
+                    </span>
                   ))}
                 </div>
                 <div className="flex justify-between space-x-3">
@@ -97,11 +95,10 @@ const Project = (props: ProjectData & { id: number }) => {
           </div>
         </div>
         <div className="aspect-w-1 aspect-h-1">
-          <Image
+          <img
             id={`project-${props.id}-thumbnail`}
             src={props.thumbnailPath}
             alt=" Project Thumbnail"
-            layout="fill"
             className="my-0 inset-0 object-cover object-left-top overflow-hidden"
           />
         </div>
