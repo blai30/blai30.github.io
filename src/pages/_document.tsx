@@ -80,6 +80,9 @@ class MyDocument extends Document {
             type="image/x-icon"
           />
           <link rel="manifest" href="/manifest.json" />
+
+          {/* Styles. */}
+          <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
         </Head>
         <body className="antialiased bg-white dark:bg-gray-900">
           <Main />
