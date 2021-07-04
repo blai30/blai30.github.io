@@ -11,7 +11,6 @@ const Portfolio = () => {
       githubUrl: 'https://github.com/blai30/Asuka.Net/',
       thumbnailPath: '/images/projects/asuka.png',
       tags: ['C#', '.NET', 'MySQL', 'Docker'],
-      // readMoreRoute: 'projects/AsukaNet',
     },
     {
       title: 'Text Morph',
@@ -21,7 +20,6 @@ const Portfolio = () => {
       githubUrl: 'https://github.com/blai30/text-morph/',
       thumbnailPath: '/images/projects/textmorph.png',
       tags: ['Angular', 'TypeScript', 'Tailwind CSS'],
-      // readMoreRoute: 'projects/text-morph',
     },
     {
       title: 'Infection FPS',
@@ -32,7 +30,6 @@ const Portfolio = () => {
       githubUrl: 'https://github.com/blai30/infection/',
       thumbnailPath: '/images/projects/infection.png',
       tags: ['Unity', 'C#'],
-      // readMoreRoute: 'projects/Infection',
     },
     {
       title: 'Raspberry Pi robot car',
@@ -41,7 +38,6 @@ const Portfolio = () => {
       githubUrl: 'https://github.com/blai30/CSC615AutonomousCar/',
       thumbnailPath: '/images/projects/picar.png',
       tags: ['C', 'Raspberry Pi'],
-      // readMoreRoute: 'projects/PiCar',
     },
     {
       title: 'Mecha Fighter VR',
@@ -50,17 +46,15 @@ const Portfolio = () => {
       githubUrl: 'https://github.com/blai30/Mecha-Fighter-VR/',
       thumbnailPath: '/images/projects/mecha.png',
       tags: ['Unity', 'C#', 'Java'],
-      // readMoreRoute: 'projects/Mecha-Fighter-VR',
     },
     {
       title: 'RPG Core Combat Sandbox',
       description:
         'Top-down click to move and attack combat system for a 3D RPG game created in Unity C#. Utilizes the Universal Render Pipeline to create custom shaders for water, animation controller for 3D character animations, particle system for spell VFX, and terrain tools to sculpt terrain.',
-      externalUrl: 'assets/works/RPG-Core-Combat/',
+      externalUrl: 'https://blai30.github.io/RPG-Core-Combat',
       githubUrl: 'https://github.com/blai30/RPG-Core-Combat/',
       thumbnailPath: '/images/projects/rpg.png',
       tags: ['Unity', 'C#'],
-      // readMoreRoute: 'projects/RPG-Core-Combat',
     },
     {
       title: 'BaySpace - Image posting',
@@ -69,7 +63,6 @@ const Portfolio = () => {
       githubUrl: 'https://github.com/blai30/BaySpace/',
       thumbnailPath: '/images/projects/bayspace.png',
       tags: ['NodeJS', 'JavaScript', 'MySQL', 'AWS'],
-      // readMoreRoute: 'projects/BaySpace',
     },
     {
       title: 'Bomberman Java',
@@ -79,7 +72,6 @@ const Portfolio = () => {
       githubUrl: 'https://github.com/blai30/bomberman-java/',
       thumbnailPath: '/images/projects/bomberman.png',
       tags: ['Java', 'Maven'],
-      // readMoreRoute: 'projects/Bomberman',
     },
     {
       title: 'Tank Game Java',
@@ -89,7 +81,6 @@ const Portfolio = () => {
       githubUrl: 'https://github.com/blai30/tankgame-java/',
       thumbnailPath: '/images/projects/tankgame.png',
       tags: ['Java', 'Maven'],
-      // readMoreRoute: 'projects/TankGame',
     },
   ]
 
