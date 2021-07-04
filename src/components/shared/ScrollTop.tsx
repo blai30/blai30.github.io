@@ -1,26 +1,26 @@
+import { useEffect, useState } from 'react'
 import { ArrowUpIcon } from '@heroicons/react/outline'
-import { useEffect, useState } from "react";
 
 const ScrollTop = () => {
-  const [visible, setVisible] = useState(false);
+  const [visible, setVisible] = useState(false)
 
   const toggleVisible = (): void => {
     if (window.pageYOffset > 300) {
-      setVisible(true);
+      setVisible(true)
     } else {
-      setVisible(false);
+      setVisible(false)
     }
   }
 
   const onScrollTop = (): void => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth"
+      behavior: 'smooth',
     })
   }
 
   useEffect(() => {
-    window.addEventListener("scroll", toggleVisible)
+    window.addEventListener('scroll', toggleVisible)
   }, [])
 
   return (

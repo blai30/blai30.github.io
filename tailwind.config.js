@@ -1,11 +1,9 @@
 const colors = require('tailwindcss/colors')
-const defaultTheme = require('tailwindcss/defaultTheme');
+const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
   mode: 'jit',
-  purge: [
-    './src/**/*.{js,jsx,ts,tsx,vue,html}',
-  ],
+  purge: ['./src/**/*.{js,jsx,ts,tsx,vue,html}'],
   // Fixes y margins on thumbnails.
   important: true,
   darkMode: 'class',
@@ -94,9 +92,7 @@ module.exports = {
   },
   variants: {
     extend: {
-      typography: [
-        'dark',
-      ],
+      typography: ['dark'],
     },
   },
   plugins: [
@@ -104,4 +100,4 @@ module.exports = {
     require('@tailwindcss/forms'),
     require('@tailwindcss/typography'),
   ],
-};
+}
