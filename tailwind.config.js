@@ -1,14 +1,14 @@
-const colors = require('tailwindcss/colors');
+const colors = require('tailwindcss/colors')
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
   mode: 'jit',
   purge: [
     './src/**/*.{js,jsx,ts,tsx,vue,html}',
-    './src/index.html',
   ],
+  // Fixes y margins on thumbnails.
   important: true,
-  darkMode: 'class', // or 'media' or 'class'
+  darkMode: 'class',
   theme: {
     colors: {
       transparent: 'transparent',
