@@ -1,3 +1,5 @@
+import { useTheme } from 'next-themes'
+
 export interface SkillData {
   skillName: string
   svgPath: string
@@ -6,6 +8,9 @@ export interface SkillData {
 }
 
 const Skill = (props: SkillData & { id: number }) => {
+  const { systemTheme, theme } = useTheme()
+  const currentTheme = theme === 'system' ? systemTheme : theme
+
   return (
     <a
       id={`skill-${props.id}-url`}
@@ -19,7 +24,7 @@ const Skill = (props: SkillData & { id: number }) => {
           </span>
           <img
             id={`skill-${props.id}-image`}
-            src={props.svgPath}
+            src={currentTheme === 'dark' && props.svgPathDark ? props.svgPathDark : props.svgPath}
             alt="logo"
             className="my-auto w-16 md:w-20 max-h-16 md:max-h-20"
             width={128}
