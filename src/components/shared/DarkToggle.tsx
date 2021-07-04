@@ -3,7 +3,8 @@ import { useEffect, useState } from 'react'
 import { useTheme } from 'next-themes'
 
 const DarkToggle = () => {
-  const { theme, setTheme } = useTheme()
+  const { systemTheme, theme, setTheme } = useTheme()
+  const currentTheme = theme === 'system' ? systemTheme : theme
   const [mounted, setMounted] = useState(false)
 
   // Delay display until mounted to client, this will ensure initial state.
@@ -16,17 +17,17 @@ const DarkToggle = () => {
   return (
     <Switch
       id="dark-toggle"
-      checked={theme === 'light'}
+      checked={currentTheme === 'light'}
       onChange={() => setTheme(theme === 'light' ? 'dark' : 'light')}
       className={`${
-        theme === 'dark' ? 'bg-gray-200' : 'bg-gray-700'
+        currentTheme === 'dark' ? 'bg-gray-200' : 'bg-gray-700'
       } relative inline-flex items-center h-6 transition ease-in-out duration-200 rounded-full w-11 focus:outline-none`}
     >
       <span className="sr-only">Enable dark mode</span>
       <span
         aria-hidden="true"
         className={`${
-          theme === 'dark'
+          currentTheme === 'dark'
             ? 'translate-x-6 bg-gray-700'
             : 'translate-x-1 bg-gray-200'
         } pointer-events-none inline-block w-4 h-4 transform ring-0 transition ease-in-out duration-200 bg-white rounded-full`}
