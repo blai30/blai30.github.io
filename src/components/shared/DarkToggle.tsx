@@ -9,7 +9,6 @@ const DarkToggle = () => {
 
   // Delay display until mounted to client, this will ensure initial state.
   useEffect(() => setMounted(true), [])
-
   if (!mounted) {
     return null
   }

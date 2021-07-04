@@ -5,108 +5,108 @@ const Skills = () => {
     [
       {
         skillName: 'C#',
-        svgPath: '/logos/csharp-original.svg',
+        logoPath: '/logos/csharp-original.svg',
         vendorUrl: 'https://docs.microsoft.com/en-us/dotnet/csharp/',
       },
       {
         skillName: 'Java',
-        svgPath: '/logos/java-icon.svg',
+        logoPath: '/logos/java-icon.svg',
         vendorUrl: 'https://www.java.com/',
       },
       {
         skillName: 'TypeScript',
-        svgPath: '/logos/typescript-original.svg',
+        logoPath: '/logos/typescript-original.svg',
         vendorUrl: 'https://www.typescriptlang.org/',
       },
       {
         skillName: 'JavaScript',
-        svgPath: '/logos/javascript-original.svg',
+        logoPath: '/logos/javascript-original.svg',
         vendorUrl: 'https://www.javascript.com/',
       },
       {
         skillName: 'Python',
-        svgPath: '/logos/python-icon.svg',
+        logoPath: '/logos/python-icon.svg',
         vendorUrl: 'https://www.python.org/',
       },
       {
         skillName: 'C++',
-        svgPath: '/logos/cplusplus-original.svg',
+        logoPath: '/logos/cplusplus-original.svg',
         vendorUrl: 'https://www.cplusplus.com/',
       },
     ],
     [
       {
         skillName: '.NET',
-        svgPath: '/logos/dotnet.svg',
+        logoPath: '/logos/dotnet.svg',
         vendorUrl: 'https://dotnet.microsoft.com/',
       },
       {
         skillName: 'Angular',
-        svgPath: '/logos/angular.svg',
+        logoPath: '/logos/angular.svg',
         vendorUrl: 'https://www.angular.io/',
       },
       {
         skillName: 'React',
-        svgPath: '/logos/react-original.svg',
+        logoPath: '/logos/react-original.svg',
         vendorUrl: 'https://reactjs.org/',
       },
       {
         skillName: 'NodeJS',
-        svgPath: '/logos/nodejs-original.svg',
+        logoPath: '/logos/nodejs-original.svg',
         vendorUrl: 'https://nodejs.org/',
       },
       {
         skillName: 'Blazor',
-        svgPath: '/logos/Blazor.png',
+        logoPath: '/logos/Blazor.png',
         vendorUrl: 'https://blazor.net/',
       },
       {
         skillName: 'MySQL',
-        svgPath: '/logos/mysql.png',
+        logoPath: '/logos/mysql.png',
         vendorUrl: 'https://www.mysql.com/',
       },
     ],
     [
       {
         skillName: 'Unity',
-        svgPath: '/logos/unity-white.png',
-        svgPathDark: '/logos/unity-black.png',
+        logoPath: '/logos/unity-white.png',
+        logoPathDark: '/logos/unity-black.png',
         vendorUrl: 'https://unity.com/',
       },
       {
         skillName: 'Tailwind CSS',
-        svgPath: '/logos/tailwindcss.svg',
+        logoPath: '/logos/tailwindcss.svg',
         vendorUrl: 'https://tailwindcss.com/',
       },
       {
         skillName: 'Bootstrap',
-        svgPath: '/logos/bootstrap-logo.svg',
+        logoPath: '/logos/bootstrap-logo.svg',
         vendorUrl: 'https://getbootstrap.com/',
       },
       {
         skillName: 'Docker',
-        svgPath: '/logos/docker.png',
+        logoPath: '/logos/docker.png',
         vendorUrl: 'https://www.docker.com/',
       },
       {
         skillName: 'Amazon Web Services',
-        svgPath: '/logos/aws.svg',
-        svgPathDark: '/logos/aws-dark.svg',
+        logoPath: '/logos/aws.svg',
+        logoPathDark: '/logos/aws-dark.svg',
         vendorUrl: 'https://www.docker.com/',
       },
       {
         skillName: 'Google Cloud Platform',
-        svgPath: '/logos/google-cloud.svg',
+        logoPath: '/logos/google-cloud.svg',
         vendorUrl: 'https://www.docker.com/',
       },
       {
         skillName: 'Figma',
-        svgPath: '/logos/figma.svg',
+        logoPath: '/logos/figma.svg',
         vendorUrl: 'https://www.figma.com/',
       },
       {
         skillName: 'Sketch',
-        svgPath: '/logos/sketch.png',
+        logoPath: '/logos/sketch.png',
         vendorUrl: 'https://www.sketch.com/',
       },
     ],
@@ -126,8 +126,8 @@ const Skills = () => {
             key={index}
             id={index}
             skillName={skill.skillName}
-            svgPath={skill.svgPath}
-            svgPathDark={skill.svgPathDark}
+            logoPath={skill.logoPath}
+            logoPathDark={skill.logoPathDark}
             vendorUrl={skill.vendorUrl}
           />
         ))}
@@ -139,8 +139,8 @@ const Skills = () => {
             key={index}
             id={index + 100}
             skillName={skill.skillName}
-            svgPath={skill.svgPath}
-            svgPathDark={skill.svgPathDark}
+            logoPath={skill.logoPath}
+            logoPathDark={skill.logoPathDark}
             vendorUrl={skill.vendorUrl}
           />
         ))}
@@ -152,8 +152,8 @@ const Skills = () => {
             key={index}
             id={index + 200}
             skillName={skill.skillName}
-            svgPath={skill.svgPath}
-            svgPathDark={skill.svgPathDark}
+            logoPath={skill.logoPath}
+            logoPathDark={skill.logoPathDark}
             vendorUrl={skill.vendorUrl}
           />
         ))}
