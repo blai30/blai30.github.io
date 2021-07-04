@@ -13,7 +13,7 @@ const Contact = () => {
         <a
           id="contact-email"
           href="mailto:brianlai30@outlook.com"
-          className="inline-flex items-center no-underline dark:text-pink-400 dark:hover:text-pink-300"
+          className="inline-flex items-center no-underline dark:text-pink-400 dark:hover:text-pink-300 transition-colors ease-in-out"
         >
           <span>brianlai30@outlook.com</span>
         </a>
@@ -23,7 +23,7 @@ const Contact = () => {
         <a
           id="contact-resume"
           href="https://blai30.github.io/resume/"
-          className="inline-flex items-center no-underline dark:text-pink-400 dark:hover:text-pink-300"
+          className="inline-flex items-center no-underline dark:text-pink-400 dark:hover:text-pink-300 transition-colors ease-in-out"
         >
           <span>https://blai30.github.io/resume/</span>
         </a>
@@ -33,7 +33,7 @@ const Contact = () => {
         <a
           id="contact-linkedin"
           href="https://www.linkedin.com/in/blai/"
-          className="inline-flex items-center no-underline dark:text-pink-400 dark:hover:text-pink-300"
+          className="inline-flex items-center no-underline dark:text-pink-400 dark:hover:text-pink-300 transition-colors ease-in-out"
         >
           <span>https://www.linkedin.com/in/blai/</span>
         </a>
@@ -43,7 +43,7 @@ const Contact = () => {
         <a
           id="contact-github"
           href="https://github.com/blai30/"
-          className="inline-flex items-center no-underline dark:text-pink-400 dark:hover:text-pink-300"
+          className="inline-flex items-center no-underline dark:text-pink-400 dark:hover:text-pink-300 transition-colors ease-in-out"
         >
           <span>https://github.com/blai30/</span>
         </a>
