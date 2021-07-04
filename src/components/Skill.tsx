@@ -22,6 +22,8 @@ const Skill = (props: SkillData & { id: number }) => {
             src={props.svgPath}
             alt="logo"
             className="my-auto w-16 md:w-20 max-h-16 md:max-h-20"
+            width={128}
+            height={128}
           />
         </div>
       </div>
