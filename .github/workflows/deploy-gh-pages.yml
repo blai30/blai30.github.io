@@ -21,8 +21,15 @@ jobs:
           npm install
           npm run build:prod
 
+      - name: Add .nojekyll file
+        run: touch out/.nojekyll
+
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.4
         with:
           branch: gh-pages
           folder: out
+          clean: true
+          clean-exclude: |
+            CNAME
+            .nojekyll
