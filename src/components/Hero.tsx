@@ -92,7 +92,7 @@ const Hero = () => {
         I earned my Bachelor of Science in Computer Science from{' '}
         <a
           href="https://sfsu.edu/"
-          className="no-underline dark:text-pink-400 dark:hover:text-pink-300 transition-colors ease-in-out"
+          className="no-underline dark:text-pink-400 dark:hover:text-pink-300"
         >
           San Francisco State University
         </a>{' '}

@@ -32,7 +32,7 @@ const Header = () => {
           <ul className="items-center space-x-6">
             <li>
               <Link href="/">
-                <a className="font-bold text-2xl tracking-wide text-gray-600 dark:text-gray-300 hover:text-pink-600 dark:hover:text-pink-500 transition-colors ease-in-out">
+                <a className="font-bold text-2xl tracking-wide text-gray-600 dark:text-gray-300 hover:text-pink-600 dark:hover:text-pink-500">
                   BRIAN LAI
                 </a>
               </Link>

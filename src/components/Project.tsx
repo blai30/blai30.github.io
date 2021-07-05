@@ -21,12 +21,12 @@ const Project = (props: ProjectData & { id: number }) => {
               >
                 {props.title}
               </h3>
-              <div
+              <p
                 id={`project-${props.id}-description`}
                 className="font-light"
               >
                 {props.description}
-              </div>
+              </p>
               {props.readMoreRoute && (
                 <a
                   id={`project-${props.id}-readmore`}
