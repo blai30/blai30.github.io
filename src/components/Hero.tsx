@@ -72,7 +72,7 @@ const Hero = () => {
         </a>
         <a
           id="hero-email"
-          href="mailto:brianlai30@outlook.com"
+          href="mailto:contact@bhlai.com"
           title="Email"
           className="transition ease-in-out transform-gpu hover:scale-110 dark:text-pink-400 dark:hover:text-pink-300"
         >
