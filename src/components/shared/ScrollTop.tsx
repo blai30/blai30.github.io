@@ -28,7 +28,7 @@ const ScrollTop = () => {
       <button
         id="scroll-top"
         className={`
-        p-3 flex items-center justify-center transition transform-gpu ease-in-out backdrop-filter backdrop-blur-lg rounded-full shadow-lg hover:shadow-xl text-white dark:text-white bg-opacity-60 dark:bg-opacity-60 bg-pink-400 dark:bg-pink-500 hover:bg-pink-500 dark:hover:bg-pink-600 focus:outline-none
+        p-3 flex items-center justify-center transition transform-gpu ease-in-out backdrop-filter backdrop-blur-lg rounded-full shadow-lg hover:shadow-xl text-white dark:text-white bg-opacity-60 dark:bg-opacity-60 bg-rose-400 dark:bg-rose-500 hover:bg-rose-500 dark:hover:bg-rose-600 focus:outline-none
         ${visible ? 'hover:scale-110' : 'scale-0'}
         `}
         name="Scroll top"

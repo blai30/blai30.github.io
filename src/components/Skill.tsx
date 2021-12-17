@@ -25,7 +25,7 @@ const Skill = (props: SkillData & { id: number }) => {
       href={props.vendorUrl}
       className="block no-underline transition-shadow ease-in-out shadow-md hover:shadow-xl"
     >
-      <div className="p-2 transition ease-in-out bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700 dark:text-pink-400 dark:hover:text-pink-300">
+      <div className="p-2 transition ease-in-out bg-zinc-200 dark:bg-zinc-800 hover:bg-zinc-300 dark:hover:bg-zinc-700">
         <div className="flex flex-col h-28 md:h-32 items-center">
           <span id={`skill-${props.id}-name`} className="text-center">
             {props.skillName}

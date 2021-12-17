@@ -7,7 +7,7 @@ const MyApp = ({ Component, pageProps, router }: AppProps) => {
   // @ts-ignore
   const getLayout = Component.getLayout || ((page: NextPage) => page)
   return (
-    <ThemeProvider attribute="class">
+    <ThemeProvider attribute="class" enableSystem={true} defaultTheme="system">
       {getLayout(<Component {...pageProps} />)}
     </ThemeProvider>
   )

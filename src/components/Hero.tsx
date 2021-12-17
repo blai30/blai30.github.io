@@ -1,6 +1,6 @@
 const Hero = () => {
   return (
-    <div className="mx-auto prose prose-pink md:prose-lg dark:prose-dark">
+    <div className="mx-auto prose prose-zinc prose-rose dark:prose-invert hover:prose-a:text-rose-700 dark:prose-a:text-rose-400 hover:dark:prose-a:text-rose-300 md:prose-lg">
       <img
         id="hero-avatar"
         src="/hero.png"
@@ -19,7 +19,7 @@ const Hero = () => {
           id="hero-github"
           href="https://github.com/blai30/"
           title="GitHub"
-          className="transition ease-in-out transform-gpu hover:scale-110 dark:text-pink-400 dark:hover:text-pink-300"
+          className="transition ease-in-out transform-gpu hover:scale-110"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -36,7 +36,7 @@ const Hero = () => {
           id="hero-linkedin"
           href="https://www.linkedin.com/in/blai/"
           title="LinkedIn"
-          className="transition ease-in-out transform-gpu hover:scale-110 dark:text-pink-400 dark:hover:text-pink-300"
+          className="transition ease-in-out transform-gpu hover:scale-110"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -53,7 +53,7 @@ const Hero = () => {
           id="hero-resume"
           href="https://blai30.github.io/resume/"
           title="Resume"
-          className="transition ease-in-out transform-gpu hover:scale-110 dark:text-pink-400 dark:hover:text-pink-300"
+          className="transition ease-in-out transform-gpu hover:scale-110"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -74,7 +74,7 @@ const Hero = () => {
           id="hero-email"
           href="mailto:contact@bhlai.com"
           title="Email"
-          className="transition ease-in-out transform-gpu hover:scale-110 dark:text-pink-400 dark:hover:text-pink-300"
+          className="transition ease-in-out transform-gpu hover:scale-110"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -92,7 +92,7 @@ const Hero = () => {
         I earned my Bachelor of Science in Computer Science from{' '}
         <a
           href="https://sfsu.edu/"
-          className="no-underline dark:text-pink-400 dark:hover:text-pink-300"
+          className="no-underline"
         >
           San Francisco State University
         </a>{' '}

@@ -1,6 +1,6 @@
 const Contact = () => {
   return (
-    <div className="mx-auto prose prose-pink md:prose-lg dark:prose-dark">
+    <div className="mx-auto prose prose-zinc prose-rose dark:prose-invert hover:prose-a:text-rose-700 dark:prose-a:text-rose-400 hover:dark:prose-a:text-rose-300 md:prose-lg">
       <h2>Want to get in touch?</h2>
       <p>
         If you have any business inquiries, shoot me an email! I am open to all
@@ -13,7 +13,7 @@ const Contact = () => {
         <a
           id="contact-email"
           href="mailto:contact@bhlai.com"
-          className="inline-flex items-center no-underline dark:text-pink-400 dark:hover:text-pink-300"
+          className="inline-flex items-center no-underline"
         >
           <span>contact@bhlai.com</span>
         </a>
@@ -23,7 +23,7 @@ const Contact = () => {
         <a
           id="contact-resume"
           href="https://blai30.github.io/resume/"
-          className="inline-flex items-center no-underline dark:text-pink-400 dark:hover:text-pink-300"
+          className="inline-flex items-center no-underline"
         >
           <span>https://blai30.github.io/resume/</span>
         </a>
@@ -33,7 +33,7 @@ const Contact = () => {
         <a
           id="contact-linkedin"
           href="https://www.linkedin.com/in/blai/"
-          className="inline-flex items-center no-underline dark:text-pink-400 dark:hover:text-pink-300"
+          className="inline-flex items-center no-underline"
         >
           <span>https://www.linkedin.com/in/blai/</span>
         </a>
@@ -43,7 +43,7 @@ const Contact = () => {
         <a
           id="contact-github"
           href="https://github.com/blai30/"
-          className="inline-flex items-center no-underline dark:text-pink-400 dark:hover:text-pink-300"
+          className="inline-flex items-center no-underline"
         >
           <span>https://github.com/blai30/</span>
         </a>

@@ -113,7 +113,7 @@ const Skills = () => {
   ]
 
   return (
-    <div className="mx-auto prose prose-pink md:prose-lg dark:prose-dark">
+    <div className="mx-auto prose prose-zinc prose-rose dark:prose-invert hover:prose-a:text-rose-700 dark:prose-a:text-rose-400 hover:dark:prose-a:text-rose-300 md:prose-lg">
       <h2>Skills</h2>
       <p>
         I enjoy learning and using new tools and technologies every day. Below
@@ -158,7 +158,7 @@ const Skills = () => {
           />
         ))}
       </div>
-      <p className="font-light text-sm text-gray-600 dark:text-gray-400">
+      <p className="font-light text-sm text-zinc-600 dark:text-zinc-400">
         * I am not affiliated with the logos featured, all logos are registered
         trademarks of their respective owners.
       </p>
