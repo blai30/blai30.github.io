@@ -1,5 +1,5 @@
+import { useEffect, useState } from 'react'
 import { useTheme } from 'next-themes'
-import { useEffect, useState } from "react";
 
 export interface SkillData {
   skillName: string
@@ -26,7 +26,7 @@ const Skill = (props: SkillData & { id: number }) => {
       className="block no-underline transition-shadow ease-in-out shadow-md hover:shadow-xl"
     >
       <div className="p-2 transition ease-in-out bg-zinc-200 dark:bg-zinc-800 hover:bg-zinc-300 dark:hover:bg-zinc-700">
-        <div className="flex flex-col h-28 md:h-32 items-center">
+        <div className="relative flex flex-col h-28 md:h-32 items-center">
           <span id={`skill-${props.id}-name`} className="text-center">
             {props.skillName}
           </span>
@@ -35,8 +35,6 @@ const Skill = (props: SkillData & { id: number }) => {
             src={currentTheme === 'dark' && props.logoPathDark ? props.logoPathDark : props.logoPath}
             alt="logo"
             className="my-auto w-16 md:w-20 max-h-16 md:max-h-20"
-            width={128}
-            height={128}
           />
         </div>
       </div>
