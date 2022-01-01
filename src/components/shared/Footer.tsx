@@ -1,5 +1,5 @@
 const Footer = () => {
-  const today: number = new Date().getFullYear()
+  const year = new Date().getFullYear()
 
   return (
     <footer id="footer" className="container mx-auto mb-4 p-8">
@@ -9,7 +9,7 @@ const Footer = () => {
           href="https://github.com/blai30/blai30.github.io/"
           className="text-sm font-light text-zinc-600 dark:text-zinc-400 hover:text-rose-400 dark:hover:text-rose-400"
         >
-          <span>Made by Brian with Next.js & Tailwind &copy; {today}</span>
+          <span>Made by Brian with Next.js & Tailwind &copy; {year}</span>
         </a>
       </div>
     </footer>

@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
-import DarkToggle from '@/components/shared/DarkToggle'
-import useDocumentScrollThrottled from '@/hooks/useDocumentScrollThrottled'
+import { DarkToggle } from '@/components/shared'
+import { useDocumentScrollThrottled } from '@/hooks'
 
 const Header = () => {
   const [mounted, setMounted] = useState(false)

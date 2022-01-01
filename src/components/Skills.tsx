@@ -1,4 +1,4 @@
-import Skill, { SkillData } from "@/components/Skill";
+import { Skill, SkillData } from '@/components'
 
 const Skills = () => {
   const skills: SkillData[][] = [

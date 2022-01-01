@@ -1,9 +1,6 @@
 import { NextPage } from 'next'
-import { getLayout } from '@/components/shared/layout/Layout'
-import Contact from '@/components/Contact'
-import Hero from '@/components/Hero'
-import Portfolio from '@/components/Portfolio'
-import Skills from '@/components/Skills'
+import { getLayout } from '@/components/shared'
+import { Contact, Hero, Portfolio, Skills } from '@/components'
 
 const Home = () => {
   return (

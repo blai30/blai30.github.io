@@ -1,7 +1,7 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
-  content: ['./src/**/*.{js,jsx,ts,tsx,vue,html}'],
+  content: ['./src/**/*.{js,jsx,ts,tsx}'],
   // Fixes y margins on thumbnails.
   important: true,
   darkMode: 'class',
