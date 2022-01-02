@@ -99,7 +99,7 @@ const Project = (props: ProjectData & { id: number }) => {
             id={`project-${props.id}-thumbnail`}
             src={props.thumbnailPath}
             alt=" Project Thumbnail"
-            className="h-full my-0 object-cover object-left-top overflow-hidden"
+            className="my-0 object-cover object-left-top overflow-hidden"
           />
         </div>
       </div>
