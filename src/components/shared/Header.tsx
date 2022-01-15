@@ -23,7 +23,7 @@ const Header = () => {
 
   return (
     <header
-      className={`${mounted ? '-translate-y-24' : ''} ${docked ? 'shadow-xl backdrop-filter backdrop-blur-lg' : ''} fixed z-20 w-full transition duration-500 ease-out transform-gpu bg-opacity-60 dark:bg-opacity-60 bg-white dark:bg-zinc-900`}
+      className={`${mounted ? '-translate-y-24' : ''} ${docked ? 'shadow-xl backdrop-filter backdrop-blur-lg' : ''} fixed z-20 w-full transition duration-500 ease-out transform-gpu bg-opacity-60 dark:bg-opacity-60 bg-white dark:bg-zinc-900 print:hidden`}
     >
       <div className="px-4 mx-auto max-w-screen-md w-auto py-4 md:py-6">
         {/* Navigation links */}

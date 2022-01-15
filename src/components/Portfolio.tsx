@@ -85,13 +85,13 @@ const Portfolio = () => {
   ]
 
   return (
-    <div className="mx-auto prose prose-zinc prose-rose dark:prose-invert hover:prose-a:text-rose-700 dark:prose-a:text-rose-400 hover:dark:prose-a:text-rose-300 md:prose-lg">
+    <div className="mx-auto prose prose-zinc prose-rose dark:prose-invert print:dark:prose-zinc hover:prose-a:text-rose-700 dark:prose-a:text-rose-400 hover:dark:prose-a:text-rose-300 print:dark:prose-a:text-rose-600 print:dark:hover:prose-a:text-rose-700 md:prose-lg">
       <h2>Featured Projects</h2>
       <p>
         These are some of the past projects I worked on that I choose to
         showcase.
       </p>
-      <div className="flex flex-col space-y-12">
+      <div className="flex flex-col space-y-12 print:divide-y">
         {projects.map((project, index) => (
           <Project
             key={index}

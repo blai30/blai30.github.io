@@ -24,7 +24,7 @@ const ScrollTop = () => {
   }, [])
 
   return (
-    <div className="block fixed bottom-20 right-10 md:right-16 z-50">
+    <div className="block fixed bottom-20 right-10 md:right-16 z-50 print:hidden">
       <button
         id="scroll-top"
         className={`

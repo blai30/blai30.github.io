@@ -23,7 +23,7 @@ const Skill = (props: SkillData & { id: number }) => {
     <a
       id={`skill-${props.id}-url`}
       href={props.vendorUrl}
-      className="block no-underline transition-shadow ease-in-out shadow-md hover:shadow-xl"
+      className="block no-underline transition-shadow ease-in-out shadow-md hover:shadow-xl print:shadow-none"
     >
       <div className="p-2 transition ease-in-out bg-zinc-200 dark:bg-zinc-800 hover:bg-zinc-300 dark:hover:bg-zinc-700">
         <div className="relative flex flex-col h-28 md:h-32 items-center">

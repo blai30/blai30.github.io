@@ -113,14 +113,14 @@ const Skills = () => {
   ]
 
   return (
-    <div className="mx-auto prose prose-zinc prose-rose dark:prose-invert hover:prose-a:text-rose-700 dark:prose-a:text-rose-400 hover:dark:prose-a:text-rose-300 md:prose-lg">
+    <div className="mx-auto prose prose-zinc prose-rose dark:prose-invert print:dark:prose-zinc hover:prose-a:text-rose-700 dark:prose-a:text-rose-400 hover:dark:prose-a:text-rose-300 print:dark:prose-a:text-rose-600 print:dark:hover:prose-a:text-rose-700 md:prose-lg">
       <h2>Skills</h2>
       <p>
         I enjoy learning and using new tools and technologies every day. Below
         is a collection of what I am most familiar with when building projects.
       </p>
       <h3>Programming Languages</h3>
-      <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+      <div className="grid grid-cols-2 sm:grid-cols-3 print:grid-cols-3 gap-4">
         {skills[0].map((skill, index) => (
           <Skill
             key={index}
@@ -133,7 +133,7 @@ const Skills = () => {
         ))}
       </div>
       <h3>Technologies</h3>
-      <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+      <div className="grid grid-cols-2 sm:grid-cols-3 print:grid-cols-3 gap-4">
         {skills[1].map((skill, index) => (
           <Skill
             key={index}
@@ -146,7 +146,7 @@ const Skills = () => {
         ))}
       </div>
       <h3>Tooling</h3>
-      <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+      <div className="grid grid-cols-2 sm:grid-cols-3 print:grid-cols-3 gap-4">
         {skills[2].map((skill, index) => (
           <Skill
             key={index}
