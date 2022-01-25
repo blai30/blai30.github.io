@@ -21,10 +21,7 @@ const Project = (props: ProjectData & { id: number }) => {
               >
                 {props.title}
               </h3>
-              <p
-                id={`project-${props.id}-description`}
-                className="font-light"
-              >
+              <p id={`project-${props.id}-description`} className="font-light">
                 {props.description}
               </p>
               {props.readMoreRoute && (
@@ -36,7 +33,10 @@ const Project = (props: ProjectData & { id: number }) => {
                 </a>
               )}
             </div>
-            <div id={`project-${props.id}-lower`} className="flex items-end justify-between">
+            <div
+              id={`project-${props.id}-lower`}
+              className="flex items-end justify-between"
+            >
               <div className="flex flex-wrap gap-2">
                 {props.tags?.map((tag, index) => (
                   <span

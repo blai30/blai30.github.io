@@ -1,4 +1,4 @@
-import { Project, ProjectData } from "@/components";
+import { Project, ProjectData } from '@/components'
 
 const Portfolio = () => {
   const projects: ProjectData[] = [

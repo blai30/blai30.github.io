@@ -90,10 +90,7 @@ const Hero = () => {
       </div>
       <p id="hero-description">
         I earned my Bachelor of Science in Computer Science from{' '}
-        <a
-          href="https://sfsu.edu/"
-          className="no-underline"
-        >
+        <a href="https://sfsu.edu/" className="no-underline">
           San Francisco State University
         </a>{' '}
         in Spring 2020. I aim to create top quality applications with a keen eye

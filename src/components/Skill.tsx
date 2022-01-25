@@ -32,7 +32,11 @@ const Skill = (props: SkillData & { id: number }) => {
           </span>
           <img
             id={`skill-${props.id}-image`}
-            src={currentTheme === 'dark' && props.logoPathDark ? props.logoPathDark : props.logoPath}
+            src={
+              currentTheme === 'dark' && props.logoPathDark
+                ? props.logoPathDark
+                : props.logoPath
+            }
             alt="logo"
             className="my-auto w-16 md:w-20 max-h-16 md:max-h-20"
           />
