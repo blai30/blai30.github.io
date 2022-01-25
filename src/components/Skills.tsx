@@ -113,14 +113,14 @@ const Skills = () => {
   ]
 
   return (
-    <div className="mx-auto prose prose-zinc prose-rose dark:prose-invert print:dark:prose-zinc hover:prose-a:text-rose-700 dark:prose-a:text-rose-400 hover:dark:prose-a:text-rose-300 print:dark:prose-a:text-rose-600 print:dark:hover:prose-a:text-rose-700 md:prose-lg">
+    <div className="prose prose-zinc prose-rose mx-auto hover:prose-a:text-rose-700 dark:prose-invert dark:prose-a:text-rose-400 hover:dark:prose-a:text-rose-300 print:dark:prose-zinc print:dark:prose-a:text-rose-600 print:dark:hover:prose-a:text-rose-700 md:prose-lg">
       <h2>Skills</h2>
       <p>
         I enjoy learning and using new tools and technologies every day. Below
         is a collection of what I am most familiar with when building projects.
       </p>
       <h3>Programming Languages</h3>
-      <div className="grid grid-cols-2 sm:grid-cols-3 print:grid-cols-3 gap-4">
+      <div className="grid grid-cols-2 gap-4 print:grid-cols-3 sm:grid-cols-3">
         {skills[0].map((skill, index) => (
           <Skill
             key={index}
@@ -133,7 +133,7 @@ const Skills = () => {
         ))}
       </div>
       <h3>Technologies</h3>
-      <div className="grid grid-cols-2 sm:grid-cols-3 print:grid-cols-3 gap-4">
+      <div className="grid grid-cols-2 gap-4 print:grid-cols-3 sm:grid-cols-3">
         {skills[1].map((skill, index) => (
           <Skill
             key={index}
@@ -146,7 +146,7 @@ const Skills = () => {
         ))}
       </div>
       <h3>Tooling</h3>
-      <div className="grid grid-cols-2 sm:grid-cols-3 print:grid-cols-3 gap-4">
+      <div className="grid grid-cols-2 gap-4 print:grid-cols-3 sm:grid-cols-3">
         {skills[2].map((skill, index) => (
           <Skill
             key={index}
@@ -158,7 +158,7 @@ const Skills = () => {
           />
         ))}
       </div>
-      <p className="font-light text-sm text-zinc-600 dark:text-zinc-400">
+      <p className="text-sm font-light text-zinc-600 dark:text-zinc-400">
         * I am not affiliated with the logos featured, all logos are registered
         trademarks of their respective owners.
       </p>

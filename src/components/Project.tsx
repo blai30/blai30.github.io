@@ -10,14 +10,14 @@ export interface ProjectData {
 
 const Project = (props: ProjectData & { id: number }) => {
   return (
-    <div className="sm:-mx-6 transition ease-in-out bg-zinc-200 dark:bg-zinc-800 shadow-md hover:shadow-xl print:shadow-none">
+    <div className="bg-zinc-200 shadow-md transition ease-in-out hover:shadow-xl dark:bg-zinc-800 print:shadow-none sm:-mx-6">
       <div className="flex flex-col sm:flex-row">
-        <div className="w-full sm:w-1/2 p-6">
-          <div className="h-full flex flex-col justify-between">
+        <div className="w-full p-6 sm:w-1/2">
+          <div className="flex h-full flex-col justify-between">
             <div id={`project-${props.id}-upper`}>
               <h3
                 id={`project-${props.id}-title`}
-                className="mt-0 font-bold text-2xl"
+                className="mt-0 text-2xl font-bold"
               >
                 {props.title}
               </h3>
@@ -42,7 +42,7 @@ const Project = (props: ProjectData & { id: number }) => {
                   <span
                     key={index}
                     id={`project-${props.id}-tag-${index}`}
-                    className="rounded-full py-1 px-2 font-light text-sm bg-zinc-300 dark:bg-zinc-700 print:border"
+                    className="rounded-full bg-zinc-300 py-1 px-2 text-sm font-light dark:bg-zinc-700 print:border"
                   >
                     {tag}
                   </span>
@@ -54,7 +54,7 @@ const Project = (props: ProjectData & { id: number }) => {
                     id={`project-${props.id}-demo`}
                     href={props.externalUrl}
                     title="View or download demo"
-                    className="transition ease-in-out transform-gpu hover:scale-110"
+                    className="transform-gpu transition ease-in-out hover:scale-110"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -74,7 +74,7 @@ const Project = (props: ProjectData & { id: number }) => {
                     id={`project-${props.id}-github`}
                     href={props.githubUrl}
                     title="Visit GitHub repository"
-                    className="transition ease-in-out transform-gpu hover:scale-110"
+                    className="transform-gpu transition ease-in-out hover:scale-110"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -97,7 +97,7 @@ const Project = (props: ProjectData & { id: number }) => {
             id={`project-${props.id}-thumbnail`}
             src={props.thumbnailPath}
             alt="Project Thumbnail"
-            className="max-w-full h-full my-0 object-cover object-left-top overflow-hidden print:w-full print:h-auto"
+            className="my-0 h-full max-w-full overflow-hidden object-cover object-left-top print:h-auto print:w-full"
           />
         </div>
       </div>

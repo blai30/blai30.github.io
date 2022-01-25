@@ -86,7 +86,7 @@ class MyDocument extends Document {
           {/* Styles. */}
           <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
         </Head>
-        <body className="antialiased bg-white dark:bg-zinc-900 transition-colors ease-in-out">
+        <body className="bg-white antialiased transition-colors ease-in-out dark:bg-zinc-900">
           <Main />
           <NextScript />
         </body>

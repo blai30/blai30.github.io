@@ -23,16 +23,19 @@ const Header = () => {
 
   return (
     <header
-      className={`${mounted ? '-translate-y-24' : ''} ${docked ? 'shadow-xl backdrop-filter backdrop-blur-lg' : ''} fixed z-20 w-full transition duration-500 ease-out transform-gpu bg-opacity-60 dark:bg-opacity-60 bg-white dark:bg-zinc-900 print:hidden`}
+      className={`
+        ${mounted ? '-translate-y-24' : ''}
+        ${docked ? 'shadow-xl backdrop-blur-lg backdrop-filter' : ''}
+        fixed z-20 w-full transform-gpu bg-white bg-opacity-60 transition duration-500 ease-out dark:bg-zinc-900 dark:bg-opacity-60 print:hidden`}
     >
-      <div className="px-4 mx-auto max-w-screen-md w-auto py-4 md:py-6">
+      <div className="mx-auto w-auto max-w-screen-md px-4 py-4 md:py-6">
         {/* Navigation links */}
         <nav className="flex items-center justify-between">
           {/* Left */}
           <ul className="items-center space-x-6">
             <li>
               <Link href="/">
-                <a className="font-bold text-2xl tracking-wide text-zinc-600 dark:text-zinc-300 hover:text-rose-600 dark:hover:text-rose-500">
+                <a className="text-2xl font-bold tracking-wide text-zinc-600 hover:text-rose-600 dark:text-zinc-300 dark:hover:text-rose-500">
                   BRIAN LAI
                 </a>
               </Link>

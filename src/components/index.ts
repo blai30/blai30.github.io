@@ -9,8 +9,9 @@ export {
   Contact,
   Hero,
   Portfolio,
-  Project, Skill,
-  Skills
+  Project,
+  Skill,
+  Skills,
 }
 
 export type {

@@ -1,16 +1,16 @@
 const Hero = () => {
   return (
-    <div className="mx-auto prose prose-zinc prose-rose dark:prose-invert print:dark:prose-zinc hover:prose-a:text-rose-700 dark:prose-a:text-rose-400 hover:dark:prose-a:text-rose-300 print:dark:prose-a:text-rose-600 print:dark:hover:prose-a:text-rose-700 md:prose-lg">
+    <div className="prose prose-zinc prose-rose mx-auto hover:prose-a:text-rose-700 dark:prose-invert dark:prose-a:text-rose-400 hover:dark:prose-a:text-rose-300 print:dark:prose-zinc print:dark:prose-a:text-rose-600 print:dark:hover:prose-a:text-rose-700 md:prose-lg">
       <img
         id="hero-avatar"
         src="/hero.png"
         alt="avatar"
         width="128"
         height="128"
-        className="object-cover rounded-lg"
+        className="rounded-lg object-cover"
       />
       <h1 id="hero-intro">{"Hello, I'm Brian! 👋"}</h1>
-      <p id="hero-occupation" className="font-bold text-2xl">
+      <p id="hero-occupation" className="text-2xl font-bold">
         Software Engineer, Full-stack Web Developer, and Unity hobbyist from San
         Francisco Bay Area, CA.
       </p>
@@ -19,7 +19,7 @@ const Hero = () => {
           id="hero-github"
           href="https://github.com/blai30/"
           title="GitHub"
-          className="transition ease-in-out transform-gpu hover:scale-110"
+          className="transform-gpu transition ease-in-out hover:scale-110"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -36,7 +36,7 @@ const Hero = () => {
           id="hero-linkedin"
           href="https://www.linkedin.com/in/blai/"
           title="LinkedIn"
-          className="transition ease-in-out transform-gpu hover:scale-110"
+          className="transform-gpu transition ease-in-out hover:scale-110"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -53,7 +53,7 @@ const Hero = () => {
           id="hero-resume"
           href="https://blai30.github.io/resume/"
           title="Resume"
-          className="transition ease-in-out transform-gpu hover:scale-110"
+          className="transform-gpu transition ease-in-out hover:scale-110"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -74,7 +74,7 @@ const Hero = () => {
           id="hero-email"
           href="mailto:contact@bhlai.com"
           title="Email"
-          className="transition ease-in-out transform-gpu hover:scale-110"
+          className="transform-gpu transition ease-in-out hover:scale-110"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

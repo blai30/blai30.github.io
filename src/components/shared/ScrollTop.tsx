@@ -24,11 +24,11 @@ const ScrollTop = () => {
   }, [])
 
   return (
-    <div className="block fixed bottom-20 right-10 md:right-16 z-50 print:hidden">
+    <div className="fixed bottom-20 right-10 z-50 block print:hidden md:right-16">
       <button
         id="scroll-top"
         className={`
-        p-3 flex items-center justify-center transition transform-gpu ease-in-out backdrop-filter backdrop-blur-lg rounded-full shadow-lg hover:shadow-xl text-white dark:text-white bg-opacity-60 dark:bg-opacity-60 bg-rose-400 dark:bg-rose-500 hover:bg-rose-500 dark:hover:bg-rose-600 focus:outline-none
+        flex transform-gpu items-center justify-center rounded-full bg-rose-400 bg-opacity-60 p-3 text-white shadow-lg backdrop-blur-lg backdrop-filter transition ease-in-out hover:bg-rose-500 hover:shadow-xl focus:outline-none dark:bg-rose-500 dark:bg-opacity-60 dark:text-white dark:hover:bg-rose-600
         ${visible ? 'hover:scale-110' : 'scale-0'}
         `}
         name="Scroll top"
@@ -36,7 +36,7 @@ const ScrollTop = () => {
         onClick={onScrollTop}
       >
         <span className="flex items-center justify-between">
-          <ArrowUpIcon className="w-6 h-6" />
+          <ArrowUpIcon className="h-6 w-6" />
         </span>
       </button>
     </div>

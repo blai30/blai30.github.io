@@ -23,10 +23,10 @@ const Skill = (props: SkillData & { id: number }) => {
     <a
       id={`skill-${props.id}-url`}
       href={props.vendorUrl}
-      className="block no-underline transition-shadow ease-in-out shadow-md hover:shadow-xl print:shadow-none"
+      className="block no-underline shadow-md transition-shadow ease-in-out hover:shadow-xl print:shadow-none"
     >
-      <div className="p-2 transition ease-in-out bg-zinc-200 dark:bg-zinc-800 hover:bg-zinc-300 dark:hover:bg-zinc-700">
-        <div className="relative flex flex-col h-28 md:h-32 items-center">
+      <div className="bg-zinc-200 p-2 transition ease-in-out hover:bg-zinc-300 dark:bg-zinc-800 dark:hover:bg-zinc-700">
+        <div className="relative flex h-28 flex-col items-center md:h-32">
           <span id={`skill-${props.id}-name`} className="text-center">
             {props.skillName}
           </span>
@@ -38,7 +38,7 @@ const Skill = (props: SkillData & { id: number }) => {
                 : props.logoPath
             }
             alt="logo"
-            className="my-auto w-16 md:w-20 max-h-16 md:max-h-20"
+            className="my-auto max-h-16 w-16 md:max-h-20 md:w-20"
           />
         </div>
       </div>

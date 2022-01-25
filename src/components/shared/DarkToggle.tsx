@@ -10,16 +10,16 @@ const DarkToggle = () => {
       id="dark-toggle"
       checked={currentTheme === 'light'}
       onChange={() => setTheme(theme === 'light' ? 'dark' : 'light')}
-      className="relative group inline-flex items-center px-2 py-1 bg-gray-500 dark:bg-gray-400 hover:bg-gray-900 dark:hover:bg-gray-100 transition rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-gray-50 focus-visible:dark:ring-offset-gray-900"
+      className="group relative inline-flex items-center rounded-full bg-gray-500 px-2 py-1 transition hover:bg-gray-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 focus-visible:ring-offset-gray-50 dark:bg-gray-400 dark:hover:bg-gray-100 focus-visible:dark:ring-offset-gray-900"
     >
       <span className="sr-only">Toggle dark mode</span>
       <span
         aria-hidden="true"
-        className="absolute top-0.5 left-0.5 dark:translate-x-8 bg-gray-50 dark:bg-gray-900 pointer-events-none w-7 h-7 rounded-full transition"
+        className="pointer-events-none absolute top-0.5 left-0.5 h-7 w-7 rounded-full bg-gray-50 transition dark:translate-x-8 dark:bg-gray-900"
       />
       {/* Sun icon. */}
       <svg
-        className="z-10 h-6 w-6 -translate-x-1 text-gray-500 dark:text-gray-900 group-hover:text-gray-800 transition"
+        className="z-10 h-6 w-6 -translate-x-1 text-gray-500 transition group-hover:text-gray-800 dark:text-gray-900"
         viewBox="0 0 20 20"
         fill="currentColor"
       >
@@ -31,7 +31,7 @@ const DarkToggle = () => {
       </svg>
       {/* Moon icon. */}
       <svg
-        className="z-10 h-6 w-6 translate-x-1 text-gray-50 dark:text-gray-400 dark:group-hover:text-gray-50 transition"
+        className="z-10 h-6 w-6 translate-x-1 text-gray-50 transition dark:text-gray-400 dark:group-hover:text-gray-50"
         viewBox="0 0 20 20"
         fill="currentColor"
       >
