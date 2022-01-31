@@ -23,10 +23,13 @@ const Header = () => {
 
   return (
     <header
-      className={`
-        ${mounted ? '-translate-y-24' : ''}
-        ${docked ? 'shadow-xl backdrop-blur-lg backdrop-filter' : ''}
-        fixed z-20 w-full transform-gpu bg-white bg-opacity-60 transition duration-500 ease-out dark:bg-zinc-900 dark:bg-opacity-60 print:hidden`}
+      className={[
+        mounted ? '-translate-y-24' : '',
+        docked ? 'shadow-xl backdrop-blur-lg backdrop-filter' : '',
+        'fixed z-20 w-full transform-gpu bg-white bg-opacity-60 transition duration-500 ease-out dark:bg-zinc-900 dark:bg-opacity-60 print:hidden',
+      ]
+        .join(' ')
+        .trim()}
     >
       <div className="mx-auto w-auto max-w-screen-md px-4 py-4 md:py-6">
         {/* Navigation links */}
