@@ -3,11 +3,20 @@ import { Project, ProjectData } from '@/components'
 const Portfolio = () => {
   const projects: ProjectData[] = [
     {
+      title: 'Hextech Check',
+      description:
+        'View champion mastery and check Hextech chests obtained for your League of Legends summoner. Users have the ability to apply sorting and filters to alter the appearance of the table. Built with React Next.js TypeScript and Tailwind CSS.',
+      externalUrl: 'https://hextech-check.bhlai.com/',
+      githubUrl: 'https://github.com/blai30/hextech-check/',
+      thumbnailPath: '/images/projects/hextech.png',
+      tags: ['React', 'NextJS', 'TypeScript', 'Tailwind CSS'],
+    },
+    {
       title: 'AsukaNet Discord bot',
       description:
-        'Discord bot written in C# using the Discord.Net library and dependency injection with .NET 5, Entity Framework Core with MySQL database, and Docker for build and deployment. Various utility and fun commands are available for users to manage reaction roles, fetch Urban Dictionary definitions, play music, and more.',
+        'Discord bot written in C# using the Discord.Net library and dependency injection with .NET 6, Entity Framework Core with MySQL database, and Docker for build and deployment. Various utility and fun commands are available for users to manage roles, fetch Urban Dictionary definitions, play music, and more.',
       externalUrl:
-        'https://discord.com/api/oauth2/authorize?client_id=547507928287019009&permissions=1580330096&scope=bot',
+        'https://discord.com/api/oauth2/authorize?client_id=547507928287019009&permissions=2452745280&scope=bot%20applications.commands',
       githubUrl: 'https://github.com/blai30/AsukaNet/',
       thumbnailPath: '/images/projects/asuka.png',
       tags: ['C#', '.NET', 'MySQL', 'Docker'],
