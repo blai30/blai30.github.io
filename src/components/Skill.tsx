@@ -38,7 +38,7 @@ const Skill = (props: SkillData & { id: number }) => {
                 : props.logoPath
             }
             alt="logo"
-            className="my-auto max-h-16 w-16 md:max-h-20 md:w-20"
+            className="my-auto max-h-16 w-16 md:max-h-20 md:w-20 object-fill"
           />
         </div>
       </div>

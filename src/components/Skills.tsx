@@ -69,8 +69,8 @@ const Skills = () => {
     [
       {
         skillName: 'Unity',
-        logoPath: '/logos/unity-white.png',
-        logoPathDark: '/logos/unity-black.png',
+        logoPath: '/logos/unity-positive.svg',
+        logoPathDark: '/logos/unity-negative.svg',
         vendorUrl: 'https://unity.com/',
       },
       {
