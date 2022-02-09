@@ -40,7 +40,7 @@ class MyDocument extends Document {
           <meta property="og:type" content="website" />
 
           {/* Twitter meta. */}
-          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:card" content="summary" />
           <meta property="twitter:title" content="Brian Lai" />
           <meta
             property="twitter:description"
@@ -54,12 +54,6 @@ class MyDocument extends Document {
           <meta name="apple-mobile-web-app-capable" content="yes" />
           <meta name="apple-mobile-web-app-status-bar-style" content="black" />
           <meta name="apple-mobile-web-app-title" content="Brian Lai" />
-          <link rel="apple-touch-icon" href="/icons/icon-128x128.png" />
-          <link
-            rel="apple-touch-icon"
-            sizes="152x152"
-            href="/icons/icon-152x152.png"
-          />
           <link
             rel="apple-touch-icon"
             sizes="180x180"
@@ -67,21 +61,9 @@ class MyDocument extends Document {
           />
 
           <link rel="canonical" href="https://www.bhlai.com/" />
+          <link rel="icon" href="/favicon.ico" sizes="any" />
           <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-          <link rel="icon" href="/favicon.png" type="image/x-icon" />
-          <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
-          <link
-            rel="mask-icon"
-            href="/favicon.svg"
-            type="image/svg+xml"
-            color="#18181B"
-          />
-          <link
-            rel="apple-touch-icon"
-            href="/favicon.png"
-            type="image/x-icon"
-          />
-          <link rel="manifest" href="/manifest.json" />
+          <link rel="manifest" href="/manifest.webmanifest" />
 
           {/* Styles. */}
           <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
