@@ -42,8 +42,8 @@ const Skills = () => {
       },
       {
         skillName: 'Next.JS',
-        logoPath: '/logos/nextjs-logotype-light-background.svg',
-        logoPathDark: '/logos/nextjs-logotype-dark-background.svg',
+        logoPath: '/logos/nextjs-logotype-dark-background.svg',
+        logoPathDark: '/logos/nextjs-logotype-light-background.svg',
         vendorUrl: 'https://nextjs.org/',
       },
       {

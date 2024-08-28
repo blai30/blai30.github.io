@@ -11,7 +11,7 @@ const Hero = () => {
       />
       <h1 id="hero-intro">{"Hello, I'm Brian! 👋"}</h1>
       <p id="hero-occupation" className="text-2xl font-bold">
-        Software Engineer, Full-stack Web Developer, and Godot Engine hobbyist from San
+        Software Engineer, Full-stack Web Developer, and Unity hobbyist from San
         Francisco Bay Area, CA.
       </p>
       <div className="flex space-x-4">
@@ -94,7 +94,7 @@ const Hero = () => {
           San Francisco State University
         </a>{' '}
         in Spring 2020. I aim to create top quality applications with a keen eye
-        for usability. Experienced in C#/.NET, Next.JS (React) + TypeScript + Tailwind CSS, Godot Engine, and Unity Engine.
+        for usability. My favorite development environment is C#/.NET.
       </p>
     </div>
   )

@@ -94,7 +94,7 @@ const Hero = () => {
           San Francisco State University
         </a>{' '}
         in Spring 2020. I aim to create top quality applications with a keen eye
-        for usability. Experienced in C#/.NET, Next.JS (React) + TypeScript + Tailwind CSS, Godot Engine, and Unity Engine.
+        for usability. My favorite development environment is C#/.NET.
       </p>
     </div>
   )

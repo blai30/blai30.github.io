@@ -41,12 +41,6 @@ const Skills = () => {
         vendorUrl: 'https://dotnet.microsoft.com/',
       },
       {
-        skillName: 'Next.JS',
-        logoPath: '/logos/nextjs-logotype-light-background.svg',
-        logoPathDark: '/logos/nextjs-logotype-dark-background.svg',
-        vendorUrl: 'https://nextjs.org/',
-      },
-      {
         skillName: 'React',
         logoPath: '/logos/react-original.svg',
         vendorUrl: 'https://reactjs.org/',
@@ -81,7 +75,7 @@ const Skills = () => {
       {
         skillName: 'Godot Engine',
         logoPath: '/logos/godot-color.svg',
-        vendorUrl: 'https://godotengine.org/',
+        vendorUrl: 'https://unity.com/',
       },
       {
         skillName: 'Unity',

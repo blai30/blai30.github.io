@@ -41,10 +41,9 @@ const Skills = () => {
         vendorUrl: 'https://dotnet.microsoft.com/',
       },
       {
-        skillName: 'Next.JS',
-        logoPath: '/logos/nextjs-logotype-light-background.svg',
-        logoPathDark: '/logos/nextjs-logotype-dark-background.svg',
-        vendorUrl: 'https://nextjs.org/',
+        skillName: 'Angular',
+        logoPath: '/logos/angular.svg',
+        vendorUrl: 'https://www.angular.io/',
       },
       {
         skillName: 'React',
@@ -52,14 +51,14 @@ const Skills = () => {
         vendorUrl: 'https://reactjs.org/',
       },
       {
-        skillName: 'Angular',
-        logoPath: '/logos/angular.png',
-        vendorUrl: 'https://www.angular.io/',
-      },
-      {
         skillName: 'NodeJS',
         logoPath: '/logos/nodejs-original.svg',
         vendorUrl: 'https://nodejs.org/',
+      },
+      {
+        skillName: 'Blazor',
+        logoPath: '/logos/Blazor.png',
+        vendorUrl: 'https://blazor.net/',
       },
       {
         skillName: 'MySQL',
@@ -79,9 +78,9 @@ const Skills = () => {
         vendorUrl: 'https://www.docker.com/',
       },
       {
-        skillName: 'Godot Engine',
+        skillName: 'Godot',
         logoPath: '/logos/godot-color.svg',
-        vendorUrl: 'https://godotengine.org/',
+        vendorUrl: 'https://unity.com/',
       },
       {
         skillName: 'Unity',
@@ -99,6 +98,11 @@ const Skills = () => {
         skillName: 'Google Cloud Platform',
         logoPath: '/logos/google-cloud.svg',
         vendorUrl: 'https://www.docker.com/',
+      },
+      {
+        skillName: 'Figma',
+        logoPath: '/logos/figma.svg',
+        vendorUrl: 'https://www.figma.com/',
       },
     ],
   ]

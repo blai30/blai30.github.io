@@ -41,10 +41,9 @@ const Skills = () => {
         vendorUrl: 'https://dotnet.microsoft.com/',
       },
       {
-        skillName: 'Next.JS',
-        logoPath: '/logos/nextjs-logotype-light-background.svg',
-        logoPathDark: '/logos/nextjs-logotype-dark-background.svg',
-        vendorUrl: 'https://nextjs.org/',
+        skillName: 'Angular',
+        logoPath: '/logos/angular.svg',
+        vendorUrl: 'https://www.angular.io/',
       },
       {
         skillName: 'React',
@@ -52,14 +51,14 @@ const Skills = () => {
         vendorUrl: 'https://reactjs.org/',
       },
       {
-        skillName: 'Angular',
-        logoPath: '/logos/angular.png',
-        vendorUrl: 'https://www.angular.io/',
-      },
-      {
         skillName: 'NodeJS',
         logoPath: '/logos/nodejs-original.svg',
         vendorUrl: 'https://nodejs.org/',
+      },
+      {
+        skillName: 'Blazor',
+        logoPath: '/logos/Blazor.png',
+        vendorUrl: 'https://blazor.net/',
       },
       {
         skillName: 'MySQL',
@@ -69,25 +68,25 @@ const Skills = () => {
     ],
     [
       {
+        skillName: 'Unity',
+        logoPath: '/logos/unity-positive.svg',
+        logoPathDark: '/logos/unity-negative.svg',
+        vendorUrl: 'https://unity.com/',
+      },
+      {
         skillName: 'Tailwind CSS',
         logoPath: '/logos/tailwindcss.svg',
         vendorUrl: 'https://tailwindcss.com/',
       },
       {
+        skillName: 'Bootstrap',
+        logoPath: '/logos/bootstrap-logo.svg',
+        vendorUrl: 'https://getbootstrap.com/',
+      },
+      {
         skillName: 'Docker',
         logoPath: '/logos/docker.png',
         vendorUrl: 'https://www.docker.com/',
-      },
-      {
-        skillName: 'Godot Engine',
-        logoPath: '/logos/godot-color.svg',
-        vendorUrl: 'https://godotengine.org/',
-      },
-      {
-        skillName: 'Unity',
-        logoPath: '/logos/unity-positive.svg',
-        logoPathDark: '/logos/unity-negative.svg',
-        vendorUrl: 'https://unity.com/',
       },
       {
         skillName: 'Amazon Web Services',
@@ -99,6 +98,16 @@ const Skills = () => {
         skillName: 'Google Cloud Platform',
         logoPath: '/logos/google-cloud.svg',
         vendorUrl: 'https://www.docker.com/',
+      },
+      {
+        skillName: 'Figma',
+        logoPath: '/logos/figma.svg',
+        vendorUrl: 'https://www.figma.com/',
+      },
+      {
+        skillName: 'Sketch',
+        logoPath: '/logos/sketch.png',
+        vendorUrl: 'https://www.sketch.com/',
       },
     ],
   ]

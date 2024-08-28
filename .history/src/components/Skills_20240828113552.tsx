@@ -42,9 +42,9 @@ const Skills = () => {
       },
       {
         skillName: 'Next.JS',
-        logoPath: '/logos/nextjs-logotype-light-background.svg',
-        logoPathDark: '/logos/nextjs-logotype-dark-background.svg',
-        vendorUrl: 'https://nextjs.org/',
+        logoPath: '/logos/nextjs-logotype-dark-background.svg',
+        logoPathDark: '/logos/nextjs-logotype-light-background.svg',
+        vendorUrl: 'https://reactjs.org/',
       },
       {
         skillName: 'React',
@@ -81,7 +81,7 @@ const Skills = () => {
       {
         skillName: 'Godot Engine',
         logoPath: '/logos/godot-color.svg',
-        vendorUrl: 'https://godotengine.org/',
+        vendorUrl: 'https://unity.com/',
       },
       {
         skillName: 'Unity',
