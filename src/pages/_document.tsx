@@ -32,7 +32,7 @@ class MyDocument extends Document {
           <meta property="og:title" content="Brian Lai" />
           <meta
             property="og:description"
-            content="Software Engineer, Full-stack Web Developer, and Unity hobbyist from San Francisco Bay Area, CA."
+            content="Software Engineer, Developer, and Godot hobbyist from San Francisco Bay Area, CA."
           />
           <meta property="og:site_name" content="Brian Lai" />
           <meta property="og:url" content="https://www.brianlai.dev/" />
@@ -44,7 +44,7 @@ class MyDocument extends Document {
           <meta property="twitter:title" content="Brian Lai" />
           <meta
             property="twitter:description"
-            content="Software Engineer, Full-stack Web Developer, and Unity hobbyist from San Francisco Bay Area, CA."
+            content="Software Engineer, Developer, and Godot hobbyist from San Francisco Bay Area, CA."
           />
           <meta property="twitter:url" content="https://www.brianlai.dev/" />
           <meta property="twitter:image" content="/favicon.png" />
