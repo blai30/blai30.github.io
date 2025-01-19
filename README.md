@@ -1,4 +1,4 @@
-[![Build and Deploy](https://github.com/blai30/www.bhlai.com/actions/workflows/deploy-gh-pages.yml/badge.svg?branch=main)](https://github.com/blai30/www.bhlai.com/actions/workflows/deploy-gh-pages.yml)
+[![Build and Deploy](https://github.com/blai30/www.brianlai.dev/actions/workflows/deploy-gh-pages.yml/badge.svg?branch=main)](https://github.com/blai30/www.brianlai.dev/actions/workflows/deploy-gh-pages.yml)
 
 # Profiles
 
@@ -8,4 +8,4 @@
 # Resources
 
 - [Resume](https://blai30.github.io/resume/)
-- [Website](https://www.bhlai.com/)
+- [Website](https://www.brianlai.dev/)

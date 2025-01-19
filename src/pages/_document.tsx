@@ -35,7 +35,7 @@ class MyDocument extends Document {
             content="Software Engineer, Full-stack Web Developer, and Unity hobbyist from San Francisco Bay Area, CA."
           />
           <meta property="og:site_name" content="Brian Lai" />
-          <meta property="og:url" content="https://www.bhlai.com/" />
+          <meta property="og:url" content="https://www.brianlai.dev/" />
           <meta property="og:image" content="/favicon.png" />
           <meta property="og:type" content="website" />
 
@@ -46,7 +46,7 @@ class MyDocument extends Document {
             property="twitter:description"
             content="Software Engineer, Full-stack Web Developer, and Unity hobbyist from San Francisco Bay Area, CA."
           />
-          <meta property="twitter:url" content="https://www.bhlai.com/" />
+          <meta property="twitter:url" content="https://www.brianlai.dev/" />
           <meta property="twitter:image" content="/favicon.png" />
           <meta property="twitter:creator" content="@blai30" />
 
@@ -60,7 +60,7 @@ class MyDocument extends Document {
             href="/icons/icon-180x180.png"
           />
 
-          <link rel="canonical" href="https://www.bhlai.com/" />
+          <link rel="canonical" href="https://www.brianlai.dev/" />
           <link rel="icon" href="/favicon.ico" sizes="any" />
           <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
           <link rel="manifest" href="/manifest.webmanifest" />

@@ -6,7 +6,7 @@ const Portfolio = () => {
       title: 'Hextech Check',
       description:
         'View champion mastery and check Hextech chests obtained for your League of Legends summoner. Users have the ability to apply sorting and filters to alter the appearance of the table. Built with React Next.js TypeScript and Tailwind CSS.',
-      externalUrl: 'https://hextech-check.bhlai.com/',
+      externalUrl: 'https://hextech-check.vercel.app/',
       githubUrl: 'https://github.com/blai30/hextech-check/',
       thumbnailPath: '/images/projects/hextech.png',
       tags: ['React', 'NextJS', 'TypeScript', 'Tailwind CSS'],

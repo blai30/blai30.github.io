@@ -11,10 +11,10 @@ const Contact = () => {
         <span>Email: </span>
         <a
           id="contact-email"
-          href="mailto:contact@bhlai.com"
+          href="mailto:contact@brianlai.dev"
           className="inline-flex items-center no-underline"
         >
-          <span>contact@bhlai.com</span>
+          <span>contact@brianlai.dev</span>
         </a>
       </p>
       <p>
