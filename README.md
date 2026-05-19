@@ -1,4 +1,4 @@
-[![Build and Deploy](https://github.com/blai30/www.brianlai.dev/actions/workflows/deploy-gh-pages.yml/badge.svg?branch=main)](https://github.com/blai30/www.brianlai.dev/actions/workflows/deploy-gh-pages.yml)
+[![Build and Deploy](https://github.com/blai30/blai30.github.io/actions/workflows/deploy-gh-pages.yml/badge.svg?branch=main)](https://github.com/blai30/blai30.github.io/actions/workflows/deploy-gh-pages.yml)
 
 # Profiles
 
