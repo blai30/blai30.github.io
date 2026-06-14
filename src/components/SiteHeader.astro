@@ -1,0 +1,66 @@
+---
+import ThemeToggle from '@/components/react/ThemeToggle.tsx'
+import MobileNav from '@/components/react/MobileNav.tsx'
+
+const links = [
+  { label: 'Home', href: '/' },
+  { label: 'Projects', href: '/projects' },
+  { label: 'Blog', href: '/blog' },
+]
+
+const current = Astro.url.pathname
+
+function isActive(href: string) {
+  if (href === '/') return current === '/'
+  return current === href || current.startsWith(href + '/')
+}
+---
+
+<header
+  class="sticky top-0 z-30 border-b border-mauve-200 bg-mauve-100/85 backdrop-blur-sm dark:border-mauve-700 dark:bg-mauve-900/85"
+>
+  <div class="flex items-center justify-between gap-4 px-6 py-4 sm:px-8">
+    <a
+      href="/"
+      class="group flex items-center gap-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-500/30 dark:focus-visible:ring-rose-400/25"
+    >
+      <span
+        aria-hidden="true"
+        class="grid size-9 place-items-center border border-mauve-300 bg-white font-mono text-sm font-medium text-mauve-900 transition-colors duration-200 group-hover:border-rose-400 group-hover:duration-0 dark:border-mauve-600 dark:bg-mauve-800 dark:text-mauve-100"
+      >
+        BL
+      </span>
+      <span class="font-serif text-xl leading-none text-mauve-900 dark:text-mauve-100">
+        Brian <span class="italic text-rose-700 dark:text-rose-400">Lai</span>
+      </span>
+    </a>
+
+    <nav class="hidden items-center gap-1 sm:flex" aria-label="Primary">
+      {
+        links.map((link) => (
+          <a
+            href={link.href}
+            aria-current={isActive(link.href) ? 'page' : undefined}
+            class:list={[
+              'px-3 py-2 font-sans text-sm transition-colors duration-200 hover:duration-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-500/30 dark:focus-visible:ring-rose-400/25',
+              isActive(link.href)
+                ? 'font-medium text-mauve-900 dark:text-mauve-100'
+                : 'text-mauve-600 hover:text-mauve-900 dark:text-mauve-400 dark:hover:text-mauve-100',
+            ]}
+          >
+            <span class:list={['relative', isActive(link.href) && 'after:absolute after:-bottom-2 after:left-0 after:h-0.5 after:w-full after:bg-rose-500 dark:after:bg-rose-400']}>
+              {link.label}
+            </span>
+          </a>
+        ))
+      }
+    </nav>
+
+    <div class="flex items-center gap-1">
+      <ThemeToggle client:load />
+      <div class="sm:hidden">
+        <MobileNav client:load links={links} current={current} />
+      </div>
+    </div>
+  </div>
+</header>

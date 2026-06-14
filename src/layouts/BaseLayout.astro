@@ -1,0 +1,70 @@
+---
+import { BlueprintFrame } from '@pristine-machine/ui'
+import SiteHeader from '@/components/SiteHeader.astro'
+import SiteFooter from '@/components/SiteFooter.astro'
+import { site } from '@/data/site'
+import '@/styles/global.css'
+
+type Props = {
+  title?: string
+  description?: string
+}
+
+const { title, description = site.description } = Astro.props
+const pageTitle = title ? `${title} · ${site.name}` : `${site.name} · ${site.role}`
+const canonical = new URL(Astro.url.pathname, site.url)
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="canonical" href={canonical} />
+
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    <meta name="author" content={site.name} />
+    <meta
+      name="keywords"
+      content="React, NextJS, Angular, Tailwind, HTML, CSS, JavaScript, TypeScript, PWA, JetBrains, Adobe, Portfolio, Brian, Lai, Software, Engineer, Web, Developer, Unity, Hobbyist, San, Francisco, State, University, Computer, Science, Bachelor, of, Science, Bay, Area, Discord, Bot, C#, Java, .NET, MySQL, FPS, Gamer, Anime, gaming, Bootstrap, Python, AWS, Docker, Google, Amazon, Apple, Cloud, Node, Figma, Sketch, C++, LinkedIn, GitHub, Resume, Dark, Light, Mode, Full, Stack, Front, Back, End, VR, Virtual, Reality"
+    />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={description} />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist:ital,wght@0,100..900;1,100..900&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+      rel="stylesheet"
+    />
+
+    <script is:inline>
+      // Resolve theme before first paint to avoid a flash. Mirrors the library's
+      // useTheme storage key (`pm-theme`); ThemeToggle reads back from this class.
+      const stored = localStorage.getItem('pm-theme')
+      const dark = stored ? stored === 'dark' : 'dark'
+      document.documentElement.classList.toggle('dark', dark)
+    </script>
+  </head>
+  <body class="bg-mauve-100 font-sans text-mauve-900 antialiased dark:bg-mauve-900 dark:text-mauve-100">
+    <BlueprintFrame>
+      <div class="flex min-h-screen flex-col">
+        <SiteHeader />
+        <main class="flex-1">
+          <slot />
+        </main>
+        <SiteFooter />
+      </div>
+    </BlueprintFrame>
+  </body>
+</html>

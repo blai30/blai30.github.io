@@ -1,0 +1,18 @@
+---
+import { site } from '@/data/site'
+
+const year = new Date().getFullYear()
+---
+
+<footer class="mt-auto border-t border-mauve-200 dark:border-mauve-700">
+  <div
+    class="flex flex-col gap-4 px-6 py-10 sm:flex-row sm:items-center sm:justify-between sm:px-8"
+  >
+    <span class="font-mono text-xs text-mauve-600 dark:text-mauve-400">
+      {site.role} · {site.location}
+    </span>
+    <span class="font-mono text-xs text-mauve-600 dark:text-mauve-400">
+      © {year} {site.name}
+    </span>
+  </div>
+</footer>

@@ -1,0 +1,77 @@
+---
+import { getCollection } from 'astro:content'
+import { Badge } from '@pristine-machine/ui'
+import { ArrowRight } from '@lucide/astro'
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import SectionHeading from '@/components/SectionHeading.astro'
+
+const dateStyle = { year: 'numeric', month: 'long', day: 'numeric' } as const
+
+const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf()
+)
+---
+
+<BaseLayout
+  title="Blog"
+  description="Notes on software, tooling, and craft by Brian Lai."
+>
+  <section class="px-6 pt-16 pb-20 sm:px-8 sm:pt-20 sm:pb-24">
+    <SectionHeading
+      eyebrow="Blog"
+      title="Notes & writing"
+      accent="writing"
+      description="Occasional posts on software, tooling, and the craft of building things well."
+    />
+
+    {
+      posts.length > 0 ? (
+        <ul class="mt-12 flex flex-col border-t border-mauve-200 dark:border-mauve-700">
+          {posts.map((post) => {
+            const date = post.data.date.toTemporalInstant().toZonedDateTimeISO('UTC').toPlainDate()
+            return (
+            <li>
+              <a
+                href={`/blog/${post.id}`}
+                class="group flex flex-col gap-3 border-b border-mauve-200 px-4 py-8 transition-colors duration-200 hover:bg-mauve-200/40 hover:duration-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-rose-500/30 sm:flex-row sm:gap-8 sm:px-6 dark:border-mauve-700 dark:hover:bg-mauve-800/50 dark:focus-visible:ring-rose-400/25"
+              >
+                <time
+                  datetime={date.toString()}
+                  class="shrink-0 pt-1 font-mono text-xs uppercase tracking-widest text-mauve-600 sm:w-36 dark:text-mauve-400"
+                >
+                  {date.toLocaleString('en-US', dateStyle)}
+                </time>
+                <div class="flex flex-1 flex-col gap-3">
+                  <h3 class="font-serif text-2xl leading-tight text-mauve-900 transition-colors duration-200 group-hover:text-rose-700 group-hover:duration-0 dark:text-mauve-100 dark:group-hover:text-rose-400">
+                    {post.data.title}
+                  </h3>
+                  <p class="max-w-2xl text-sm/6 text-mauve-600 dark:text-mauve-400">
+                    {post.data.description}
+                  </p>
+                  {post.data.tags.length > 0 && (
+                    <ul class="flex flex-wrap gap-2 pt-1">
+                      {post.data.tags.map((tag) => (
+                        <li>
+                          <Badge variant="neutral">{tag}</Badge>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </div>
+                <span
+                  aria-hidden="true"
+                  class="hidden self-center text-mauve-500 transition group-hover:translate-x-1 group-hover:text-rose-600 sm:block dark:text-mauve-400 dark:group-hover:text-rose-400"
+                >
+                  <ArrowRight class="size-5" />
+                </span>
+              </a>
+            </li>
+            )
+          })}
+        </ul>
+      ) : (
+        <p class="mt-12 font-mono text-sm text-mauve-600 dark:text-mauve-400">No posts published yet. Check back soon.</p>
+      )
+    }
+  </section>
+</BaseLayout>
