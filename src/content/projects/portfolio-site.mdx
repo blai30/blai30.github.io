@@ -1,0 +1,25 @@
+---
+title: Portfolio & Blog
+summary: This site, a statically generated portfolio and blog built with Astro, consuming the Pristine Machine design system.
+order: 2
+featured: false
+thumbnail: /thumbnails/portfolio-site.svg
+tech:
+  - Astro
+  - TypeScript
+  - Tailwind CSS
+  - MDX
+repo: https://github.com/blai30/blai30.github.io
+demo: https://blai30.github.io
+---
+
+The site you're reading. I wanted a portfolio that doubled as a real-world test of my design system, so it's built with [Astro](https://astro.build) and consumes `@pristine-machine/ui` straight from npm.
+
+## Why Astro
+
+I wanted a completely static site that can be hosted for free on GitHub Pages, but most other frameworks out there are heavily focused on server-side rendering (SSR), which needs to run on a server and can impose hosting expenses. That would be too overkill for a site that essentially presents purely static content.
+When Astro builds the site, everything renders to plain HTML and can be served by a static host. This means that zero JavaScript is sent to the client, and the user experience can be as lean as possible. Only the theme toggle and the mobile navigation drawer hydrate as islands.
+
+## Content as data
+
+Projects and posts are MDX files tracked in version control, validated through Astro's content collections with a typed schema. Since my projects often span over the long term, they do not have hard dates and are sorted by a custom explicit order, while some are selected to be featured/pinned at the top. Meanwhile blog posts require a publish date and are sorted chronologically. Adding to either is just dropping in a new file, which keeps the writing close to the code.

@@ -1,0 +1,36 @@
+---
+title: Hello, world
+description: Why I rebuilt my site with Astro and a custom design system, and how this blog is wired up.
+date: 2026-06-15
+tags:
+  - Astro
+  - Meta
+---
+
+My portfolio site has been rebuilt a few times by now, each time with a different framework. It started as plain HTML/CSS, then Angular, then Next.js, and now finally Astro. This version is different: it's the first one that runs on a custom design system, powered by Tailwind CSS, and the first where writing a post is as low-friction as committing a file.
+
+## The stack, briefly
+
+The whole site is [Astro](https://astro.build). The components come from **Pristine Machine**, a design system built with the help of AI and published to npm. Astro renders those React components to static HTML, so the marketing-style pages ship no JavaScript at all. The only interactive islands are the theme toggle and the mobile menu.
+
+## Posts are just files
+
+Every post is an MDX file in `src/content/blog/`, validated by a typed schema. The required fields are small:
+
+```ts
+const blog = defineCollection({
+  loader: glob({ pattern: '**/*.{md,mdx}', base: './src/content/blog' }),
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    date: z.coerce.date(),
+    tags: z.array(z.string()).default([]),
+  }),
+})
+```
+
+To publish, I write a file and push. No CMS, no database, no build step I have to think about beyond `astro build`. The constraint that everything lives in version control is the feature: the writing and the code share one history.
+
+## What's next
+
+I'll use this space for notes on the things I'm building: design systems, tooling, and the occasional deep dive when a problem turns out to be more interesting than it looked. Thanks for reading.

@@ -1,0 +1,27 @@
+---
+// Long-form MD/MDX article wrapper. Colors come from the `prose-plum` palette
+// (global.css); fonts and squared corners are applied here as prose-* utilities.
+type Props = {
+  class?: string
+}
+
+const { class: className } = Astro.props
+---
+
+<div
+  class:list={[
+    'prose prose-plum max-w-2xl dark:prose-invert',
+    // Serif display headings (the plugin defaults to bold sans).
+    'prose-headings:font-serif prose-headings:font-normal',
+    // Inline code: mono chip on the recessed well, squared, no backtick quotes.
+    'prose-code:rounded-none prose-code:bg-mauve-50 prose-code:px-1.5 prose-code:py-0.5 prose-code:font-mono prose-code:font-normal prose-code:before:content-none prose-code:after:content-none dark:prose-code:bg-mauve-950',
+    // Block code lives in <pre>; undo the inline-chip bg/padding so Shiki controls it.
+    '[&_pre_code]:bg-transparent [&_pre_code]:p-0',
+    // Code blocks and images: mono, squared, plum-bordered.
+    'prose-pre:rounded-none prose-pre:border prose-pre:border-mauve-200 prose-pre:font-mono dark:prose-pre:border-mauve-700',
+    'prose-img:rounded-none prose-img:border prose-img:border-mauve-200 dark:prose-img:border-mauve-700',
+    className,
+  ]}
+>
+  <slot />
+</div>

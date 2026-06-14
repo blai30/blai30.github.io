@@ -1,0 +1,29 @@
+---
+title: Pristine Machine
+summary: A plum-blossom take on a draughtsman's blueprint, a master design system and live showcase built on Tailwind and Base UI.
+order: 1
+featured: false
+thumbnail: /thumbnails/pristine-machine.png
+tech:
+  - React
+  - TypeScript
+  - Tailwind CSS
+  - Base UI
+  - Vite
+repo: https://github.com/blai30/pristine-machine
+---
+
+Pristine Machine is a design system that was built with the help of modern day AI. I am not a designer but I care about how code is written. I exclusively use [Tailwind CSS](https://tailwindcss.com) in all of my web projects and wanted a simple design system that plays into the "no custom CSS" rule. This design system only uses built-in Tailwind CSS utilities and keeps the CSS file completely bare of anything custom. It only includes the imports for Tailwind CSS itself, some Google Fonts, and a dark theme custom variant selector utility.
+My favorite color is red, but I prefer to lean towards the more rosy shade. Then I saw the v4.3 release of Tailwind CSS introduced a new `mauve` color spectrum, and decided to ground the color palette on `rose` and `mauve`. I saw a new trend within the modern web design space that I would call the "blueprint" design where solid thin lines were used to separate UI elements, like the design on used by the VoidZero team for their [oxc.rs](https://oxc.rs), [voidzero.dev](https://voidzero.dev), and [vite.dev](https://vite.dev) websites, or the [tailwindcss.com](https://tailwindcss.com) website itself. I am also a fan of the plum blossom aesthetic from Asian cultures, so this design system takes inspiration from both the blueprint design and the plum blossom aesthetic. The fonts and squared corners are a personal choice: Instrument Serif for display, Geist for UI text, JetBrains Mono for annotations.
+
+## The constraints are the point
+
+The system has one non-negotiable rule: **Tailwind utility classes only**. No custom CSS, no inline styles, no design tokens beyond three font families. The native `mauve` and `rose` ramps do the heavy lifting, which means there is no theme layer to drift out of sync. A component's color story lives entirely in its class strings, and the published library ships those strings intact so a consumer's own Tailwind build can see them.
+
+## What's inside
+
+- A catalog of accessible components across core, forms, feedback, navigation, overlays, and disclosure, built on top of [Base UI](https://base-ui.com) primitives.
+- A signature blueprint frame: a centered column bounded by vertical rails with plus-tick corners and an out-of-bounds diagonal hatch.
+- A single-page live showcase that documents the foundations and assembles the primitives into real interfaces.
+
+This very portfolio consumes the published `@pristine-machine/ui` package, so the system gets to prove itself in production rather than only in its own showcase.

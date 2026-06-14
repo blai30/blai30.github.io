@@ -3,6 +3,7 @@ import { getCollection, render } from 'astro:content'
 import { Badge } from '@pristine-machine/ui'
 import { ArrowLeft } from '@lucide/astro'
 import BaseLayout from '@/layouts/BaseLayout.astro'
+import Prose from '@/components/Prose.astro'
 
 export async function getStaticPaths() {
   const posts = await getCollection('blog', ({ data }) => !data.draft)
@@ -66,8 +67,8 @@ const updated = data.updated?.toTemporalInstant().toZonedDateTimeISO('UTC').toPl
       }
     </header>
 
-    <div class="prose mt-10 max-w-2xl">
+    <Prose class="mt-10">
       <Content />
-    </div>
+    </Prose>
   </article>
 </BaseLayout>

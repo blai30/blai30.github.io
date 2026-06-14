@@ -29,7 +29,8 @@ export const site = {
   location: 'San Francisco Bay Area',
   email: 'brianlai30@outlook.com',
   url: 'https://blai30.github.io',
-  tagline: 'Software Engineer, Full-stack Web Developer, and Godot hobbyist from San Francisco Bay Area, CA.',
+  tagline:
+    'Software Engineer, Full-stack Web Developer, and Godot hobbyist from San Francisco Bay Area, CA.',
   description:
     'Brian Lai is a software engineer in the San Francisco Bay Area who specializes in building web applications and games. With a background in computer science and a passion for creating engaging user experiences, Brian has experience working with a variety of technologies including C#, .NET, React, TypeScript, Tailwind CSS, Godot Engine, and Unity Engine. He is dedicated to crafting high-quality applications that are both functional and enjoyable to use.',
 }

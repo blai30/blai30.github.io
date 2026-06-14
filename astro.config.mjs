@@ -9,6 +9,11 @@ import { defineConfig } from 'astro/config'
 export default defineConfig({
   site: 'https://blai30.github.io',
   integrations: [react(), mdx(), icon()],
+  markdown: {
+    shikiConfig: {
+      themes: { light: 'github-light', dark: 'github-dark' },
+    },
+  },
   vite: {
     plugins: [tailwindcss()],
   },

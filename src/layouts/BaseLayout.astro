@@ -11,7 +11,7 @@ type Props = {
 }
 
 const { title, description = site.description } = Astro.props
-const pageTitle = title ? `${title} · ${site.name}` : `${site.name} · ${site.role}`
+const pageTitle = title ? `${title} · ${site.name}` : `${site.name}`
 const canonical = new URL(Astro.url.pathname, site.url)
 ---
 
@@ -30,7 +30,7 @@ const canonical = new URL(Astro.url.pathname, site.url)
     <meta name="author" content={site.name} />
     <meta
       name="keywords"
-      content="React, NextJS, Angular, Tailwind, HTML, CSS, JavaScript, TypeScript, PWA, JetBrains, Adobe, Portfolio, Brian, Lai, Software, Engineer, Web, Developer, Unity, Hobbyist, San, Francisco, State, University, Computer, Science, Bachelor, of, Science, Bay, Area, Discord, Bot, C#, Java, .NET, MySQL, FPS, Gamer, Anime, gaming, Bootstrap, Python, AWS, Docker, Google, Amazon, Apple, Cloud, Node, Figma, Sketch, C++, LinkedIn, GitHub, Resume, Dark, Light, Mode, Full, Stack, Front, Back, End, VR, Virtual, Reality"
+      content="React, NextJS, Astro, Angular, Tailwind, HTML, CSS, JavaScript, TypeScript, PWA, JetBrains, Adobe, Portfolio, Brian, Lai, Software, Engineer, Web, Game, Developer, Unity, Godot, Hobbyist, San, Francisco, State, University, Computer, Science, Bachelor, of, Science, Bay, Area, Discord, Bot, C#, Java, .NET, MySQL, FPS, Gamer, Anime, gaming, Bootstrap, Python, AWS, Docker, Google, Amazon, Apple, Cloud, Node, Figma, Sketch, C++, LinkedIn, GitHub, Resume, Dark, Light, Mode, Full, Stack, Front, Back, End, VR, Virtual, Reality"
     />
 
     <meta property="og:type" content="website" />

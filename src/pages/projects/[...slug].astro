@@ -5,6 +5,7 @@ import { ArrowLeft, ExternalLink } from '@lucide/astro'
 import BaseLayout from '@/layouts/BaseLayout.astro'
 import LinkButton from '@/components/LinkButton.astro'
 import SocialIcon from '@/components/SocialIcon.astro'
+import Prose from '@/components/Prose.astro'
 
 export async function getStaticPaths() {
   const projects = await getCollection('projects', ({ data }) => !data.draft)
@@ -77,8 +78,8 @@ const { Content } = await render(project)
       )
     }
 
-    <div class="prose mt-10 max-w-2xl">
+    <Prose class="mt-10">
       <Content />
-    </div>
+    </Prose>
   </article>
 </BaseLayout>
