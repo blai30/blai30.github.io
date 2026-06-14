@@ -1,5 +1,3 @@
-[![Build and Deploy](https://github.com/blai30/blai30.github.io/actions/workflows/deploy-gh-pages.yml/badge.svg?branch=main)](https://github.com/blai30/blai30.github.io/actions/workflows/deploy-gh-pages.yml)
-
 # Profiles
 
 - [GitHub](https://github.com/blai30)
