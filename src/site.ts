@@ -27,6 +27,8 @@ export const site = {
   location: 'San Francisco Bay Area',
   email: 'contact@brianlai.dev',
   url: 'https://blai30.github.io',
+  // Default share image, resolved against `url`. Used when a page sets none.
+  ogImage: '/favicon.png',
   tagline:
     'Software Engineer, Full-stack Web Developer, and Godot hobbyist from San Francisco Bay Area, CA.',
   description:

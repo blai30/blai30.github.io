@@ -22,7 +22,14 @@ const date = data.date.toTemporalInstant().toZonedDateTimeISO('UTC').toPlainDate
 const updated = data.updated?.toTemporalInstant().toZonedDateTimeISO('UTC').toPlainDate()
 ---
 
-<BaseLayout title={data.title} description={data.description}>
+<BaseLayout
+  title={data.title}
+  description={data.description}
+  type="article"
+  publishedTime={data.date}
+  modifiedTime={data.updated}
+  tags={data.tags}
+>
   <article class="px-6 pt-12 pb-20 sm:px-8 sm:pt-16 sm:pb-24">
     <a
       href="/blog"
