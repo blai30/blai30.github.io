@@ -1,12 +1,19 @@
 ---
+import { getCollection } from 'astro:content'
 import { BlueprintDivider, PlusTick } from '@pristine-machine/ui'
 import { ArrowRight, MapPin } from '@lucide/astro'
 import BaseLayout from '@/layouts/BaseLayout.astro'
 import SectionHeading from '@/components/SectionHeading.astro'
 import SocialLinks from '@/components/SocialLinks.astro'
 import SkillChip from '@/components/SkillChip.astro'
+import ProjectCard from '@/components/ProjectCard.astro'
 import LinkButton from '@/components/LinkButton.astro'
 import { site, skills } from '@/site'
+
+const featured = (await getCollection('projects', ({ data }) => !data.draft))
+  .filter((project) => project.data.featured && !project.data.archived)
+  .sort((a, b) => a.data.title.localeCompare(b.data.title))
+  .slice(0, 3)
 
 const profile = [
   { label: 'Location', value: site.location },
@@ -86,11 +93,47 @@ const profile = [
     </div>
   </section>
 
+  {/* Projects */}
+  <BlueprintDivider ticked />
+  <section class="px-6 py-16 sm:px-8 sm:py-20" id="projects">
+    <SectionHeading
+      eyebrow="01 / Projects"
+      title="Selected work"
+      accent="work"
+      description="A few things I've designed and built. Browse the full list for side projects, experiments, and older work."
+    />
+
+    <ul class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {featured.map((project) => (
+        <li class="h-full">
+          <ProjectCard project={project} />
+        </li>
+      ))}
+      <li class="h-full">
+        <a
+          href="/projects"
+          class="group flex h-full flex-col justify-between gap-6 border border-mauve-200 bg-mauve-50 p-5 transition-colors hover:border-mauve-400 hover:bg-white hover:duration-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-500/30 dark:border-mauve-700 dark:bg-mauve-950 dark:hover:border-mauve-600 dark:hover:bg-mauve-800 dark:focus-visible:ring-rose-400/25"
+        >
+          <span class="font-mono text-xs font-medium uppercase tracking-widest text-mauve-600 dark:text-mauve-400">
+            // more
+          </span>
+          <span class="font-serif text-2xl leading-tight text-mauve-900 dark:text-mauve-100">
+            See all projects
+          </span>
+          <span class="inline-flex items-center gap-1.5 font-mono text-xs font-medium text-rose-700 transition-transform group-hover:translate-x-1 group-hover:duration-0 dark:text-rose-400">
+            Browse the archive
+            <ArrowRight class="size-3.5" aria-hidden="true" />
+          </span>
+        </a>
+      </li>
+    </ul>
+  </section>
+
   {/* Skills */}
   <BlueprintDivider ticked />
   <section class="px-6 py-16 sm:px-8 sm:py-20" id="skills">
     <SectionHeading
-      eyebrow="01 / Skills"
+      eyebrow="02 / Skills"
       title="Tools of the trade"
       accent="trade"
       description="I enjoy learning and using new tools and technologies every day. Below is a collection of what I am most familiar with when building projects, grouped by where they live in the stack."
@@ -119,7 +162,7 @@ const profile = [
   <section class="px-6 py-16 sm:px-8 sm:py-24" id="contact">
     <div class="grid gap-12 lg:grid-cols-[1.2fr_1fr] lg:items-center lg:gap-16">
       <div class="flex flex-col gap-6">
-        <SectionHeading eyebrow="02 / Contact" title="Let's build something" accent="build" />
+        <SectionHeading eyebrow="03 / Contact" title="Let's build something" accent="build" />
         <p class="max-w-xl text-base/7 text-mauve-600 dark:text-mauve-400">
           Currently not looking for new opportunities, but my inbox is always open. Whether you have a question about my work, want to chat about tech, or just want to say hi, I'll do my best to get back to you!
         </p>
