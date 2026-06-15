@@ -6,20 +6,14 @@ import { useState } from 'react'
 export type NavLink = {
   label: string
   href: string
+  active: boolean
 }
 
 type MobileNavProps = {
   links: NavLink[]
-  // Current pathname, used to indicate the active link.
-  current: string
 }
 
-function isActive(href: string, current: string) {
-  if (href === '/') return current === '/'
-  return current === href || current.startsWith(href + '/')
-}
-
-export default function MobileNav({ links, current }: MobileNavProps) {
+export default function MobileNav({ links }: MobileNavProps) {
   const [open, setOpen] = useState(false)
 
   return (
@@ -44,7 +38,7 @@ export default function MobileNav({ links, current }: MobileNavProps) {
               onClick={() => setOpen(false)}
               className={clsx(
                 'border-l-2 px-4 py-3 font-sans text-sm transition-colors duration-200 hover:duration-0',
-                isActive(link.href, current)
+                link.active
                   ? 'border-rose-500 bg-mauve-200/60 font-medium text-mauve-900 dark:border-rose-400 dark:bg-mauve-800 dark:text-mauve-100'
                   : 'border-transparent text-mauve-600 hover:bg-mauve-200/40 hover:text-mauve-900 dark:text-mauve-400 dark:hover:bg-mauve-800/60 dark:hover:text-mauve-100'
               )}

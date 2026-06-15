@@ -1,6 +1,7 @@
 import { Navbar } from '@pristine-machine/ui'
-import ThemeToggle from '@/components/ThemeToggle'
+
 import MobileNav from '@/components/MobileNav'
+import ThemeToggle from '@/components/ThemeToggle'
 
 const links = [
   { label: 'Home', href: '/' },
@@ -18,11 +19,13 @@ function isActive(href: string, pathname: string) {
 }
 
 export default function SiteHeader({ pathname }: Props) {
+  const navLinks = links.map((link) => ({ ...link, active: isActive(link.href, pathname) }))
+
   return (
     <Navbar.Root>
       <a
         href="/"
-        className="group flex shrink-0 items-center gap-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-500/30 dark:focus-visible:ring-rose-400/25"
+        className="group flex shrink-0 items-center gap-3 focus-visible:ring-2 focus-visible:ring-rose-500/30 focus-visible:outline-none dark:focus-visible:ring-rose-400/25"
       >
         <span
           aria-hidden="true"
@@ -31,15 +34,15 @@ export default function SiteHeader({ pathname }: Props) {
           BL
         </span>
         <span className="font-serif text-xl leading-none text-mauve-900 dark:text-mauve-100">
-          Brian <span className="italic text-rose-700 dark:text-rose-400">Lai</span>
+          Brian <span className="text-rose-700 italic dark:text-rose-400">Lai</span>
         </span>
       </a>
 
       <Navbar.Nav className="hidden sm:flex">
         <Navbar.List>
-          {links.map((link) => (
+          {navLinks.map((link) => (
             <Navbar.Item key={link.href}>
-              <Navbar.Link href={link.href} active={isActive(link.href, pathname)}>
+              <Navbar.Link href={link.href} active={link.active}>
                 {link.label}
               </Navbar.Link>
             </Navbar.Item>
@@ -50,7 +53,7 @@ export default function SiteHeader({ pathname }: Props) {
       <div className="ml-auto flex shrink-0 items-center gap-1">
         <ThemeToggle />
         <div className="sm:hidden">
-          <MobileNav links={links} current={pathname} />
+          <MobileNav links={navLinks} />
         </div>
       </div>
     </Navbar.Root>

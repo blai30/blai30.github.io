@@ -2,7 +2,7 @@
 import { FileText, Mail, Rss } from '@lucide/astro'
 
 type Props = {
-  name: 'github' | 'linkedin' | 'mail' | 'rss' | 'file-text'
+  name: 'github' | 'linkedin' | 'mail' | 'file-text'
   class?: string
 }
 
@@ -40,5 +40,4 @@ const { name, class: className } = Astro.props
   )
 }
 {name === 'mail' && <Mail class={className} aria-hidden="true" />}
-{name === 'rss' && <Rss class={className} aria-hidden="true" />}
 {name === 'file-text' && <FileText class={className} aria-hidden="true" />}

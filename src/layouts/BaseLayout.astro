@@ -52,7 +52,7 @@ const canonical = new URL(Astro.url.pathname, site.url)
       // Resolve theme before first paint to avoid a flash. Mirrors the library's
       // useTheme storage key (`pm-theme`); ThemeToggle reads back from this class.
       const stored = localStorage.getItem('pm-theme')
-      const dark = stored ? stored === 'dark' : 'dark'
+      const dark = stored ? stored === 'dark' : true
       document.documentElement.classList.toggle('dark', dark)
     </script>
   </head>
