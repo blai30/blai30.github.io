@@ -8,12 +8,10 @@ export type SocialLink = {
 
 export type Skill = {
   name: string
-  // Iconify name for the brand logo, e.g. 'logos:react'.
-  // A 'simple-icons:*' name is monochrome and gets tinted to the foreground color.
   icon: string
   // Optional separate logo for dark mode (a real theme variant), shown in place of `icon`.
   iconDark?: string
-  // Dark-mode filter for single colored logos.
+  // Dark-mode filter for single colored logos that vanish on the dark canvas.
   dark?: 'invert' | 'white'
 }
 
@@ -27,7 +25,7 @@ export const site = {
   title: 'Brian Lai',
   role: 'Software Engineer',
   location: 'San Francisco Bay Area',
-  email: 'brianlai30@outlook.com',
+  email: 'contact@brianlai.dev',
   url: 'https://blai30.github.io',
   tagline:
     'Software Engineer, Full-stack Web Developer, and Godot hobbyist from San Francisco Bay Area, CA.',
@@ -56,9 +54,9 @@ export const socials: SocialLink[] = [
   },
   {
     label: 'Email',
-    href: 'mailto:brianlai30@outlook.com',
+    href: 'mailto:contact@brianlai.dev',
     icon: 'mail',
-    handle: 'brianlai30@outlook.com',
+    handle: 'contact@brianlai.dev',
   },
 ]
 
@@ -66,44 +64,44 @@ export const skills: SkillGroup[] = [
   {
     label: 'Languages',
     items: [
-      { name: 'C#', icon: 'logos:c-sharp' },
-      { name: 'TypeScript', icon: 'logos:typescript-icon' },
-      { name: 'JavaScript', icon: 'logos:javascript' },
+      { name: 'C#', icon: 'csharp.svg' },
+      { name: 'TypeScript', icon: 'typescript.svg' },
+      { name: 'JavaScript', icon: 'javascript.svg' },
     ],
   },
   {
     label: 'Frameworks & Runtime',
     items: [
-      { name: '.NET', icon: 'logos:dotnet' },
-      { name: 'React', icon: 'logos:react' },
-      { name: 'Next.js', icon: 'logos:nextjs-icon', dark: 'invert' },
-      { name: 'Node.js', icon: 'logos:nodejs-icon' },
-      { name: 'Astro', icon: 'logos:astro-icon', iconDark: 'simple-icons:astro' },
-      { name: 'Tailwind CSS', icon: 'logos:tailwindcss-icon' },
-      { name: 'Vite', icon: 'logos:vite-icon', iconDark: 'logos:vite-icon-dark' },
+      { name: '.NET', icon: 'dotnet.svg' },
+      { name: 'React', icon: 'react.svg' },
+      { name: 'Next.js', icon: 'nextjs-light.svg', iconDark: 'nextjs-dark.svg' },
+      { name: 'Node.js', icon: 'nodejs.svg' },
+      { name: 'Astro', icon: 'astro-light.svg', iconDark: 'astro-dark.svg' },
+      { name: 'Tailwind CSS', icon: 'tailwindcss.svg' },
+      { name: 'Vite', icon: 'vite.svg' },
     ],
   },
   {
     label: 'Databases',
     items: [
-      { name: 'MySQL', icon: 'logos:mysql-icon', dark: 'white' },
-      { name: 'PostgreSQL', icon: 'logos:postgresql' },
-      { name: 'Supabase', icon: 'logos:supabase-icon' },
+      { name: 'PostgreSQL', icon: 'postgresql.svg' },
+      { name: 'Supabase', icon: 'supabase.svg' },
     ],
   },
   {
     label: 'Game Engines',
     items: [
-      { name: 'Godot', icon: 'logos:godot-icon' },
-      { name: 'Unity', icon: 'simple-icons:unity' },
+      { name: 'Godot', icon: 'godot.svg' },
+      { name: 'Unity', icon: 'unity-light.svg', iconDark: 'unity-dark.svg' },
     ],
   },
   {
     label: 'Tools & Platforms',
     items: [
-      { name: 'Docker', icon: 'logos:docker-icon' },
-      { name: 'AWS', icon: 'logos:aws', dark: 'white' },
-      { name: 'Figma', icon: 'logos:figma' },
+      { name: 'Docker', icon: 'docker.svg' },
+      { name: 'AWS', icon: 'aws-light.svg', iconDark: 'aws-dark.svg' },
+      { name: 'Cloudflare', icon: 'cloudflare.svg' },
+      { name: 'Figma', icon: 'figma.svg' },
     ],
   },
 ]
