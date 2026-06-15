@@ -1,6 +1,8 @@
 ---
+import { FileText, Mail, Rss } from '@lucide/astro'
+
 type Props = {
-  name: 'github' | 'linkedin' | 'mail' | 'rss'
+  name: 'github' | 'linkedin' | 'mail' | 'rss' | 'file-text'
   class?: string
 }
 
@@ -37,40 +39,6 @@ const { name, class: className } = Astro.props
     </svg>
   )
 }
-{
-  name === 'mail' && (
-    <svg
-      class={className}
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      aria-hidden="true"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <rect width="20" height="16" x="2" y="4" rx="2" />
-      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-    </svg>
-  )
-}
-{
-  name === 'rss' && (
-    <svg
-      class={className}
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      aria-hidden="true"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path d="M4 11a9 9 0 0 1 9 9" />
-      <path d="M4 4a16 16 0 0 1 16 16" />
-      <circle cx="5" cy="19" r="1" />
-    </svg>
-  )
-}
+{name === 'mail' && <Mail class={className} aria-hidden="true" />}
+{name === 'rss' && <Rss class={className} aria-hidden="true" />}
+{name === 'file-text' && <FileText class={className} aria-hidden="true" />}

@@ -2,7 +2,7 @@ export type SocialLink = {
   label: string
   href: string
   // lucide-react icon name, resolved in SocialLinks/SiteHeader.
-  icon: 'github' | 'linkedin' | 'mail' | 'rss'
+  icon: 'github' | 'linkedin' | 'mail' | 'rss' | 'file-text'
   handle: string
 }
 
@@ -47,6 +47,12 @@ export const socials: SocialLink[] = [
     href: 'https://www.linkedin.com/in/blai/',
     icon: 'linkedin',
     handle: 'in/blai',
+  },
+  {
+    label: 'Resume',
+    href: 'https://blai30.github.io/resume/',
+    icon: 'file-text',
+    handle: '/resume',
   },
   {
     label: 'Email',
