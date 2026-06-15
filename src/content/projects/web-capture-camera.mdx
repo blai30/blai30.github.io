@@ -1,0 +1,17 @@
+---
+title: Web Capture Camera
+summary: A tool that turns any web page into a virtual ONVIF camera by capturing screenshots using Puppeteer, streaming live as an H.264 RTSP feed using FFmpeg that network video recorders can discover and record.
+featured: false
+thumbnail: /thumbnails/web-capture-camera.png
+tech:
+  - Node.js
+  - TypeScript
+  - Docker
+repo: https://github.com/blai30/web-capture-camera
+---
+
+Web Capture Camera exposes any web page as a virtual ONVIF camera so a network video recorder can treat a dashboard, status board, or live page as if it were a physical security camera. It captures screenshots of a configurable URL with headless Chromium, encodes them into an H.264 RTSP stream with FFmpeg, and advertises the feed over ONVIF SOAP. Built as a standalone Node.js application that I currently use to capture Weather Forecast Dashboard and serve to my UniFi Protect NVR.
+
+## Plug into existing NVR gear
+
+The piece that makes it practical is WS-Discovery: the camera announces itself on the network the same way a real device would, so an NVR finds and adds it automatically with no manual configuration. It runs on Node.js with [Puppeteer](https://pptr.dev) driving the browser and ffmpeg handling the encode, and the whole thing ships as a Docker image.
