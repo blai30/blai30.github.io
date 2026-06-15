@@ -1,0 +1,52 @@
+@import 'tailwindcss';
+@import '@pristine-machine/ui/preset.css';
+@plugin '@tailwindcss/typography';
+@source '../../node_modules/@pristine-machine/ui';
+
+/* Plum-blossom color palette for @tailwindcss/typography (used via `prose prose-plum`).
+   Fonts and squared corners are applied as prose-* utilities in Prose.astro. */
+@utility prose-plum {
+  --tw-prose-body: var(--color-mauve-700);
+  --tw-prose-headings: var(--color-mauve-900);
+  --tw-prose-lead: var(--color-mauve-600);
+  --tw-prose-links: var(--color-rose-700);
+  --tw-prose-bold: var(--color-mauve-900);
+  --tw-prose-counters: var(--color-mauve-500);
+  --tw-prose-bullets: var(--color-rose-500);
+  --tw-prose-hr: var(--color-mauve-200);
+  --tw-prose-quotes: var(--color-mauve-600);
+  --tw-prose-quote-borders: var(--color-rose-400);
+  --tw-prose-captions: var(--color-mauve-500);
+  --tw-prose-code: var(--color-mauve-800);
+  --tw-prose-pre-code: var(--color-mauve-800);
+  --tw-prose-pre-bg: var(--color-mauve-50);
+  --tw-prose-th-borders: var(--color-mauve-300);
+  --tw-prose-td-borders: var(--color-mauve-200);
+  --tw-prose-invert-body: var(--color-mauve-300);
+  --tw-prose-invert-headings: var(--color-mauve-100);
+  --tw-prose-invert-lead: var(--color-mauve-400);
+  --tw-prose-invert-links: var(--color-rose-400);
+  --tw-prose-invert-bold: var(--color-mauve-100);
+  --tw-prose-invert-counters: var(--color-mauve-400);
+  --tw-prose-invert-bullets: var(--color-rose-400);
+  --tw-prose-invert-hr: var(--color-mauve-700);
+  --tw-prose-invert-quotes: var(--color-mauve-400);
+  --tw-prose-invert-quote-borders: var(--color-rose-400);
+  --tw-prose-invert-captions: var(--color-mauve-400);
+  --tw-prose-invert-code: var(--color-mauve-200);
+  --tw-prose-invert-pre-code: var(--color-mauve-200);
+  --tw-prose-invert-pre-bg: var(--color-mauve-950);
+  --tw-prose-invert-th-borders: var(--color-mauve-600);
+  --tw-prose-invert-td-borders: var(--color-mauve-700);
+}
+
+.astro-code {
+  background-color: var(--color-mauve-50) !important;
+}
+.dark .astro-code {
+  background-color: var(--color-mauve-950) !important;
+}
+.dark .astro-code,
+.dark .astro-code span {
+  color: var(--shiki-dark) !important;
+}

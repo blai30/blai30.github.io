@@ -1,0 +1,20 @@
+---
+title: Splicer
+summary: A browser-based video editor that imports, trims, and exports clips entirely on the client, with nothing ever uploaded to a server. Powered by WebCodecs and FFmpeg WASM.
+featured: false
+thumbnail: /projects/splicer.png
+tech:
+  - Astro
+  - SSG
+  - Preact
+  - TypeScript
+  - Tailwind CSS
+repo: https://github.com/blai30/splicer
+demo: https://blai30.github.io/splicer
+---
+
+Splicer is a video editing tool that runs completely in the browser. You import clips, trim them, adjust playback, and export to several formats, and none of it ever leaves your machine. There is no backend and no upload step, which means your footage stays private by default.
+
+## Local processing, real codecs
+
+The editor leans on the browser's native [WebCodecs](https://developer.mozilla.org/docs/Web/API/WebCodecs_API) API for hardware-accelerated encode and decode, and falls back to [FFmpeg](https://ffmpeg.org) compiled to WebAssembly for the codecs and containers WebCodecs does not cover. Demuxing and muxing are handled with mp4box and webm-muxer. The UI is built with [Preact](https://preactjs.com) and Signals so the timeline stays responsive even while heavy media work runs in the background.

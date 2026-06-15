@@ -1,0 +1,45 @@
+---
+// Anchor styled to match @pristine-machine/ui Button. Use for navigation links
+// (semantic <a>) where the real Button would render an invalid nested <button>.
+import { focusRing } from '@pristine-machine/ui'
+
+type Variant = 'primary' | 'secondary' | 'ghost'
+type Size = 'sm' | 'md' | 'lg'
+
+type Props = {
+  href: string
+  variant?: Variant
+  size?: Size
+  external?: boolean
+  class?: string
+}
+
+const { href, variant = 'primary', size = 'md', external = false, class: className } = Astro.props
+
+const base =
+  'inline-flex items-center justify-center gap-2 rounded-none border font-sans font-medium leading-none whitespace-nowrap select-none transition duration-200 hover:duration-0 ease-out active:translate-y-px active:scale-[0.99] [&_svg]:size-[1.1em]'
+
+const sizes: Record<Size, string> = {
+  sm: 'h-7 px-3 text-sm',
+  md: 'h-9 px-4 text-base',
+  lg: 'h-11 px-5 text-lg',
+}
+
+const variants: Record<Variant, string> = {
+  primary:
+    'border-transparent bg-rose-600 text-white hover:bg-rose-700 active:bg-rose-800 dark:bg-rose-400 dark:text-rose-950 dark:hover:bg-rose-300 dark:active:bg-rose-500',
+  secondary:
+    'bg-white text-mauve-900 border-mauve-300 shadow-xs shadow-rose-900/10 hover:bg-mauve-200 hover:border-mauve-400 dark:bg-mauve-800 dark:text-mauve-100 dark:border-mauve-700 dark:hover:bg-mauve-700 dark:hover:border-mauve-600',
+  ghost:
+    'border-transparent text-mauve-900 hover:bg-mauve-200 dark:text-mauve-100 dark:hover:bg-mauve-700',
+}
+---
+
+<a
+  href={href}
+  target={external ? '_blank' : undefined}
+  rel={external ? 'noopener noreferrer' : undefined}
+  class:list={[base, sizes[size], variants[variant], focusRing, className]}
+>
+  <slot />
+</a>

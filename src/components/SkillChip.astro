@@ -1,0 +1,32 @@
+---
+import { clsx } from 'clsx/lite'
+
+type Props = {
+  name: string
+  icon: string
+  iconDark?: string
+  dark?: 'invert' | 'white'
+}
+
+const { name, icon, iconDark, dark } = Astro.props
+
+const base = 'size-10 shrink-0'
+const filter =
+  dark === 'invert' ? 'dark:invert' : dark === 'white' ? 'dark:brightness-0 dark:invert' : ''
+---
+
+<div
+  class="flex h-full items-center gap-3 px-4 py-3 transition-colors duration-200 hover:bg-mauve-100 hover:duration-0 dark:hover:bg-mauve-900"
+>
+  {
+    iconDark ? (
+      <>
+        <img src={`/icons/${icon}`} alt="" class={clsx(base, 'dark:hidden')} />
+        <img src={`/icons/${iconDark}`} alt="" class={clsx(base, 'hidden dark:block')} />
+      </>
+    ) : (
+      <img src={`/icons/${icon}`} alt="" class={clsx(base, filter)} />
+    )
+  }
+  <span class="font-sans text-base font-medium text-mauve-900 dark:text-mauve-100">{name}</span>
+</div>

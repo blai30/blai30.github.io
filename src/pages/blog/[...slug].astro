@@ -1,0 +1,81 @@
+---
+import { getCollection, render } from 'astro:content'
+import { Badge, eyebrow } from '@pristine-machine/ui'
+import { ArrowLeft } from '@lucide/astro'
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import Prose from '@/components/Prose.astro'
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog', ({ data }) => !data.draft)
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }))
+}
+
+const { post } = Astro.props
+const { data } = post
+const { Content } = await render(post)
+
+const dateStyle = { year: 'numeric', month: 'long', day: 'numeric' } as const
+const date = data.date.toTemporalInstant().toZonedDateTimeISO('UTC').toPlainDate()
+const updated = data.updated?.toTemporalInstant().toZonedDateTimeISO('UTC').toPlainDate()
+---
+
+<BaseLayout
+  title={data.title}
+  description={data.description}
+  type="article"
+  publishedTime={data.date}
+  modifiedTime={data.updated}
+  tags={data.tags}
+>
+  <article class="px-6 pt-12 pb-20 sm:px-8 sm:pt-16 sm:pb-24">
+    <a
+      href="/blog"
+      class:list={[eyebrow, 'inline-flex items-center gap-1.5 transition-colors hover:text-rose-700 dark:hover:text-rose-400']}
+    >
+      <ArrowLeft class="size-3.5" aria-hidden="true" />
+      All posts
+    </a>
+
+    <header class="mt-8 flex flex-col gap-5 border-b border-mauve-200 pb-10 dark:border-mauve-700">
+      <div class="flex flex-wrap items-center gap-x-4 gap-y-2">
+        <time
+          datetime={date.toString()}
+          class="font-mono text-xs uppercase tracking-widest text-mauve-600 dark:text-mauve-400"
+        >
+          {date.toLocaleString('en-US', dateStyle)}
+        </time>
+        {
+          updated && (
+            <span class="font-mono text-xs uppercase tracking-widest text-mauve-600 dark:text-mauve-400">
+              Updated {updated.toLocaleString('en-US', dateStyle)}
+            </span>
+          )
+        }
+      </div>
+
+      <h1 class="font-serif text-4xl leading-tight text-mauve-900 sm:text-5xl dark:text-mauve-100">
+        {data.title}
+      </h1>
+      <p class="max-w-2xl text-lg/8 text-mauve-600 dark:text-mauve-400">{data.description}</p>
+
+      {
+        data.tags.length > 0 && (
+          <ul class="flex flex-wrap gap-2">
+            {data.tags.map((tag) => (
+              <li>
+                <Badge variant="neutral">{tag}</Badge>
+              </li>
+            ))}
+          </ul>
+        )
+      }
+    </header>
+
+    <Prose class="mt-10">
+      <Content />
+    </Prose>
+  </article>
+</BaseLayout>

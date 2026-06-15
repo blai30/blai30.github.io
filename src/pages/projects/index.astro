@@ -1,0 +1,103 @@
+---
+import { getCollection } from 'astro:content'
+import { BlueprintDivider, eyebrow } from '@pristine-machine/ui'
+import { Sparkles } from '@lucide/astro'
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import SectionHeading from '@/components/SectionHeading.astro'
+import ProjectCard from '@/components/ProjectCard.astro'
+
+const all = (await getCollection('projects', ({ data }) => !data.draft)).sort(
+  (a, b) => a.data.title.localeCompare(b.data.title)
+)
+const featured = all.filter(
+  (project) => project.data.featured && !project.data.archived
+)
+const rest = all.filter(
+  (project) => !project.data.featured && !project.data.archived
+)
+const archived = all.filter((project) => project.data.archived)
+---
+
+<BaseLayout
+  title="Projects"
+  description="A selection of things Brian Lai has designed and built."
+>
+  <section class="px-6 pt-16 pb-12 sm:px-8 sm:pt-20">
+    <SectionHeading
+      eyebrowText="Projects"
+      title="Things I've built"
+      accent="built"
+      description="A selection of work, side projects, and experiments. Each one is a short writeup of what it is and how it came together."
+    />
+  </section>
+
+  {
+    featured.length > 0 && (
+      <section class="px-6 pb-16 sm:px-8">
+        <div class="mb-6 flex items-center gap-2">
+          <Sparkles class="size-4 text-rose-600 dark:text-rose-400" aria-hidden="true" />
+          <h2 class={eyebrow}>
+            Featured
+          </h2>
+        </div>
+        <ul class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {featured.map((project) => (
+            <li class="h-full">
+              <ProjectCard project={project} />
+            </li>
+          ))}
+        </ul>
+      </section>
+    )
+  }
+
+  {
+    rest.length > 0 && (
+      <>
+        <BlueprintDivider ticked />
+        <section class="px-6 py-16 sm:px-8 sm:py-20">
+          <h2 class:list={['mb-6', eyebrow]}>
+            {featured.length > 0 ? 'More projects' : 'All projects'}
+          </h2>
+          <ul class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {rest.map((project) => (
+              <li class="h-full">
+                <ProjectCard project={project} />
+              </li>
+            ))}
+          </ul>
+        </section>
+      </>
+    )
+  }
+
+  {
+    archived.length > 0 && (
+      <>
+        <BlueprintDivider ticked />
+        <section class="px-6 py-16 sm:px-8 sm:py-20">
+          <h2 class:list={['mb-6', eyebrow]}>
+            Archived
+          </h2>
+          <ul class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {archived.map((project) => (
+              <li class="h-full">
+                <ProjectCard project={project} compact />
+              </li>
+            ))}
+          </ul>
+        </section>
+      </>
+    )
+  }
+
+  {
+    all.length === 0 && (
+      <section class="px-6 pb-20 sm:px-8">
+        <p class="font-mono text-sm text-mauve-600 dark:text-mauve-400">
+          No projects published yet. Check back soon.
+        </p>
+      </section>
+    )
+  }
+</BaseLayout>

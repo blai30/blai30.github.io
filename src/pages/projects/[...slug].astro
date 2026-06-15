@@ -1,0 +1,91 @@
+---
+import { getCollection, render } from 'astro:content'
+import { Badge, eyebrow } from '@pristine-machine/ui'
+import { ArrowLeft, ExternalLink } from '@lucide/astro'
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import LinkButton from '@/components/LinkButton.astro'
+import SocialIcon from '@/components/SocialIcon.astro'
+import Prose from '@/components/Prose.astro'
+
+export async function getStaticPaths() {
+  const projects = await getCollection('projects', ({ data }) => !data.draft)
+  return projects.map((project) => ({
+    params: { slug: project.id },
+    props: { project },
+  }))
+}
+
+const { project } = Astro.props
+const { data } = project
+const { Content } = await render(project)
+---
+
+<BaseLayout
+  title={data.title}
+  description={data.summary}
+  type="article"
+  image={data.thumbnail}
+  tags={data.tech}
+>
+  <article class="px-6 pt-12 pb-20 sm:px-8 sm:pt-16 sm:pb-24">
+    <a
+      href="/projects"
+      class:list={[eyebrow, 'inline-flex items-center gap-1.5 transition-colors hover:text-rose-700 dark:hover:text-rose-400']}
+    >
+      <ArrowLeft class="size-3.5" aria-hidden="true" />
+      All projects
+    </a>
+
+    <header class="mt-8 flex flex-col gap-6 border-b border-mauve-200 pb-10 dark:border-mauve-700">
+      <h1 class="font-serif text-4xl leading-tight text-mauve-900 sm:text-5xl dark:text-mauve-100">
+        {data.title}
+      </h1>
+      <p class="max-w-2xl text-lg/8 text-mauve-600 dark:text-mauve-400">{data.summary}</p>
+
+      {
+        data.tech.length > 0 && (
+          <ul class="flex flex-wrap gap-2">
+            {data.tech.map((item) => (
+              <li>
+                <Badge variant="neutral">{item}</Badge>
+              </li>
+            ))}
+          </ul>
+        )
+      }
+
+      {
+        (data.repo || data.demo) && (
+          <div class="flex flex-wrap gap-3">
+            {data.repo && (
+              <LinkButton href={data.repo} variant="secondary" size="md" external>
+                <SocialIcon name="github" />
+                View code
+              </LinkButton>
+            )}
+            {data.demo && (
+              <LinkButton href={data.demo} variant="primary" size="md" external>
+                <ExternalLink aria-hidden="true" />
+                Live demo
+              </LinkButton>
+            )}
+          </div>
+        )
+      }
+    </header>
+
+    {
+      data.thumbnail && (
+        <img
+          src={data.thumbnail}
+          alt=""
+          class="mt-10 aspect-video w-full border border-mauve-200 object-cover dark:border-mauve-700"
+        />
+      )
+    }
+
+    <Prose class="mt-10">
+      <Content />
+    </Prose>
+  </article>
+</BaseLayout>

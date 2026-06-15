@@ -1,0 +1,113 @@
+---
+import { Badge, Card, focusRing } from '@pristine-machine/ui'
+import { ArrowUpRight, ExternalLink } from '@lucide/astro'
+import type { CollectionEntry } from 'astro:content'
+import SocialIcon from '@/components/SocialIcon.astro'
+
+type Props = {
+  project: CollectionEntry<'projects'>
+  compact?: boolean
+}
+
+const { project, compact = false } = Astro.props
+const { data, id } = project
+const href = `/projects/${id}`
+---
+
+<Card interactive padded={false} className="flex h-full flex-col overflow-hidden">
+  {
+    data.thumbnail && (
+      <a href={href} class="group block aspect-video w-full overflow-hidden border-b border-mauve-200 bg-mauve-50 dark:border-mauve-700 dark:bg-mauve-950">
+        <img
+          src={data.thumbnail}
+          alt=""
+          loading="lazy"
+          class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.03] group-hover:duration-0"
+        />
+      </a>
+    )
+  }
+
+  <div class:list={['flex flex-1 flex-col gap-3', compact ? 'p-4' : 'p-5']}>
+    <div class="flex items-start justify-between gap-3">
+      <h3
+        class:list={[
+          'font-serif leading-tight text-mauve-900 dark:text-mauve-100',
+          compact ? 'text-lg' : 'text-xl',
+        ]}
+      >
+        <a
+          href={href}
+          class:list={['transition-colors hover:text-rose-700 hover:duration-0 dark:hover:text-rose-400', focusRing]}
+        >
+          {data.title}
+        </a>
+      </h3>
+      {data.featured && <Badge variant="accent">Featured</Badge>}
+    </div>
+
+    <p
+      class:list={[
+        'text-mauve-600 dark:text-mauve-400',
+        compact ? 'line-clamp-2 text-sm/6' : 'text-sm/6',
+      ]}
+    >
+      {data.summary}
+    </p>
+
+    {
+      data.tech.length > 0 && !compact && (
+        <ul class="mt-auto flex flex-wrap gap-2 pt-2">
+          {data.tech.map((item) => (
+            <li>
+              <Badge variant="neutral">{item}</Badge>
+            </li>
+          ))}
+        </ul>
+      )
+    }
+  </div>
+
+  <div
+    class:list={[
+      'flex items-center justify-between border-t border-mauve-200 dark:border-mauve-700',
+      compact ? 'px-4 py-2' : 'px-5 py-3',
+    ]}
+  >
+    <div class="flex items-center gap-4">
+      {
+        data.repo && (
+          <a
+            href={data.repo}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-1.5 font-mono text-xs text-mauve-600 transition-colors hover:text-rose-700 hover:duration-0 dark:text-mauve-400 dark:hover:text-rose-400"
+          >
+            <SocialIcon name="github" class="size-3.5" />
+            Code
+          </a>
+        )
+      }
+      {
+        data.demo && (
+          <a
+            href={data.demo}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-1.5 font-mono text-xs text-mauve-600 transition-colors hover:text-rose-700 hover:duration-0 dark:text-mauve-400 dark:hover:text-rose-400"
+          >
+            <ExternalLink class="size-3.5" aria-hidden="true" />
+            Live
+          </a>
+        )
+      }
+    </div>
+    <a
+      href={href}
+      class="inline-flex items-center gap-1 font-mono text-xs font-medium text-mauve-900 transition-colors hover:text-rose-700 hover:duration-0 dark:text-mauve-100 dark:hover:text-rose-400"
+    >
+      Details
+      <ArrowUpRight class="size-3.5" aria-hidden="true" />
+    </a>
+  </div>
+</Card>

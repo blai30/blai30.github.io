@@ -1,0 +1,179 @@
+---
+import { getCollection } from 'astro:content'
+import { BlueprintDivider, eyebrow, focusRing } from '@pristine-machine/ui'
+import { ArrowRight, MapPin } from '@lucide/astro'
+import BaseLayout from '@/layouts/BaseLayout.astro'
+import SectionHeading from '@/components/SectionHeading.astro'
+import SocialLinks from '@/components/SocialLinks.astro'
+import SkillChip from '@/components/SkillChip.astro'
+import ProjectCard from '@/components/ProjectCard.astro'
+import LinkButton from '@/components/LinkButton.astro'
+import BlueprintPanel from '@/components/BlueprintPanel.astro'
+import { site, skills } from '@/site'
+
+const featured = (await getCollection('projects', ({ data }) => !data.draft))
+  .filter((project) => project.data.featured && !project.data.archived)
+  .sort((a, b) => a.data.title.localeCompare(b.data.title))
+  .slice(0, 3)
+
+const profile = [
+  { label: 'Location', value: site.location },
+  { label: 'Role', value: site.role },
+  { label: 'Focus', value: 'TypeScript React for web apps, Godot C# for game dev' },
+  { label: 'Currently', value: 'Building web apps and games' },
+]
+---
+
+<BaseLayout description={site.description}>
+  {/* About / hero */}
+  <section class="px-6 pt-16 pb-20 sm:px-8 sm:pt-24 sm:pb-24">
+    <div class="grid gap-12 lg:grid-cols-[1.4fr_1fr] lg:items-start lg:gap-16">
+      <div class="flex flex-col gap-8">
+        <span class={eyebrow}>
+          {site.role} <span class="text-rose-700 dark:text-rose-400">/</span> San Francisco Bay Area
+        </span>
+
+        <h1 class="font-serif text-5xl leading-[1.05] text-mauve-900 sm:text-6xl lg:text-7xl dark:text-mauve-100">
+          Hello, I'm Brian! 👋
+        </h1>
+
+        <div class="flex max-w-xl flex-col gap-4">
+          <p class="text-base/7 text-mauve-600 dark:text-mauve-400">
+            I earned my Bachelor of Science in Computer Science from <a
+              href="https://www.sfsu.edu"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="font-medium text-rose-700 underline decoration-rose-400 underline-offset-2 transition-colors hover:decoration-rose-600 hover:duration-0 dark:text-rose-400 dark:decoration-rose-400/50 dark:hover:decoration-rose-400"
+              >San Francisco State University</a
+            > in Spring 2020. I aim to create top quality applications with a keen eye for UX and usability. Experienced in C#/.NET, React + TypeScript + Tailwind CSS, Godot Engine, and Unity Engine.
+          </p>
+        </div>
+
+        <div class="flex flex-wrap items-center gap-3">
+          <LinkButton href="/projects" variant="primary" size="lg">
+            View projects
+            <ArrowRight aria-hidden="true" />
+          </LinkButton>
+          <LinkButton href="/blog" variant="secondary" size="lg">Read the blog</LinkButton>
+        </div>
+
+        <div class="flex flex-col gap-3">
+          <span class={eyebrow}>
+            Find me
+          </span>
+          <SocialLinks variant="icons" />
+        </div>
+      </div>
+
+      {/* Blueprint profile legend */}
+      <BlueprintPanel label="// profile" class="lg:mt-2">
+        <span
+          slot="meta"
+          class="inline-flex items-center gap-1.5 font-mono text-xs text-mauve-600 dark:text-mauve-400"
+        >
+          <MapPin class="size-3.5" aria-hidden="true" />
+          Bay Area
+        </span>
+
+        <dl class="divide-y divide-mauve-200 dark:divide-mauve-700">
+          {profile.map((row) => (
+            <div class="flex flex-col gap-1 px-5 py-4">
+              <dt class={eyebrow}>
+                {row.label}
+              </dt>
+              <dd class="font-sans text-sm text-mauve-900 dark:text-mauve-100">{row.value}</dd>
+            </div>
+          ))}
+        </dl>
+      </BlueprintPanel>
+    </div>
+  </section>
+
+  {/* Projects */}
+  <BlueprintDivider ticked />
+  <section class="px-6 py-16 sm:px-8 sm:py-20" id="projects">
+    <SectionHeading
+      eyebrowText="01 / Projects"
+      title="Selected work"
+      accent="work"
+      description="A few things I've designed and built. Browse the full list for side projects, experiments, and older work."
+    />
+
+    <ul class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {featured.map((project) => (
+        <li class="h-full">
+          <ProjectCard project={project} />
+        </li>
+      ))}
+      <li class="h-full">
+        <a
+          href="/projects"
+          class:list={['group flex h-full flex-col justify-between gap-6 border border-mauve-200 bg-mauve-50 p-5 transition-colors hover:border-mauve-400 hover:bg-white hover:duration-0 dark:border-mauve-700 dark:bg-mauve-950 dark:hover:border-mauve-600 dark:hover:bg-mauve-800', focusRing]}
+        >
+          <span class={eyebrow}>
+            // more
+          </span>
+          <span class="font-serif text-2xl leading-tight text-mauve-900 dark:text-mauve-100">
+            See all projects
+          </span>
+          <span class="inline-flex items-center gap-1.5 font-mono text-xs font-medium text-rose-700 transition-transform group-hover:translate-x-1 group-hover:duration-0 dark:text-rose-400">
+            Browse the archive
+            <ArrowRight class="size-3.5" aria-hidden="true" />
+          </span>
+        </a>
+      </li>
+    </ul>
+  </section>
+
+  {/* Skills */}
+  <BlueprintDivider ticked />
+  <section class="px-6 py-16 sm:px-8 sm:py-20" id="skills">
+    <SectionHeading
+      eyebrowText="02 / Skills"
+      title="Tools of the trade"
+      accent="trade"
+      description="I enjoy learning and using new tools and technologies every day. Below is a collection of what I am most familiar with when building projects, grouped by where they live in the stack."
+    />
+
+    <div class="mt-12 gap-6 lg:columns-2">
+      {skills.map((group) => (
+        <BlueprintPanel label={`// ${group.label.toLowerCase()}`} class="mb-6 break-inside-avoid">
+          <span slot="meta" class="font-mono text-xs text-mauve-600 dark:text-mauve-400">
+            {String(group.items.length).padStart(2, '0')}
+          </span>
+
+          <ul class="grid grid-cols-2 gap-px bg-mauve-200 dark:bg-mauve-700">
+            {group.items.map((item) => (
+              <li class="bg-white dark:bg-mauve-800">
+                <SkillChip name={item.name} icon={item.icon} iconDark={item.iconDark} dark={item.dark} />
+              </li>
+            ))}
+            {group.items.length % 2 === 1 && (
+              <li class="bg-white dark:bg-mauve-800" aria-hidden="true" />
+            )}
+          </ul>
+        </BlueprintPanel>
+      ))}
+    </div>
+  </section>
+
+  {/* Contact */}
+  <BlueprintDivider ticked />
+  <section class="px-6 py-16 sm:px-8 sm:py-24" id="contact">
+    <div class="grid gap-12 lg:grid-cols-[1.2fr_1fr] lg:items-center lg:gap-16">
+      <div class="flex flex-col gap-6">
+        <SectionHeading eyebrowText="03 / Contact" title="Let's build something" accent="build" />
+        <p class="max-w-xl text-base/7 text-mauve-600 dark:text-mauve-400">
+          Currently not looking for new opportunities, but my inbox is always open. Whether you have a question about my work, want to chat about tech, or just want to say hi, I'll do my best to get back to you!
+        </p>
+        <div>
+          <LinkButton href={`mailto:${site.email}`} variant="primary" size="lg">
+            Say hello
+            <ArrowRight aria-hidden="true" />
+          </LinkButton>
+        </div>
+      </div>
+      <SocialLinks variant="list" />
+    </div>
+  </section>
+</BaseLayout>

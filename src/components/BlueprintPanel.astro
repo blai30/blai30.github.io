@@ -1,0 +1,29 @@
+---
+import { PlusTick } from '@pristine-machine/ui'
+
+type Props = {
+  label: string
+  class?: string
+}
+
+const { label, class: className } = Astro.props
+---
+
+<div
+  class:list={[
+    'relative border border-mauve-200 bg-white dark:border-mauve-700 dark:bg-mauve-800',
+    className,
+  ]}
+>
+  <PlusTick corner="tl" />
+  <PlusTick corner="tr" />
+  <PlusTick corner="bl" />
+  <PlusTick corner="br" />
+
+  <div class="flex items-center justify-between border-b border-mauve-200 bg-mauve-50 px-5 py-3 dark:border-mauve-700 dark:bg-mauve-950">
+    <span class="font-mono text-xs font-medium text-mauve-600 dark:text-mauve-400">{label}</span>
+    <slot name="meta" />
+  </div>
+
+  <slot />
+</div>

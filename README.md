@@ -1,11 +1,19 @@
-[![Build and Deploy](https://github.com/blai30/blai30.github.io/actions/workflows/deploy-gh-pages.yml/badge.svg?branch=main)](https://github.com/blai30/blai30.github.io/actions/workflows/deploy-gh-pages.yml)
+# blai30.github.io
 
-# Profiles
+My personal website and portfolio, built with [Astro](https://astro.build/), React, and Tailwind CSS.
 
+## Development
+
+```sh
+pnpm install   # install dependencies
+pnpm dev       # start the dev server
+pnpm build     # build for production
+pnpm preview   # preview the production build
+```
+
+## Links
+
+- [Website](https://www.brianlai.dev/)
+- [Resume](https://blai30.github.io/resume/)
 - [GitHub](https://github.com/blai30)
 - [LinkedIn](https://www.linkedin.com/in/blai/)
-
-# Resources
-
-- [Resume](https://blai30.github.io/resume/)
-- [Website](https://www.brianlai.dev/)
