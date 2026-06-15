@@ -1,0 +1,19 @@
+---
+title: Hextech Check
+summary: A League of Legends companion that looks up a player and lays out their champion mastery and Hextech chest progress as interactive cards.
+featured: true
+thumbnail: /thumbnails/hextech-check.png
+tech:
+  - Next.js
+  - SSR
+  - React
+  - TypeScript
+  - Tailwind CSS
+  - Riot API
+repo: https://github.com/blai30/hextech-check
+demo: https://hextech-check.vercel.app
+---
+
+Hextech Check lets League of Legends players search for a player by name and region, then renders their champion mastery rankings and Hextech chest progress as a grid of interactive cards. It pulls live data from the Riot API through [Next.js](https://nextjs.org) server-side rendering, so each lookup reflects the player's current state.
+
+The interface is responsive and ships with dark mode out of the box. The cards are the centerpiece: each one surfaces a champion's mastery level, points, and whether the chest for that champion has already been earned this season. The card display can be filtered and sorted based on various criteria. The cards themselves have a parallax hover effect, and can be flipped to show more detailed stats about the champion mastery. It's a fun way to visualize and explore a player's progress in the game.

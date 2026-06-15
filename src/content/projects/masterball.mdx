@@ -1,0 +1,21 @@
+---
+title: Masterball
+summary: A fast, fully static Pokedex covering all 1,000+ species along with their moves, abilities, and items, built at compile time from the PokéAPI dataset.
+featured: true
+thumbnail: /thumbnails/masterball.png
+tech:
+  - Astro
+  - SSG
+  - TypeScript
+  - React
+  - Tailwind CSS
+  - PokéAPI
+repo: https://github.com/blai30/masterball
+demo: https://blai30.github.io/masterball
+---
+
+Masterball is a Pokedex web application that browses all 1,000+ Pokémon species, plus their moves, abilities, and items. Every piece of data is pulled from [PokéAPI](https://pokeapi.co) at build time and baked into static HTML, so the pages load instantly and there are no runtime API calls to wait on.
+
+## Static first, interactive where it counts
+
+The bulk of the site is plain HTML rendered by [Astro](https://astro.build). React only hydrates the parts that genuinely need it: search, filtering, and sortable tables powered by [TanStack Table](https://tanstack.com/table). Stat spreads and type charts are drawn with [visx](https://airbnb.io/visx), and the whole thing runs through the React Compiler so the interactive islands stay lean. The result is a reference tool that feels instant while still being rich to explore.
