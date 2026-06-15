@@ -1,6 +1,6 @@
 ---
 import { BlueprintFrame } from '@pristine-machine/ui'
-import SiteHeader from '@/components/SiteHeader.astro'
+import SiteHeader from '@/components/SiteHeader'
 import SiteFooter from '@/components/SiteFooter.astro'
 import { site } from '@/site'
 import '@/styles/global.css'
@@ -59,7 +59,7 @@ const canonical = new URL(Astro.url.pathname, site.url)
   <body class="bg-mauve-100 font-sans text-mauve-900 antialiased dark:bg-mauve-900 dark:text-mauve-100">
     <BlueprintFrame>
       <div class="flex min-h-screen flex-col">
-        <SiteHeader />
+        <SiteHeader pathname={Astro.url.pathname} client:load />
         <main class="flex-1">
           <slot />
         </main>
