@@ -139,18 +139,32 @@ const profile = [
       description="I enjoy learning and using new tools and technologies every day. Below is a collection of what I am most familiar with when building projects, grouped by where they live in the stack."
     />
 
-    <div class="mt-12 flex flex-col gap-10">
+    <div class="mt-12 gap-6 lg:columns-2">
       {skills.map((group) => (
-        <div class="flex flex-col gap-4">
-          <h3 class="font-mono text-xs font-medium uppercase tracking-widest text-mauve-600 dark:text-mauve-400">
-            {group.label}
-          </h3>
-          <ul class="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
+        <div class="relative mb-6 break-inside-avoid border border-mauve-200 bg-white dark:border-mauve-700 dark:bg-mauve-800">
+          <PlusTick corner="tl" />
+          <PlusTick corner="tr" />
+          <PlusTick corner="bl" />
+          <PlusTick corner="br" />
+
+          <div class="flex items-center justify-between border-b border-mauve-200 bg-mauve-50 px-5 py-3 dark:border-mauve-700 dark:bg-mauve-950">
+            <span class="font-mono text-xs font-medium text-mauve-600 dark:text-mauve-400">
+              // {group.label.toLowerCase()}
+            </span>
+            <span class="font-mono text-xs text-mauve-600 dark:text-mauve-400">
+              {String(group.items.length).padStart(2, '0')}
+            </span>
+          </div>
+
+          <ul class="grid grid-cols-2 gap-px bg-mauve-200 dark:bg-mauve-700">
             {group.items.map((item) => (
-              <li>
+              <li class="bg-white dark:bg-mauve-800">
                 <SkillChip name={item.name} icon={item.icon} iconDark={item.iconDark} dark={item.dark} />
               </li>
             ))}
+            {group.items.length % 2 === 1 && (
+              <li class="bg-white dark:bg-mauve-800" aria-hidden="true" />
+            )}
           </ul>
         </div>
       ))}
