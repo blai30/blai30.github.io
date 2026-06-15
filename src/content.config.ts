@@ -9,7 +9,7 @@ const projects = defineCollection({
     title: z.string(),
     summary: z.string(),
     tech: z.array(z.string()).default([]),
-    // Path under /public, e.g. '/thumbnails/foo.svg'.
+    // Path under /public, e.g. '/projects/foo.svg'.
     thumbnail: z.string().optional(),
     repo: z.url().optional(),
     demo: z.url().optional(),
