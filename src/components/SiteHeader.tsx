@@ -1,4 +1,5 @@
-import { Navbar } from '@pristine-machine/ui'
+import { Navbar, focusRing } from '@pristine-machine/ui'
+import { clsx } from 'clsx/lite'
 
 import MobileNav from '@/components/MobileNav'
 import ThemeToggle from '@/components/ThemeToggle'
@@ -23,10 +24,7 @@ export default function SiteHeader({ pathname }: Props) {
 
   return (
     <Navbar.Root>
-      <a
-        href="/"
-        className="group flex shrink-0 items-center gap-3 focus-visible:ring-2 focus-visible:ring-rose-500/30 focus-visible:outline-none dark:focus-visible:ring-rose-400/25"
-      >
+      <a href="/" className={clsx('group flex shrink-0 items-center gap-3', focusRing)}>
         <span
           aria-hidden="true"
           className="grid size-9 place-items-center border border-mauve-300 bg-white font-mono text-sm font-medium text-mauve-900 transition-colors duration-200 group-hover:border-rose-400 group-hover:duration-0 dark:border-mauve-600 dark:bg-mauve-800 dark:text-mauve-100"

@@ -1,7 +1,9 @@
 ---
+import { eyebrow } from '@pristine-machine/ui'
+
 type Props = {
   // Mono eyebrow, e.g. "02 / Skills".
-  eyebrow: string
+  eyebrowText: string
   title: string
   // One word within `title` rendered in italic accent; first match wins.
   accent?: string
@@ -9,7 +11,7 @@ type Props = {
   id?: string
 }
 
-const { eyebrow, title, accent, description, id } = Astro.props
+const { eyebrowText, title, accent, description, id } = Astro.props
 
 // Split the title around the accent word so only that word is emphasized.
 let before = title
@@ -24,8 +26,8 @@ if (accent && title.includes(accent)) {
 ---
 
 <div class="flex flex-col gap-3" id={id}>
-  <span class="font-mono text-xs font-medium uppercase tracking-widest text-mauve-600 dark:text-mauve-400">
-    {eyebrow}
+  <span class={eyebrow}>
+    {eyebrowText}
   </span>
   <h2 class="font-serif text-4xl leading-tight text-mauve-900 sm:text-5xl dark:text-mauve-100">
     {

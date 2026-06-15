@@ -1,6 +1,7 @@
 ---
 import SocialIcon from '@/components/SocialIcon.astro'
 import { socials } from '@/site'
+import { focusRing } from '@pristine-machine/ui'
 
 type Props = {
   // 'icons' = compact square icon buttons; 'list' = icon + label + handle rows.
@@ -22,7 +23,7 @@ const { variant = 'icons', class: className } = Astro.props
             rel={social.icon === 'mail' ? undefined : 'noopener noreferrer'}
             aria-label={social.label}
             title={social.label}
-            class="grid size-10 place-items-center border border-mauve-300 bg-white text-mauve-700 transition-colors duration-200 hover:border-rose-400 hover:text-rose-600 hover:duration-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-500/30 dark:border-mauve-600 dark:bg-mauve-800 dark:text-mauve-300 dark:hover:border-rose-400 dark:hover:text-rose-400 dark:focus-visible:ring-rose-400/25"
+            class:list={['grid size-10 place-items-center border border-mauve-300 bg-white text-mauve-700 transition-colors duration-200 hover:border-rose-400 hover:text-rose-600 hover:duration-0 dark:border-mauve-600 dark:bg-mauve-800 dark:text-mauve-300 dark:hover:border-rose-400 dark:hover:text-rose-400', focusRing]}
           >
             <SocialIcon name={social.icon} class="size-[1.15rem]" />
           </a>
@@ -37,7 +38,7 @@ const { variant = 'icons', class: className } = Astro.props
             href={social.href}
             target={social.icon === 'mail' ? undefined : '_blank'}
             rel={social.icon === 'mail' ? undefined : 'noopener noreferrer'}
-            class="group flex items-center gap-4 bg-white px-4 py-3.5 transition-colors duration-200 hover:bg-mauve-50 hover:duration-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-rose-500/30 dark:bg-mauve-800 dark:hover:bg-mauve-800/60 dark:focus-visible:ring-rose-400/25"
+            class:list={['group flex items-center gap-4 bg-white px-4 py-3.5 transition-colors duration-200 hover:bg-mauve-50 hover:duration-0 dark:bg-mauve-800 dark:hover:bg-mauve-800/60', focusRing, 'focus-visible:ring-inset']}
           >
             <SocialIcon
               name={social.icon}

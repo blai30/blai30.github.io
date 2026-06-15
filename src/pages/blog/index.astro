@@ -1,6 +1,6 @@
 ---
 import { getCollection } from 'astro:content'
-import { Badge } from '@pristine-machine/ui'
+import { Badge, focusRing } from '@pristine-machine/ui'
 import { ArrowRight } from '@lucide/astro'
 import BaseLayout from '@/layouts/BaseLayout.astro'
 import SectionHeading from '@/components/SectionHeading.astro'
@@ -18,7 +18,7 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort(
 >
   <section class="px-6 pt-16 pb-20 sm:px-8 sm:pt-20 sm:pb-24">
     <SectionHeading
-      eyebrow="Blog"
+      eyebrowText="Blog"
       title="Notes & writing"
       accent="writing"
       description="Occasional posts on software, tooling, and the craft of building things well."
@@ -33,7 +33,7 @@ const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort(
             <li>
               <a
                 href={`/blog/${post.id}`}
-                class="group flex flex-col gap-3 border-b border-mauve-200 px-4 py-8 transition-colors duration-200 hover:bg-mauve-200/40 hover:duration-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-rose-500/30 sm:flex-row sm:gap-8 sm:px-6 dark:border-mauve-700 dark:hover:bg-mauve-800/50 dark:focus-visible:ring-rose-400/25"
+                class:list={['group flex flex-col gap-3 border-b border-mauve-200 px-4 py-8 transition-colors duration-200 hover:bg-mauve-200/40 hover:duration-0 sm:flex-row sm:gap-8 sm:px-6 dark:border-mauve-700 dark:hover:bg-mauve-800/50', focusRing, 'focus-visible:ring-inset']}
               >
                 <time
                   datetime={date.toString()}

@@ -1,6 +1,6 @@
 ---
 import { getCollection, render } from 'astro:content'
-import { Badge } from '@pristine-machine/ui'
+import { Badge, eyebrow } from '@pristine-machine/ui'
 import { ArrowLeft, ExternalLink } from '@lucide/astro'
 import BaseLayout from '@/layouts/BaseLayout.astro'
 import LinkButton from '@/components/LinkButton.astro'
@@ -24,7 +24,7 @@ const { Content } = await render(project)
   <article class="px-6 pt-12 pb-20 sm:px-8 sm:pt-16 sm:pb-24">
     <a
       href="/projects"
-      class="inline-flex items-center gap-1.5 font-mono text-xs font-medium uppercase tracking-widest text-mauve-600 transition-colors hover:text-rose-700 dark:text-mauve-400 dark:hover:text-rose-400"
+      class:list={[eyebrow, 'inline-flex items-center gap-1.5 transition-colors hover:text-rose-700 dark:hover:text-rose-400']}
     >
       <ArrowLeft class="size-3.5" aria-hidden="true" />
       All projects

@@ -1,5 +1,5 @@
 ---
-import { Badge, Card } from '@pristine-machine/ui'
+import { Badge, Card, focusRing } from '@pristine-machine/ui'
 import { ArrowUpRight, ExternalLink } from '@lucide/astro'
 import type { CollectionEntry } from 'astro:content'
 import SocialIcon from '@/components/SocialIcon.astro'
@@ -38,7 +38,7 @@ const href = `/projects/${id}`
       >
         <a
           href={href}
-          class="transition-colors hover:text-rose-700 hover:duration-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-500/30 dark:hover:text-rose-400 dark:focus-visible:ring-rose-400/25"
+          class:list={['transition-colors hover:text-rose-700 hover:duration-0 dark:hover:text-rose-400', focusRing]}
         >
           {data.title}
         </a>

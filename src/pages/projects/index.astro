@@ -1,6 +1,6 @@
 ---
 import { getCollection } from 'astro:content'
-import { BlueprintDivider } from '@pristine-machine/ui'
+import { BlueprintDivider, eyebrow } from '@pristine-machine/ui'
 import { Sparkles } from '@lucide/astro'
 import BaseLayout from '@/layouts/BaseLayout.astro'
 import SectionHeading from '@/components/SectionHeading.astro'
@@ -24,7 +24,7 @@ const archived = all.filter((project) => project.data.archived)
 >
   <section class="px-6 pt-16 pb-12 sm:px-8 sm:pt-20">
     <SectionHeading
-      eyebrow="Projects"
+      eyebrowText="Projects"
       title="Things I've built"
       accent="built"
       description="A selection of work, side projects, and experiments. Each one is a short writeup of what it is and how it came together."
@@ -36,7 +36,7 @@ const archived = all.filter((project) => project.data.archived)
       <section class="px-6 pb-16 sm:px-8">
         <div class="mb-6 flex items-center gap-2">
           <Sparkles class="size-4 text-rose-600 dark:text-rose-400" aria-hidden="true" />
-          <h2 class="font-mono text-xs font-medium uppercase tracking-widest text-mauve-600 dark:text-mauve-400">
+          <h2 class={eyebrow}>
             Featured
           </h2>
         </div>
@@ -56,7 +56,7 @@ const archived = all.filter((project) => project.data.archived)
       <>
         <BlueprintDivider ticked />
         <section class="px-6 py-16 sm:px-8 sm:py-20">
-          <h2 class="mb-6 font-mono text-xs font-medium uppercase tracking-widest text-mauve-600 dark:text-mauve-400">
+          <h2 class:list={['mb-6', eyebrow]}>
             {featured.length > 0 ? 'More projects' : 'All projects'}
           </h2>
           <ul class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -76,7 +76,7 @@ const archived = all.filter((project) => project.data.archived)
       <>
         <BlueprintDivider ticked />
         <section class="px-6 py-16 sm:px-8 sm:py-20">
-          <h2 class="mb-6 font-mono text-xs font-medium uppercase tracking-widest text-mauve-600 dark:text-mauve-400">
+          <h2 class:list={['mb-6', eyebrow]}>
             Archived
           </h2>
           <ul class="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
