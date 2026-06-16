@@ -19,3 +19,18 @@ Masterball is a Pokedex web application that browses all 1,000+ Pokémon species
 ## Static first, interactive where it counts
 
 The bulk of the site is plain HTML rendered by [Astro](https://astro.build). React only hydrates the parts that genuinely need it: search, filtering, and sortable tables powered by [TanStack Table](https://tanstack.com/table). Stat spreads and type charts are drawn with [visx](https://airbnb.io/visx), and the whole thing runs through the React Compiler so the interactive islands stay lean. The result is a reference tool that feels instant while still being rich to explore.
+
+## Light and dark themes
+
+Every page adapts to the active color scheme. Here is a species detail view in both themes:
+
+<img
+  src="/projects/masterball-detail-light.png"
+  alt="Masterball species detail page in light mode"
+  class="block dark:hidden"
+/>
+<img
+  src="/projects/masterball-detail-dark.png"
+  alt="Masterball species detail page in dark mode"
+  class="hidden dark:block"
+/>

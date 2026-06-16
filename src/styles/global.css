@@ -40,6 +40,10 @@
   --tw-prose-invert-td-borders: var(--color-mauve-700);
 }
 
+img {
+  margin: 0;
+}
+
 .astro-code {
   background-color: var(--color-mauve-50) !important;
 }
