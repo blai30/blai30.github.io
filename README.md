@@ -13,7 +13,7 @@ pnpm preview   # preview the production build
 
 ## Links
 
-- [Website](https://www.brianlai.dev/)
+- [Website](https://blai30.github.io/)
 - [Resume](https://blai30.github.io/resume/)
 - [GitHub](https://github.com/blai30)
 - [LinkedIn](https://www.linkedin.com/in/blai/)
