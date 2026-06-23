@@ -1,0 +1,56 @@
+---
+title: MiniMetrics
+summary: A desktop widget app for Windows that keeps live CPU and GPU readouts and a clock floating on your screen, built with Avalonia on .NET 10.
+featured: false
+thumbnail: /projects/minimetrics.png
+tech:
+  - C#
+  - .NET 10
+  - Avalonia
+repo: https://github.com/blai30/MiniMetrics
+---
+
+MiniMetrics is a set of floating desktop widgets for Windows that keep live performance metrics and a clock always within view. The CPU and GPU widgets show readouts such as temperature, usage, power, and RAM/VRAM, drawn from [LibreHardwareMonitor](https://github.com/LibreHardwareMonitor/LibreHardwareMonitor), with temperature color coding and configurable thresholds. Each widget stays on top, snaps flush to screen edges and to its neighbors, and remembers its position and visibility between sessions.
+
+## Built with Avalonia on .NET
+
+The app is written in C# on .NET 10 using the [Avalonia](https://avaloniaui.net/) UI toolkit, with [CommunityToolkit.Mvvm](https://learn.microsoft.com/dotnet/communitytoolkit/mvvm/) for the MVVM layer. Packaging and in-app updates run through [Velopack](https://velopack.io/), so every build installs one-click and updates itself in place. For full hardware sensor access the app requests elevation only when those metrics are enabled, rather than running elevated all the time.
+
+## Live metrics in light and dark
+
+The CPU and GPU widgets adapt to the active color scheme, with per-metric visibility toggles so you only show what you care about:
+
+<img
+  src="/projects/minimetrics-metrics-light.png"
+  alt="MiniMetrics CPU and GPU widgets in light theme"
+  class="block dark:hidden"
+/>
+<img
+  src="/projects/minimetrics-metrics-dark.png"
+  alt="MiniMetrics CPU and GPU widgets in dark theme"
+  class="hidden dark:block"
+/>
+
+## A configurable clock
+
+The date and time widget supports time zone and locale selection, custom date and time format strings, and left, center, or right alignment:
+
+<img
+  src="/projects/minimetrics-clock-light.png"
+  alt="MiniMetrics clock widget in light theme"
+  class="block dark:hidden"
+/>
+<img
+  src="/projects/minimetrics-clock-dark.png"
+  alt="MiniMetrics clock widget in dark theme"
+  class="hidden dark:block"
+/>
+
+## Settings
+
+Everything is configurable from a single settings window: themes, background color and opacity, widget size, font family and weight, compact layouts, edge snapping, and run at Windows startup. Per-option restore buttons let any single setting be reset without touching the rest.
+
+<img
+  src="/projects/minimetrics-settings-window.png"
+  alt="MiniMetrics settings window"
+/>
